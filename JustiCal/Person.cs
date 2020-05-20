@@ -6,11 +6,28 @@ using System.Threading.Tasks;
 
 namespace JustiCal
 {
-    public class Pessoa
+    public class Person
     {
-        public Pessoa()
+        public Person(string firstName, string lastName)
         {
+            FirstName = firstName;
+            OtherNames = string.Empty;
+            LastName = lastName;
+        }
 
+        public Person (string firstName, string otherNames, string lastName)
+        {
+            FirstName = firstName;
+            OtherNames = otherNames;
+            LastName = lastName;
+        }
+
+        public string getFullName()
+        {
+            if (otherNames != string.Empty)
+                return FirstName + " " + OtherNames + " " + LastName;
+            else
+                return FirstName + " " + LastName;
         }
 
         public string FirstName
@@ -40,5 +57,7 @@ namespace JustiCal
             set { birthDate = value; }
         }
         private DateTime birthDate;
+
+        // TODO acrescentar documento de identificação
     }
 }
