@@ -8,11 +8,13 @@ namespace JustiCal
 {
     public class Person
     {
-        public Person(string firstName, string lastName)
+        public Person(string firstName, string lastName, IdDocument idDocument = null)
         {
             FirstName = firstName;
             OtherNames = string.Empty;
             LastName = lastName;
+            if (!(idDocument == null))
+                IdDocument = idDocument;
         }
 
         public Person (string firstName, string otherNames, string lastName)
@@ -58,6 +60,11 @@ namespace JustiCal
         }
         private DateTime birthDate;
 
-        // TODO acrescentar documento de identificação
+        public IdDocument IdDocument
+        {
+            get { return idDocument; }
+            set { idDocument = value; }
+        }
+        private IdDocument idDocument;
     }
 }
