@@ -17,6 +17,13 @@ namespace JustiCal
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            Person oPerson;
+            oPerson = new Person("Hélder Alexandre de Sousa Lima");
+            MessageBox.Show(oPerson.FirstName);
+            MessageBox.Show(oPerson.OtherNames);
+            MessageBox.Show(oPerson.LastName);
+            MessageBox.Show(oPerson.getFullName());
         }
     }
 }

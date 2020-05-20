@@ -8,13 +8,24 @@ namespace JustiCal
 {
     public class Person
     {
-        public Person(string firstName, string lastName, IdDocument idDocument = null)
+        public Person(string name, IdDocument idDocument = null, DateTime? birthDate = null)
         {
-            FirstName = firstName;
-            OtherNames = string.Empty;
-            LastName = lastName;
+            string[] names = name.Split(' ');
+            FirstName = names[0];
+            if (names.Length > 1)
+                LastName = names[names.Length - 1];
+            if (names.Length > 2)
+            {
+                OtherNames = names[1];
+                for (int i = 2; i < names.Length-1; i++)
+                {
+                    OtherNames += " " + names[i];
+                }
+            }
             if (!(idDocument == null))
                 IdDocument = idDocument;
+            if (!(birthDate == null))
+                BirthDate = birthDate;
         }
 
         public Person (string firstName, string otherNames, string lastName)
@@ -53,12 +64,12 @@ namespace JustiCal
         }
         private string otherNames;
 
-        public DateTime BirthDate
+        public DateTime? BirthDate
         {
             get { return birthDate; }
             set { birthDate = value; }
         }
-        private DateTime birthDate;
+        private DateTime? birthDate;
 
         public IdDocument IdDocument
         {
@@ -66,5 +77,19 @@ namespace JustiCal
             set { idDocument = value; }
         }
         private IdDocument idDocument;
+    }
+
+    public class Militar : Person
+    {
+        private string posto;
+        private string arma;
+        private string nim;
+
+        public Militar(string posto, string arma, string nim, string firstName, string otherNames, string lastName): base (firstName, otherNames, lastName)
+        {
+            FirstName = firstName;
+            OtherNames = otherNames;
+            LastName = lastName;
+        }
     }
 }
