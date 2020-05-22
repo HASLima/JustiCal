@@ -130,6 +130,22 @@ namespace JustiCal
             get { return nr; }
             set { nr = value; }
         }
+
+        public virtual string NormalizedPrint()
+        {
+            string normalizedprint = Posto;
+            if (Arma != null)
+                normalizedprint += " de " + Arma;
+            if (Nr != null)
+            {
+                if (Nr.Length == 8)
+                    normalizedprint += " NM " + Nr;
+                if (Nr.Length == 9)
+                    normalizedprint += " NIM " + Nr;
+            }
+            normalizedprint += " - " + getFullName();
+            return normalizedprint;
+        }
     }
 
     public class Student : Militar
@@ -176,6 +192,26 @@ namespace JustiCal
         {
             get { return origem; }
             set { origem = value; }
+        }
+
+        public override string NormalizedPrint()
+        {
+            string normalizedprint = Posto;
+            if (Arma != null && (Posto == "Aspirante-Aluno" || Posto == "Alferes-Aluno" || Posto == "Tenente-Aluno"))
+                normalizedprint += " de " + Arma;
+            if (Origem == "PLOP")
+                normalizedprint += " n.º " + NrCorpo + "/PLOP";
+            else
+                normalizedprint += " n.º " + NrCorpo;
+            if (Nr != null)
+            {
+                if (Nr.Length == 8)
+                    normalizedprint += " NM " + Nr;
+                if (Nr.Length == 9)
+                    normalizedprint += " NIM " + Nr;
+            }
+            normalizedprint += " - " + getFullName();
+            return normalizedprint;
         }
     }
 
