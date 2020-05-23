@@ -4,16 +4,21 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
+using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Task = System.Threading.Tasks.Task;
 
 namespace JustiCal
 {
     public partial class Form1 : Form
     {
+
+        private static readonly HttpClient client = new HttpClient();
         public Form1()
         {
             InitializeComponent();
@@ -52,6 +57,7 @@ namespace JustiCal
         }
 
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             Student oStudent = new Student(238, "GNR-Armas", 3, 1, "civil", "Cadete-Aluno", null, "16083006", "Hélder Alexandre de Sousa Lima", true);
@@ -65,6 +71,23 @@ namespace JustiCal
             
 
             //CreateDocument();
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+
         }
     }
 }
