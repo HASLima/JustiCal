@@ -17,12 +17,19 @@ namespace JustiCal
 {
     public partial class Form1 : Form
     {
-
+        private View view;
         private static readonly HttpClient client = new HttpClient();
         public Form1()
         {
             InitializeComponent();
         }
+        public Form1(View view)
+        {
+            InitializeComponent();
+            View = view;
+        }
+
+        public View View { get; set; }
 
         public void updateBookmark(string bookmarkToBeUpdated, string newText, Microsoft.Office.Interop.Word.Document document)
         {
