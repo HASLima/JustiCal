@@ -14,11 +14,11 @@ namespace JustiCal
         class Controller
         {
             private ModelClass model;
-            private View view;
+            private View.ViewClass view;
 
             public Controller()
             {
-                View = new View(model);
+                View = new View.ViewClass(model);
                 Model = new ModelClass(view);
             }
 
@@ -28,7 +28,7 @@ namespace JustiCal
                 set { model = value; }
             }
 
-            public View View
+            public View.ViewClass View
             {
                 get { return view; }
                 set { view = value; }

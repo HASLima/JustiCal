@@ -9,9 +9,9 @@ namespace JustiCal
 {
     public class ModelClass
     {
-        View view;
+        View.ViewClass view;
 
-        public ModelClass(View v)
+        public ModelClass(View.ViewClass v)
         {
             view = v;
         }
