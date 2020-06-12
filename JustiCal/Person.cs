@@ -11,6 +11,9 @@ namespace JustiCal
     {
         public class Person
         {
+            public Morada Morada { get; set; }
+            public string Email { get; set; }
+
             private bool masculino;
             public Person(string name, bool masculino, IdDocument idDocument = null, DateTime? birthDate = null)
             {
