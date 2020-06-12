@@ -10,9 +10,9 @@ namespace JustiCal
     public class View
     {
         private Form homepage;
-        Model model;
+        ModelClass model;
 
-        public View(Model m)
+        public View(ModelClass m)
         {
             model = m;
         }

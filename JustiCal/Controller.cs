@@ -13,16 +13,16 @@ namespace JustiCal
     {
         class Controller
         {
-            private Model model;
+            private ModelClass model;
             private View view;
 
             public Controller()
             {
                 View = new View(model);
-                Model = new Model(view);
+                Model = new ModelClass(view);
             }
 
-            public Model Model
+            public ModelClass Model
             {
                 get { return model; }
                 set { model = value; }
