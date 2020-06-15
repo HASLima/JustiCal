@@ -35,7 +35,9 @@ namespace JustiCal
 
                 //test area
                 Model.ContactoTelefonico contacto = new Model.ContactoTelefonico("969239643", "351");
-                Console.WriteLine(contacto.Pais);
+                Console.WriteLine(contacto.CountryFromCode("351").Result);
+
+                Console.ReadKey();
 
                 //Este é o código originalmente criado pelo VIsual Studio
                 //Application.EnableVisualStyles();

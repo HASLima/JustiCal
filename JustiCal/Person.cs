@@ -12,6 +12,8 @@ namespace JustiCal
         public class Person
         {
             public Morada Morada { get; set; }
+
+            public ContactoTelefonico Contacto { get; set; }
             public string Email { get; set; }
 
             private bool masculino;
