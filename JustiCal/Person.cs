@@ -16,6 +16,9 @@ namespace JustiCal
 
             public ContactoTelefonico Contacto { get; set; }
             public MailAddress EmailAddress { get; set; }
+            public string[] Filiacao;
+            public string Naturalidade { get; set; }
+            public string Nacionalidade { get; set; }
 
             private bool masculino;
             public Person(string name, bool masculino, IdDocument idDocument = null, DateTime? birthDate = null)
