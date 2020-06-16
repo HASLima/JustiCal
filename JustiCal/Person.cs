@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace JustiCal
             public Morada Morada { get; set; }
 
             public ContactoTelefonico Contacto { get; set; }
-            public string Email { get; set; }
+            public MailAddress EmailAddress { get; set; }
 
             private bool masculino;
             public Person(string name, bool masculino, IdDocument idDocument = null, DateTime? birthDate = null)

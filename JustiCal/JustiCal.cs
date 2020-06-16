@@ -34,10 +34,10 @@ namespace JustiCal
                 controller.View.ActivarUI();
 
                 //test area
-                Model.ContactoTelefonico contacto = new Model.ContactoTelefonico("969239643", "351");
-                Console.WriteLine(contacto.CountryFromCode("351").Result);
+                Model.ContactoTelefonico contacto = new Model.ContactoTelefonico("969239643", "3531581");
+                Console.WriteLine(contacto.Pais);
 
-                Console.ReadKey();
+                Console.Read();
 
                 //Este é o código originalmente criado pelo VIsual Studio
                 //Application.EnableVisualStyles();
