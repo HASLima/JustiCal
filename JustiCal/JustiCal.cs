@@ -1,5 +1,7 @@
-﻿using System;
+﻿using JustiCal.Model;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Services;
 using System.Diagnostics;
 using System.IO;
@@ -36,6 +38,14 @@ namespace JustiCal
                 //test area
                 Model.ContactoTelefonico contacto = new Model.ContactoTelefonico("969239643", "3531581");
                 Console.WriteLine(contacto.Pais);
+
+                Model.Person pessoa = new Model.Person("Hélder Alexandre de Sousa Lima", true, null, new DateTime(1988, 3, 2), new Morada("Rua", "Dias Lourenço", "10", null, "2925", "135"),new ContactoTelefonico("969239643"),new System.Net.Mail.MailAddress("haslima@gmail.com"),"Hélder Carvalho Lima", "Maria Armanda Leite da Costa Sousa", null, "Portuguesa");
+                Militar militar = new Militar("Capitão", "Infantaria", "2080018", pessoa);
+
+                //militar.Filiacao[0] = "Hélder Carvalho Lima";
+                //militar.Filiacao[1] = "Maria Armanda Leite da Costa Sousa";
+
+                Console.WriteLine(String.Format("Filho de {0} e {1}", militar.Filiacao[0], militar.Filiacao[1]));
 
                 Console.Read();
 

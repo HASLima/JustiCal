@@ -70,8 +70,8 @@ namespace JustiCal
 
             private void button1_Click(object sender, EventArgs e)
             {
-                Model.Student oStudent = new Model.Student(238, "GNR-Armas", 3, 1, "civil", "Cadete-Aluno", null, "16083006", "Hélder Alexandre de Sousa Lima", true);
-                Model.Militar oMilitar = new Model.Militar("Capitão", "Artilharia", "11197709", "Paulo Alberto Ferreira da Silva Freitas", true);
+                Model.Student oStudent = new Model.Student(238, "GNR-Armas", 3, 1, "Civil", new Model.Militar("Cadete-Aluno", "Infantaria", "16083006", new Model.Person("Hélder Alexandre de Sousa Lima", true)));
+                Model.Militar oMilitar = new Model.Militar("Capitão", "Artilharia", "11197709", new Model.Person("Paulo Alberto Ferreira da Silva Freitas", true));
                 DateTime data = new DateTime(2007, 5, 1);
                 Model.Participacao oParticipacao = new Model.Participacao(data, DateTime.Now, oMilitar);
                 Model.ProcessoAA oProcessoAA = new Model.ProcessoAA(oStudent, oParticipacao);

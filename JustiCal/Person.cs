@@ -12,6 +12,13 @@ namespace JustiCal
     {
         public class Person
         {
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string OtherNames { get; set; }
+            public DateTime? BirthDate { get; set; }
+            public IdDocument IdDocument { get; set; }
+            public bool Masculino { get; set; }
+
             public Morada Morada { get; set; }
 
             public ContactoTelefonico Contacto { get; set; }
@@ -19,10 +26,23 @@ namespace JustiCal
             public string[] Filiacao;
             public string Naturalidade { get; set; }
             public string Nacionalidade { get; set; }
-
-            private bool masculino;
-            public Person(string name, bool masculino, IdDocument idDocument = null, DateTime? birthDate = null)
+            /// <summary>
+            /// Constructor for the Person class
+            /// </summary>
+            /// <param name="name">Full Name</param>
+            /// <param name="masculino">True if male, False if Female</param>
+            /// <param name="idDocument">An Identification Document</param>
+            /// <param name="birthDate">The birthdate</param>
+            /// <param name="morada">The address</param>
+            /// <param name="contacto">The phone contact</param>
+            /// <param name="mailAddress">The email address</param>
+            /// <param name="pai">Father's Fullname</param>
+            /// <param name="mae">Mother's FUllname</param>
+            /// <param name="naturalidade">Naturality</param>
+            /// <param name="nacionalidade">Nacionality</param>
+            public Person(string name, bool masculino, IdDocument idDocument = null, DateTime? birthDate = null, Morada morada = null, ContactoTelefonico contacto = null, MailAddress mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
             {
+                //Spliting FirstName, LastName and other names from name
                 string[] names = name.Split(' ');
                 FirstName = names[0];
                 if (names.Length > 1)
@@ -35,111 +55,51 @@ namespace JustiCal
                         OtherNames += " " + names[i];
                     }
                 }
+
                 Masculino = masculino;
                 if (!(idDocument == null))
                     IdDocument = idDocument;
                 if (!(birthDate == null))
                     BirthDate = birthDate;
+                if (!(morada == null))
+                    Morada = morada;
+                if (!(contacto == null))
+                    Contacto = contacto;
+                if (!(mailAddress == null))
+                    EmailAddress = mailAddress;
+                Filiacao = new string[] { pai, mae };
+                if (!(naturalidade == null))
+                    Naturalidade = naturalidade;
+                if (!(nacionalidade == null))
+                    Nacionalidade = nacionalidade;
             }
-
-            public Person(string firstName, string otherNames, string lastName, bool masculino, IdDocument idDocument = null, DateTime? birthDate = null)
-            {
-                FirstName = firstName;
-                OtherNames = otherNames;
-                LastName = lastName;
-                Masculino = masculino;
-                if (!(idDocument == null))
-                    IdDocument = idDocument;
-                if (!(birthDate == null))
-                    BirthDate = birthDate;
-            }
-
+            /// <summary>
+            /// Uses FirstName, LastName and OtherNames to return the Person's full name
+            /// </summary>
+            /// <returns>The Person's FullName</returns>
             public string getFullName()
             {
-                if (otherNames != string.Empty)
+                if (OtherNames != string.Empty)
                     return FirstName + " " + OtherNames + " " + LastName;
                 else
                     return FirstName + " " + LastName;
             }
 
-            public bool Masculino
-            {
-                get { return masculino; }
-                set { masculino = value; }
-            }
-
-            public string FirstName
-            {
-                get { return firstName; }
-                set { firstName = value; }
-            }
-            private string firstName;
-
-            public string LastName
-            {
-                get { return lastName; }
-                set { lastName = value; }
-            }
-            private string lastName;
-
-            public string OtherNames
-            {
-                get { return otherNames; }
-                set { otherNames = value; }
-            }
-            private string otherNames;
-
-            public DateTime? BirthDate
-            {
-                get { return birthDate; }
-                set { birthDate = value; }
-            }
-            private DateTime? birthDate;
-
-            public IdDocument IdDocument
-            {
-                get { return idDocument; }
-                set { idDocument = value; }
-            }
-            private IdDocument idDocument;
+            
         }
 
         public class Militar : Person
         {
-            private string posto;
-            private string arma;
-            private string nr;
+            public string Posto { get; set; }
+            public string Arma { get; set; }
+            public string Nr { get; set; }
 
-            public Militar(string posto, string arma, string nr, string firstName, string otherNames, string lastName, bool masculino, IdDocument idDocument = null, DateTime? birthDate = null) : base(firstName, otherNames, lastName, masculino, idDocument, birthDate)
+
+            public Militar(string posto, string arma, string nr, Person person) : base(person.getFullName(), person.Masculino, person.IdDocument, person.BirthDate, person.Morada, person.Contacto, person.EmailAddress, person.Filiacao[0], person.Filiacao[1], person.Naturalidade, person.Nacionalidade)
             {
                 Posto = posto;
                 Arma = arma;
                 Nr = nr;
-            }
-
-            public Militar(string posto, string arma, string nr, string name, bool masculino, IdDocument idDocument = null, DateTime? birthDate = null) : base(name, masculino, idDocument, birthDate)
-            {
-                Posto = posto;
-                Arma = arma;
-                Nr = nr;
-            }
-
-            public string Posto
-            {
-                get { return posto; }
-                set { posto = value; }
-            }
-
-            public string Arma
-            {
-                get { return arma; }
-                set { arma = value; }
-            }
-
-            public string Nr
-            {
-                get { return nr; }
-                set { nr = value; }
             }
 
             public virtual string NormalizedPrint()
@@ -166,7 +126,7 @@ namespace JustiCal
             private int companhia;
             private int batalhao;
             private string origem;
-            public Student(int nrCorpo, string curso, int companhia, int batalhao, string origem, string posto, string arma, string nr, string name, bool masculino, IdDocument idDocument = null, DateTime? birthDate = null) : base(posto, arma, nr, name, masculino, idDocument, birthDate)
+            public Student(int nrCorpo, string curso, int companhia, int batalhao, string origem, Militar militar) : base (militar.Posto, militar.Arma, militar.Nr, militar)
             {
                 NrCorpo = nrCorpo;
                 Curso = curso;

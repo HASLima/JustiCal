@@ -7,34 +7,36 @@ namespace JustiCal
     {
         public class IdDocument
         {
-            public IdDocument(byte documentType, string idNumber, DateTime? expiryDate = null)
+            public enum DocumentType
             {
-                DocumentType = documentType;
-                IdNumber = idNumber;
-                ExpiryDate = expiryDate;
+                CartaoDeCidadao = 0,
+                BilheteDeIdentidade = 1,
+                BilheteDeIdentidadeMilitar = 2,
+                Passaporte = 3,
+                TituloDeResidencia = 4,
+                AutorizacaoDeResidencia
             }
 
-            public string IdNumber
-            {
-                get { return idNumber; }
-                set { idNumber = value; }
-            }
-            private string idNumber;
+            public string DocumentNumber { get; set; }
+            public DateTime? ExpiryDate { get; set; }
+            public DateTime? IssueDate { get; set; }
 
-            public byte DocumentType
+            public IdDocument()
             {
-                get { return documentType; }
-                set { documentType = value; }
-            }
-            private byte documentType;
 
-            public DateTime? ExpiryDate
+            }
+
+        }
+
+        class CartaoDeCidadao : IdDocument
+        {
+            public CartaoDeCidadao()
             {
-                get { return expiryDate; }
-                set { expiryDate = value; }
+                
             }
-            private DateTime? expiryDate;
 
-        } 
+            public string civilianIdNumber { get; set; }
+            public string controlDigits1 { get; set; }
+        }
     }
 }
