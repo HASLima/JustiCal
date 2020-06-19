@@ -36,16 +36,14 @@ namespace JustiCal
                 controller.View.ActivarUI();
 
                 //test area
-                Model.ContactoTelefonico contacto = new Model.ContactoTelefonico("969239643", "3531581");
-                Console.WriteLine(contacto.Pais);
+                if(CartaoDeCidadao.CheckDocumentNumber("133683761ZX8"))
+                {
+                    CartaoDeCidadao oDocumento = new CartaoDeCidadao("133683761ZX8", new DateTime(2021, 10, 10));
+                    Console.WriteLine(String.Format("Cartão de Cidadão n.º: {0}\nN.º de Identificação Civil: {1}\nDigito de Controlo do N.º de Identificação Civil: {2}\nVersão: {3}\nN.º de controlo do Cartão de Cidadão: {4}\nData de Validade: {5}", oDocumento.DocumentNumber, oDocumento.CivilianIdNumber, oDocumento.CivilianIdNumberCheckDigit.ToString(), oDocumento.Version, oDocumento.DocumentNumberCheckDigit, oDocumento.ExpiryDate.ToString()));
+                }
+                    
 
-                Model.Person pessoa = new Model.Person("Hélder Alexandre de Sousa Lima", true, null, new DateTime(1988, 3, 2), new Morada("Rua", "Dias Lourenço", "10", null, "2925", "135"),new ContactoTelefonico("969239643"),new System.Net.Mail.MailAddress("haslima@gmail.com"),"Hélder Carvalho Lima", "Maria Armanda Leite da Costa Sousa", null, "Portuguesa");
-                Militar militar = new Militar("Capitão", "Infantaria", "2080018", pessoa);
-
-                //militar.Filiacao[0] = "Hélder Carvalho Lima";
-                //militar.Filiacao[1] = "Maria Armanda Leite da Costa Sousa";
-
-                Console.WriteLine(String.Format("Filho de {0} e {1}", militar.Filiacao[0], militar.Filiacao[1]));
+                
 
                 Console.Read();
 
