@@ -16,6 +16,7 @@ namespace JustiCal
             public string LastName { get; set; }
             public string OtherNames { get; set; }
             public DateTime? BirthDate { get; set; }
+            public List<IdDocument> IdDocuments { get; set; }
             public IdDocument IdDocument { get; set; } //TODO passar a ser uma lista de documentos e no constructor adicionar um documento a lista
             public bool Masculino { get; set; }
 
@@ -31,7 +32,7 @@ namespace JustiCal
             /// </summary>
             /// <param name="name">Full Name</param>
             /// <param name="masculino">True if male, False if Female</param>
-            /// <param name="idDocument">An Identification Document</param>
+            /// <param name="idDocuments">A list of IdDocuments</param>
             /// <param name="birthDate">The birthdate</param>
             /// <param name="morada">The address</param>
             /// <param name="contacto">The phone contact</param>
@@ -40,7 +41,7 @@ namespace JustiCal
             /// <param name="mae">Mother's FUllname</param>
             /// <param name="naturalidade">Naturality</param>
             /// <param name="nacionalidade">Nacionality</param>
-            public Person(string name, bool masculino, IdDocument idDocument = null, DateTime? birthDate = null, Morada morada = null, ContactoTelefonico contacto = null, MailAddress mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
+            public Person(string name, bool masculino, List<IdDocument> idDocuments = null, DateTime? birthDate = null, Morada morada = null, ContactoTelefonico contacto = null, MailAddress mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
             {
                 //Spliting FirstName, LastName and other names from name
                 string[] names = name.Split(' ');
@@ -57,8 +58,12 @@ namespace JustiCal
                 }
 
                 Masculino = masculino;
-                if (!(idDocument == null))
-                    IdDocument = idDocument;
+
+                if (!(idDocuments == null))
+                    IdDocuments = idDocuments;
+                else
+                    IdDocuments = new List<IdDocument>();
+
                 if (!(birthDate == null))
                     BirthDate = birthDate;
                 if (!(morada == null))
@@ -95,7 +100,7 @@ namespace JustiCal
             public string Nr { get; set; }
 
 
-            public Militar(string posto, string arma, string nr, Person person) : base(person.getFullName(), person.Masculino, person.IdDocument, person.BirthDate, person.Morada, person.Contacto, person.EmailAddress, person.Filiacao[0], person.Filiacao[1], person.Naturalidade, person.Nacionalidade)
+            public Militar(string posto, string arma, string nr, Person person) : base(person.getFullName(), person.Masculino, person.IdDocuments, person.BirthDate, person.Morada, person.Contacto, person.EmailAddress, person.Filiacao[0], person.Filiacao[1], person.Naturalidade, person.Nacionalidade)
             {
                 Posto = posto;
                 Arma = arma;
