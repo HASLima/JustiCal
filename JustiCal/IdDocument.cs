@@ -19,6 +19,7 @@ namespace JustiCal
             public string DocumentNumber { get; set; }
             public DateTime? ExpiryDate { get; set; }
             public DateTime? IssueDate { get; set; }
+            public DocumentType IdDocumentType { get; set; }
 
             public IdDocument()
             {
@@ -55,6 +56,7 @@ namespace JustiCal
                 DocumentNumberCheckDigit = numero.Substring(11, 1);
                 ExpiryDate = dataDeValidade;
                 IssueDate = null;
+                IdDocumentType = (DocumentType)0;
             }
             /// <summary>
             /// Construtor de Cartão de Cidadão
@@ -169,6 +171,49 @@ namespace JustiCal
                     case 'Z': return 35;
                     default: throw new ArgumentException(String.Format("O caracter {0} não é válido para o número de Cartão de Cidadão", letter));
                 }
+            }
+
+        }
+
+        public class BilheteDeIdentidade : IdDocument
+        {
+            public int DocumentNumberCheckDigit { get; set; }
+            public string IssuePlace { get; set;}
+            /// <summary>
+            /// Constructor do Bilhete de Identidade
+            /// </summary>
+            /// <param name="numero">Número do Bilhete de Identidade (sem o digito de controlo)</param>
+            /// <param name="digitoDeControlo">Digito de controlo</param>
+            /// <param name="issueDate">Data de Emissão</param>
+            /// <param name="expiryDate">Data de Validade</param>
+            /// <param name="issuePlace">Local de Emissão</param>
+            public BilheteDeIdentidade(string numero, int digitoDeControlo, DateTime issueDate, DateTime expiryDate, string issuePlace)
+            {
+                if (numero.Length != 8)
+                    throw new ArgumentException(String.Format("{0} não cumpre os requisitos de um número de bilhete de identidade. Deve conter oito digitos", numero));
+                if (!CartaoDeCidadao.CheckCivilianIdNumber(numero, digitoDeControlo))
+                    throw new ArgumentException(String.Format("{0} não parece ser um número válido quando confirmado com o digito de controlo {1}", numero, digitoDeControlo.ToString()));
+
+                DocumentNumber = numero;
+                IssueDate = issueDate;
+                ExpiryDate = expiryDate;
+                IssuePlace = issuePlace;
+            }
+            /// <summary>
+            /// Constructor do Bilhete de Identidade
+            /// </summary>
+            /// <param name="numero">Número do Bilhete de Identidade com oito digitos (sem o digito de controlo)</param>
+            /// <param name="digitoDeControlo">Digito de controlo</param>
+            /// <param name="diaIssueDate">Dia da data de emissão</param>
+            /// <param name="mesIssueDate">Mês da data de emissão</param>
+            /// <param name="anoIssueDate">Ano da data de emissão</param>
+            /// <param name="diaExpiryDate">Dia da data de validade</param>
+            /// <param name="mesExpiryDate">Mês da data de validade</param>
+            /// <param name="anoExpiryDate">Ano da data de validade</param>
+            /// <param name="issuePlace">Local de emissão</param>
+            public BilheteDeIdentidade(string numero, int digitoDeControlo, int diaIssueDate, int mesIssueDate, int anoIssueDate, int diaExpiryDate, int mesExpiryDate, int anoExpiryDate, string issuePlace)
+            {
+                new BilheteDeIdentidade(numero, digitoDeControlo, new DateTime(diaIssueDate, mesIssueDate, anoIssueDate), new DateTime(diaExpiryDate, mesExpiryDate, anoExpiryDate), issuePlace);
             }
 
         }
