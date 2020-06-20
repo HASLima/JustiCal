@@ -56,7 +56,7 @@ namespace JustiCal
                 DocumentNumberCheckDigit = numero.Substring(11, 1);
                 ExpiryDate = dataDeValidade;
                 IssueDate = null;
-                IdDocumentType = (DocumentType)0;
+                IdDocumentType = DocumentType.CartaoDeCidadao;
             }
             /// <summary>
             /// Construtor de Cartão de Cidadão
@@ -66,8 +66,8 @@ namespace JustiCal
             /// <param name="mes">O mes da data de validade</param>
             /// <param name="ano">O ano da data de validade</param>
             public CartaoDeCidadao(string numero, int dia, int mes, int ano)
+                : this (numero, new DateTime(ano, mes, dia))
             {
-                new CartaoDeCidadao(numero, new DateTime(ano, mes, dia));
             }
 
             //De acordo com o Documento "Validação do Número de Documento Cartão de Cidadão v1.0.doc (https://www.autenticacao.gov.pt/documents/20126/115760/Valida%C3%A7%C3%A3o+de+N%C3%BAmero+de+Documento+do+Cart%C3%A3o+de+Cidad%C3%A3o.pdf/bdc4eb37-7316-3ff4-164a-f869382b7053?t=1588780568207&download=true)
@@ -198,6 +198,7 @@ namespace JustiCal
                 IssueDate = issueDate;
                 ExpiryDate = expiryDate;
                 IssuePlace = issuePlace;
+                IdDocumentType = DocumentType.BilheteDeIdentidade;
             }
             /// <summary>
             /// Constructor do Bilhete de Identidade
@@ -212,8 +213,8 @@ namespace JustiCal
             /// <param name="anoExpiryDate">Ano da data de validade</param>
             /// <param name="issuePlace">Local de emissão</param>
             public BilheteDeIdentidade(string numero, int digitoDeControlo, int diaIssueDate, int mesIssueDate, int anoIssueDate, int diaExpiryDate, int mesExpiryDate, int anoExpiryDate, string issuePlace)
+                : this(numero, digitoDeControlo, new DateTime(anoIssueDate, mesIssueDate, diaIssueDate), new DateTime(anoExpiryDate, mesExpiryDate, diaExpiryDate), issuePlace)
             {
-                new BilheteDeIdentidade(numero, digitoDeControlo, new DateTime(diaIssueDate, mesIssueDate, anoIssueDate), new DateTime(diaExpiryDate, mesExpiryDate, anoExpiryDate), issuePlace);
             }
 
         }

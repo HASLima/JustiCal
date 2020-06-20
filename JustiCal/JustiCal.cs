@@ -36,11 +36,10 @@ namespace JustiCal
                 controller.View.ActivarUI();
 
                 //test area
-                if(CartaoDeCidadao.CheckDocumentNumber("133683761ZX8"))
-                {
-                    CartaoDeCidadao oDocumento = new CartaoDeCidadao("133683761ZX8", new DateTime(2021, 10, 10));
-                    Console.WriteLine(String.Format("Cartão de Cidadão n.º: {0}\nN.º de Identificação Civil: {1}\nDigito de Controlo do N.º de Identificação Civil: {2}\nVersão: {3}\nN.º de controlo do Cartão de Cidadão: {4}\nData de Validade: {5}", oDocumento.DocumentNumber, oDocumento.CivilianIdNumber, oDocumento.CivilianIdNumberCheckDigit.ToString(), oDocumento.Version, oDocumento.DocumentNumberCheckDigit, oDocumento.ExpiryDate.ToString()));
-                }
+                BilheteDeIdentidade oBilhete = new BilheteDeIdentidade("13368376", 1, 2, 3, 2000, 2, 3, 2005, "Braga");
+                //BilheteDeIdentidade oBilhete = new BilheteDeIdentidade("13368376", 1, new DateTime(2000, 3, 2), new DateTime(2005, 03, 02), "Braga");
+                Console.WriteLine(String.Format("Bilhete de identidade n.º {0}\nEmitido a {1} em {3}\nVálido até {2}", oBilhete.DocumentNumber, oBilhete.IssueDate.Value.Date.ToString(), oBilhete.ExpiryDate.Value.Date.ToString(), oBilhete.IssuePlace));
+
                     
 
                 
