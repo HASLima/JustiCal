@@ -16,7 +16,7 @@ namespace JustiCal
             public string LastName { get; set; }
             public string OtherNames { get; set; }
             public DateTime? BirthDate { get; set; }
-            public IdDocument IdDocument { get; set; }
+            public IdDocument IdDocument { get; set; } //TODO passar a ser uma lista de documentos e no constructor adicionar um documento a lista
             public bool Masculino { get; set; }
 
             public Morada Morada { get; set; }
