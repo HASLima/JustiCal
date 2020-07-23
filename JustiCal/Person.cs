@@ -20,8 +20,7 @@ namespace JustiCal
             public bool Masculino { get; set; }
 
             public Morada Morada { get; set; }
-
-            public ContactoTelefonico Contacto { get; set; }
+            public List<ContactoTelefonico> Contactos { get; set; }
             public MailAddress EmailAddress { get; set; }
             public string[] Filiacao;
             public string Naturalidade { get; set; }
@@ -40,7 +39,7 @@ namespace JustiCal
             /// <param name="mae">Mother's FUllname</param>
             /// <param name="naturalidade">Naturality</param>
             /// <param name="nacionalidade">Nacionality</param>
-            public Person(string name, bool masculino, List<IdDocument> idDocuments = null, DateTime? birthDate = null, Morada morada = null, ContactoTelefonico contacto = null, MailAddress mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
+            public Person(string name, bool masculino, List<IdDocument> idDocuments = null, DateTime? birthDate = null, Morada morada = null, List<ContactoTelefonico> contactos = null, MailAddress mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
             {
                 //Spliting FirstName, LastName and other names from name
                 string[] names = name.Split(' ');
@@ -67,8 +66,10 @@ namespace JustiCal
                     BirthDate = birthDate;
                 if (!(morada == null))
                     Morada = morada;
-                if (!(contacto == null))
-                    Contacto = contacto;
+                if (!(contactos == null))
+                    Contactos = new List<ContactoTelefonico>();
+                else
+                    Contactos = contactos;
                 if (!(mailAddress == null))
                     EmailAddress = mailAddress;
                 Filiacao = new string[] { pai, mae };
@@ -99,7 +100,7 @@ namespace JustiCal
             public string Nr { get; set; }
 
 
-            public Militar(string posto, string arma, string nr, Person person) : base(person.getFullName(), person.Masculino, person.IdDocuments, person.BirthDate, person.Morada, person.Contacto, person.EmailAddress, person.Filiacao[0], person.Filiacao[1], person.Naturalidade, person.Nacionalidade)
+            public Militar(string posto, string arma, string nr, Person person) : base(person.getFullName(), person.Masculino, person.IdDocuments, person.BirthDate, person.Morada, person.Contactos, person.EmailAddress, person.Filiacao[0], person.Filiacao[1], person.Naturalidade, person.Nacionalidade)
             {
                 Posto = posto;
                 Arma = arma;

@@ -62,6 +62,12 @@
   <ItemGroup>
     <Compile Include="ContactoTelefonico.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="AdicionarPessoaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarPessoaForm.Designer.cs">
+      <DependentUpon>AdicionarPessoaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelClass.cs" />
     <Compile Include="Morada.cs" />
     <Compile Include="ProcessoAA.cs" />
@@ -84,6 +90,9 @@
     <Compile Include="ViewClass.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarPessoaForm.resx">
+      <DependentUpon>AdicionarPessoaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

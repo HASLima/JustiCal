@@ -12,10 +12,12 @@ namespace JustiCal
     {
         View.ViewClass view;
         public static HttpClient client = new HttpClient(); //create a HttpClient
+        List<object> persons;
 
         public ModelClass(View.ViewClass v)
         {
             view = v;
+            persons = new List<object>();
 
             
 
