@@ -19,7 +19,8 @@ namespace JustiCal
             public List<IdDocument> IdDocuments { get; set; }
             public bool Masculino { get; set; }
 
-            public Morada Morada { get; set; }
+            //public Morada Morada { get; set; }
+            public List<Morada> Moradas { get; set; }
             public List<ContactoTelefonico> Contactos { get; set; }
             public MailAddress EmailAddress { get; set; }
             public string[] Filiacao;
@@ -32,14 +33,14 @@ namespace JustiCal
             /// <param name="masculino">True if male, False if Female</param>
             /// <param name="idDocuments">A list of IdDocuments</param>
             /// <param name="birthDate">The birthdate</param>
-            /// <param name="morada">The address</param>
-            /// <param name="contacto">The phone contact</param>
+            /// <param name="moradas">A list of addresses</param>
+            /// <param name="contactos">A list of contacts</param>
             /// <param name="mailAddress">The email address</param>
             /// <param name="pai">Father's Fullname</param>
             /// <param name="mae">Mother's FUllname</param>
             /// <param name="naturalidade">Naturality</param>
             /// <param name="nacionalidade">Nacionality</param>
-            public Person(string name, bool masculino, List<IdDocument> idDocuments = null, DateTime? birthDate = null, Morada morada = null, List<ContactoTelefonico> contactos = null, MailAddress mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
+            public Person(string name, bool masculino, List<IdDocument> idDocuments = null, DateTime? birthDate = null, List<Morada> moradas = null, List<ContactoTelefonico> contactos = null, MailAddress mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
             {
                 //Spliting FirstName, LastName and other names from name
                 string[] names = name.Split(' ');
@@ -64,12 +65,14 @@ namespace JustiCal
 
                 if (!(birthDate == null))
                     BirthDate = birthDate;
-                if (!(morada == null))
-                    Morada = morada;
-                if (!(contactos == null))
-                    Contactos = new List<ContactoTelefonico>();
+                if (!(moradas == null))
+                    Moradas = moradas;
                 else
+                    Moradas = new List<Morada>();
+                if (!(contactos == null))
                     Contactos = contactos;
+                else
+                    Contactos = new List<ContactoTelefonico>();
                 if (!(mailAddress == null))
                     EmailAddress = mailAddress;
                 Filiacao = new string[] { pai, mae };
