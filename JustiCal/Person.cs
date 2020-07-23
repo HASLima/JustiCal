@@ -103,7 +103,7 @@ namespace JustiCal
             public string Nr { get; set; }
 
 
-            public Militar(string posto, string arma, string nr, Person person) : base(person.getFullName(), person.Masculino, person.IdDocuments, person.BirthDate, person.Morada, person.Contactos, person.EmailAddress, person.Filiacao[0], person.Filiacao[1], person.Naturalidade, person.Nacionalidade)
+            public Militar(string posto, string arma, string nr, Person person) : base(person.getFullName(), person.Masculino, person.IdDocuments, person.BirthDate, person.Moradas, person.Contactos, person.EmailAddress, person.Filiacao[0], person.Filiacao[1], person.Naturalidade, person.Nacionalidade)
             {
                 Posto = posto;
                 Arma = arma;
