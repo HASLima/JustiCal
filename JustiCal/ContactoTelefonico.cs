@@ -18,6 +18,9 @@ namespace JustiCal
 		{
             public string Numero { get; set; }
             public string Indicativo { get; set; }
+            public string Detentor { get; set; } //Serve para descrever quem poderá atender o contacto telefónico a ser criado. Principalmente para contactos de emergência. Ex: Sr. Carlos Santos (pai)
+
+            public string Descricao { get; set; } //Serve para descrever o contacto telefónico a ser criado. Por exemplo: Principal, Fixo, Emergência, Pais
             public string Pais
             {
                 get
@@ -55,11 +58,19 @@ namespace JustiCal
                 }
             }
 
-
-            public ContactoTelefonico(string numero, string indicativo = "351")
+            /// <summary>
+            /// Constructor de um contacto telefónico
+            /// </summary>
+            /// <param name="numero">Número de telefone. Uma string com o número de telefone, sem indicativo internacional</param>
+            /// <param name="descricao">Descrição do contacto. Uma string para descrever o contacto a ser criado. Ex: "Principal", "Fixo", "Emergência", "Pais de origem"...</param>
+            /// <param name="detentor">Detentor do contacto. Uma string para descrever quem poderá atender este contacto. Particularmente útil para contacto de emergência Ex: "Sr. Carlos (pai)"</param>
+            /// <param name="indicativo">Indicativo internacional. Uma string para o indicativo internacional, caso o número não seja Português. Ex: "+34"</param>
+            public ContactoTelefonico(string numero, string descricao, string detentor = null, string indicativo = "351")
             {
                 Numero = numero;
                 Indicativo = indicativo;
+                Descricao = descricao;
+                Detentor = detentor;
             }
             /// <summary>
             /// Returns the country name given a international dialer code
