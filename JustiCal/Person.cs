@@ -22,7 +22,7 @@ namespace JustiCal
             //public Morada Morada { get; set; }
             public List<Morada> Moradas { get; set; }
             public List<ContactoTelefonico> Contactos { get; set; }
-            public MailAddress EmailAddress { get; set; }
+            public EnderecoElectronico EmailAddress { get; set; }
             public string[] Filiacao;
             public string Naturalidade { get; set; }
             public string Nacionalidade { get; set; }
@@ -40,7 +40,7 @@ namespace JustiCal
             /// <param name="mae">Mother's FUllname</param>
             /// <param name="naturalidade">Naturality</param>
             /// <param name="nacionalidade">Nacionality</param>
-            public Person(string name, bool masculino, List<IdDocument> idDocuments = null, DateTime? birthDate = null, List<Morada> moradas = null, List<ContactoTelefonico> contactos = null, MailAddress mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
+            public Person(string name, bool masculino, List<IdDocument> idDocuments = null, DateTime? birthDate = null, List<Morada> moradas = null, List<ContactoTelefonico> contactos = null, EnderecoElectronico mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
             {
                 //Spliting FirstName, LastName and other names from name
                 string[] names = name.Split(' ');
