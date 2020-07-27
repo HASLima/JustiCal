@@ -68,6 +68,7 @@
     <Compile Include="AdicionarPessoaForm.Designer.cs">
       <DependentUpon>AdicionarPessoaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EnderecoElectronico.cs" />
     <Compile Include="ModelClass.cs" />
     <Compile Include="Morada.cs" />
     <Compile Include="ProcessoAA.cs" />

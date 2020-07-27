@@ -15,6 +15,7 @@ namespace JustiCal
         /// </summary>
         public class Morada
         {
+            public string Descricao { get; set; } //serve para descrever a morada. Ex: Principal, Pais, Pais de Origem...
             public string Arteria { get; set; }
             public string NomeArteria { get; set; }
             public string IdentificacaoPorta { get; set; }
@@ -32,6 +33,7 @@ namespace JustiCal
             /// <summary>
             /// Constructor for Morada
             /// </summary>
+            /// <param name="descricao">Descrição da morada a ser criada (ex: Principal, Pais, Pais de Origem...)</param>
             /// <param name="arteria">Artéria (ex: Rua, Praça, Travessa)</param>
             /// <param name="nomearteria">Nome da Artéria incluindo a preposição(ex: da Liberdade, Doutor Fernando Amado, António Alves)</param>
             /// <param name="identificacaoPorta">Número de policia, ou número de lote ou número de cci (ex: 44, lote 12, CCI 512)</param>
@@ -41,7 +43,7 @@ namespace JustiCal
             /// <param name="pais">País, por defeito é passado "Portugal"</param>
             /// <param name="localidade">Localidade. Só deve ser usado se o país não for Portugal (ex: Genk)</param>
             /// <param name="designacaoPostal">Designação Postal. Só deve ser usado se o país não for Portugal (ex: MAASEIK)</param>
-            public Morada(string arteria, string nomearteria, string identificacaoPorta, string identificacaoAlojamento, string codigoPostalCP4, string codigoPostalCP3, string pais = "Portugal", string localidade = null, string designacaoPostal = null)
+            public Morada(string descricao, string arteria, string nomearteria, string identificacaoPorta, string identificacaoAlojamento, string codigoPostalCP4, string codigoPostalCP3, string pais = "Portugal", string localidade = null, string designacaoPostal = null)
             {
                 Arteria = arteria;
                 NomeArteria = nomearteria;
