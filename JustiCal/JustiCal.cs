@@ -32,8 +32,13 @@ namespace JustiCal
 
             static void Main()
             {
+
+                AdicionarPessoaForm adicionarPessoaForm = new AdicionarPessoaForm();
+                adicionarPessoaForm.ShowDialog();
+                
+                
                 Controller controller = new Controller();
-                controller.View.ActivarUI();
+                //controller.View.ActivarUI();
 
                 Person oPerson2 = new Person("Andreia Sofia Saraiva dos Santos Lima", false, null, new DateTime(1987, 9, 13), new Morada("Rua", "Dias Lourenço", "10", null, "2925", "135"), new List<ContactoTelefonico> { new ContactoTelefonico("969654740") }, new System.Net.Mail.MailAddress("assantos.lima@gmail.com"), "José Carlos Santos", "Ana Paula Saraiva dos Santos", null, null);
                 CartaoDeCidadao cartaoDeCidadao = new CartaoDeCidadao("133683761ZX8", new DateTime(2021, 10, 01));
