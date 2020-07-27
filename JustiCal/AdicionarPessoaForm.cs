@@ -21,5 +21,10 @@ namespace JustiCal
         {
 
         }
+
+        private void birthDateDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
