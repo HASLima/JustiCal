@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdicionarPessoaForm));
             this.fullNameLabel = new System.Windows.Forms.Label();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
@@ -48,7 +49,30 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.criarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.coisoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // fullNameLabel
@@ -85,6 +109,7 @@
             // 
             resources.ApplyResources(this.birthDateLabel, "birthDateLabel");
             this.birthDateLabel.Name = "birthDateLabel";
+            this.birthDateLabel.Click += new System.EventHandler(this.birthDateLabel_Click);
             // 
             // birthDateDateTimePicker
             // 
@@ -140,6 +165,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.ContextMenuStrip = this.contextMenuStrip1;
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -162,10 +188,145 @@
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            resources.ApplyResources(this.checkBox2, "checkBox2");
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // textBox3
+            // 
+            resources.ApplyResources(this.textBox3, "textBox3");
+            this.textBox3.Name = "textBox3";
+            // 
+            // comboBox3
+            // 
+            resources.ApplyResources(this.comboBox3, "comboBox3");
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Name = "comboBox3";
+            // 
+            // comboBox4
+            // 
+            resources.ApplyResources(this.comboBox4, "comboBox4");
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Name = "comboBox4";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // textBox4
+            // 
+            resources.ApplyResources(this.textBox4, "textBox4");
+            this.textBox4.Name = "textBox4";
+            // 
+            // comboBox5
+            // 
+            resources.ApplyResources(this.comboBox5, "comboBox5");
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // comboBox6
+            // 
+            resources.ApplyResources(this.comboBox6, "comboBox6");
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Name = "comboBox6";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // comboBox7
+            // 
+            resources.ApplyResources(this.comboBox7, "comboBox7");
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Name = "comboBox7";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarDocumentoToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            // 
+            // criarDocumentoToolStripMenuItem
+            // 
+            this.criarDocumentoToolStripMenuItem.Name = "criarDocumentoToolStripMenuItem";
+            resources.ApplyResources(this.criarDocumentoToolStripMenuItem, "criarDocumentoToolStripMenuItem");
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.coisoToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            resources.ApplyResources(this.contextMenuStrip2, "contextMenuStrip2");
+            // 
+            // coisoToolStripMenuItem
+            // 
+            this.coisoToolStripMenuItem.Name = "coisoToolStripMenuItem";
+            resources.ApplyResources(this.coisoToolStripMenuItem, "coisoToolStripMenuItem");
+            // 
             // AdicionarPessoaForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBox7);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -184,6 +345,8 @@
             this.Name = "AdicionarPessoaForm";
             this.Load += new System.EventHandler(this.AdicionarPessoaForm_Load);
             this.tabControl1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +373,26 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem criarDocumentoToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem coisoToolStripMenuItem;
     }
 }

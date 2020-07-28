@@ -26,5 +26,15 @@ namespace JustiCal
         {
 
         }
+
+        private void birthDateLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
