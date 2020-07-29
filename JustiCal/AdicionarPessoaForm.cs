@@ -1,7 +1,9 @@
-﻿using System;
+﻿using JustiCal.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,26 @@ namespace JustiCal
         public AdicionarPessoaForm()
         {
             InitializeComponent();
+        }
+
+        List<object> listaDeDocumentos = new List<object>();
+
+        private void refreshIdDocumentsListBox()
+        {
+            IdDocumentsListBox.Items.Clear();
+            foreach (object item in listaDeDocumentos)
+            {
+                if (item is CartaoDeCidadao)
+                {
+                    CartaoDeCidadao cartao = item as CartaoDeCidadao;
+                IdDocumentsListBox.Items.Add(String.Format("CC {0}", cartao.DocumentNumber));
+                }
+                else if (item is BilheteDeIdentidade)
+                {
+                    BilheteDeIdentidade bilhete = item as BilheteDeIdentidade;
+                    IdDocumentsListBox.Items.Add(String.Format("BI {0}", bilhete.DocumentNumber));
+                }
+            }
         }
 
 
@@ -54,12 +76,21 @@ namespace JustiCal
             for (int i = list.Count-1;  i >= 0; i--)
             {
                 IdDocumentsListBox.Items.Remove(list[i]);
+                listaDeDocumentos.RemoveAt(i);
             }
-            //ListBox.SelectedIndexCollection list = listBox1.SelectedIndices;
-            //List<int> indexes = list.Cast<int>().ToList();
-            //foreach (int item in indexes)
+            refreshIdDocumentsListBox();
+        }
+
+        private void cartãoDeCidadãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdicionarCartaoDeCidadao adicionarCartaoDeCidadaoForm = new AdicionarCartaoDeCidadao();
+            DialogResult result = adicionarCartaoDeCidadaoForm.ShowDialog();
+            if (result == DialogResult.OK)
             {
+                Debug.WriteLine("Teste");
+                listaDeDocumentos.Add(adicionarCartaoDeCidadaoForm.cartao);
             }
+            refreshIdDocumentsListBox();
         }
     }
 }

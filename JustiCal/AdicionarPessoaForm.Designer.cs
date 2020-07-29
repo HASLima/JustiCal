@@ -200,6 +200,7 @@
             // 
             this.cartãoDeCidadãoToolStripMenuItem.Name = "cartãoDeCidadãoToolStripMenuItem";
             resources.ApplyResources(this.cartãoDeCidadãoToolStripMenuItem, "cartãoDeCidadãoToolStripMenuItem");
+            this.cartãoDeCidadãoToolStripMenuItem.Click += new System.EventHandler(this.cartãoDeCidadãoToolStripMenuItem_Click);
             // 
             // bilheteDeIdentidadeToolStripMenuItem
             // 

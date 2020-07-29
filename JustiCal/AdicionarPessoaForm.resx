@@ -580,7 +580,7 @@
     <value>Bilhete de Identidade</value>
   </data>
   <data name="criarDocumentoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="criarDocumentoToolStripMenuItem.Text" xml:space="preserve">
     <value>Criar Documento</value>
@@ -592,7 +592,7 @@
     <value>Apagar Documento</value>
   </data>
   <data name="IdDocumentsContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 48</value>
+    <value>181, 70</value>
   </data>
   <data name="&gt;&gt;IdDocumentsContextMenuStrip.Name" xml:space="preserve">
     <value>IdDocumentsContextMenuStrip</value>
@@ -1332,12 +1332,6 @@
   <metadata name="contextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>251, 11</value>
   </metadata>
-  <data name="coisoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 22</value>
-  </data>
-  <data name="coisoToolStripMenuItem.Text" xml:space="preserve">
-    <value>coiso</value>
-  </data>
   <data name="contextMenuStrip2.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 26</value>
   </data>
@@ -1346,6 +1340,12 @@
   </data>
   <data name="&gt;&gt;contextMenuStrip2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="coisoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 22</value>
+  </data>
+  <data name="coisoToolStripMenuItem.Text" xml:space="preserve">
+    <value>coiso</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
