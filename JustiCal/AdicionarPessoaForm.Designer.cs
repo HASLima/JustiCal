@@ -46,8 +46,11 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.IdDocumentsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.criarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apagarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.IdDocumentsListBox = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -70,14 +73,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.coisoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.apagarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cartãoDeCidadãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bilheteDeIdentidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
-            this.contextMenuStrip2.SuspendLayout();
+            this.IdDocumentsContextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // fullNameLabel
@@ -170,25 +172,51 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.ContextMenuStrip = this.contextMenuStrip1;
-            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.ContextMenuStrip = this.IdDocumentsContextMenuStrip;
+            this.tabPage1.Controls.Add(this.IdDocumentsListBox);
             this.tabPage1.Controls.Add(this.dataGridView1);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // contextMenuStrip1
+            // IdDocumentsContextMenuStrip
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.IdDocumentsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.IdDocumentsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.criarDocumentoToolStripMenuItem,
             this.apagarDocumentoToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            this.IdDocumentsContextMenuStrip.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.IdDocumentsContextMenuStrip, "IdDocumentsContextMenuStrip");
             // 
             // criarDocumentoToolStripMenuItem
             // 
+            this.criarDocumentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cartãoDeCidadãoToolStripMenuItem,
+            this.bilheteDeIdentidadeToolStripMenuItem});
             this.criarDocumentoToolStripMenuItem.Name = "criarDocumentoToolStripMenuItem";
             resources.ApplyResources(this.criarDocumentoToolStripMenuItem, "criarDocumentoToolStripMenuItem");
+            // 
+            // apagarDocumentoToolStripMenuItem
+            // 
+            this.apagarDocumentoToolStripMenuItem.Name = "apagarDocumentoToolStripMenuItem";
+            resources.ApplyResources(this.apagarDocumentoToolStripMenuItem, "apagarDocumentoToolStripMenuItem");
+            this.apagarDocumentoToolStripMenuItem.Click += new System.EventHandler(this.apagarDocumentoToolStripMenuItem_Click);
+            // 
+            // IdDocumentsListBox
+            // 
+            resources.ApplyResources(this.IdDocumentsListBox, "IdDocumentsListBox");
+            this.IdDocumentsListBox.FormattingEnabled = true;
+            this.IdDocumentsListBox.Name = "IdDocumentsListBox";
+            this.IdDocumentsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             // 
             // tabPage2
             // 
@@ -305,6 +333,7 @@
             // 
             // contextMenuStrip2
             // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.coisoToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
@@ -315,27 +344,15 @@
             this.coisoToolStripMenuItem.Name = "coisoToolStripMenuItem";
             resources.ApplyResources(this.coisoToolStripMenuItem, "coisoToolStripMenuItem");
             // 
-            // dataGridView1
+            // cartãoDeCidadãoToolStripMenuItem
             // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
+            this.cartãoDeCidadãoToolStripMenuItem.Name = "cartãoDeCidadãoToolStripMenuItem";
+            resources.ApplyResources(this.cartãoDeCidadãoToolStripMenuItem, "cartãoDeCidadãoToolStripMenuItem");
             // 
-            // listBox1
+            // bilheteDeIdentidadeToolStripMenuItem
             // 
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Name = "listBox1";
-            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            // 
-            // apagarDocumentoToolStripMenuItem
-            // 
-            this.apagarDocumentoToolStripMenuItem.Name = "apagarDocumentoToolStripMenuItem";
-            resources.ApplyResources(this.apagarDocumentoToolStripMenuItem, "apagarDocumentoToolStripMenuItem");
-            this.apagarDocumentoToolStripMenuItem.Click += new System.EventHandler(this.apagarDocumentoToolStripMenuItem_Click);
+            this.bilheteDeIdentidadeToolStripMenuItem.Name = "bilheteDeIdentidadeToolStripMenuItem";
+            resources.ApplyResources(this.bilheteDeIdentidadeToolStripMenuItem, "bilheteDeIdentidadeToolStripMenuItem");
             // 
             // AdicionarPessoaForm
             // 
@@ -377,9 +394,9 @@
             this.Load += new System.EventHandler(this.AdicionarPessoaForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.contextMenuStrip2.ResumeLayout(false);
+            this.IdDocumentsContextMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,12 +440,14 @@
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip IdDocumentsContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem criarDocumentoToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem coisoToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox IdDocumentsListBox;
         private System.Windows.Forms.ToolStripMenuItem apagarDocumentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cartãoDeCidadãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bilheteDeIdentidadeToolStripMenuItem;
     }
 }

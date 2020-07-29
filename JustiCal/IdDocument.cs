@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace JustiCal
@@ -15,6 +16,15 @@ namespace JustiCal
                 Passaporte = 3,
                 TituloDeResidencia = 4
             }
+
+            public readonly Dictionary<int, string> DocumentTypes = new Dictionary<int, string>()
+            {
+                {0, "Cartão de Cidadão"},
+                {1, "Bilhete de Identidade"},
+                {2, "Bilhete de Identidade Militar"},
+                {3, "Passaporte"},
+                {4, "Título de Residência"}
+            };
 
             public string DocumentNumber { get; set; }
             public DateTime? ExpiryDate { get; set; }
