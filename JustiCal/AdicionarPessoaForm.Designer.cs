@@ -48,6 +48,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.IdDocumentsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.criarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cartãoDeCidadãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bilheteDeIdentidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apagarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.IdDocumentsListBox = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -73,8 +75,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.coisoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cartãoDeCidadãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bilheteDeIdentidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.IdDocumentsContextMenuStrip.SuspendLayout();
@@ -195,6 +195,16 @@
             this.bilheteDeIdentidadeToolStripMenuItem});
             this.criarDocumentoToolStripMenuItem.Name = "criarDocumentoToolStripMenuItem";
             resources.ApplyResources(this.criarDocumentoToolStripMenuItem, "criarDocumentoToolStripMenuItem");
+            // 
+            // cartãoDeCidadãoToolStripMenuItem
+            // 
+            this.cartãoDeCidadãoToolStripMenuItem.Name = "cartãoDeCidadãoToolStripMenuItem";
+            resources.ApplyResources(this.cartãoDeCidadãoToolStripMenuItem, "cartãoDeCidadãoToolStripMenuItem");
+            // 
+            // bilheteDeIdentidadeToolStripMenuItem
+            // 
+            this.bilheteDeIdentidadeToolStripMenuItem.Name = "bilheteDeIdentidadeToolStripMenuItem";
+            resources.ApplyResources(this.bilheteDeIdentidadeToolStripMenuItem, "bilheteDeIdentidadeToolStripMenuItem");
             // 
             // apagarDocumentoToolStripMenuItem
             // 
@@ -343,16 +353,6 @@
             // 
             this.coisoToolStripMenuItem.Name = "coisoToolStripMenuItem";
             resources.ApplyResources(this.coisoToolStripMenuItem, "coisoToolStripMenuItem");
-            // 
-            // cartãoDeCidadãoToolStripMenuItem
-            // 
-            this.cartãoDeCidadãoToolStripMenuItem.Name = "cartãoDeCidadãoToolStripMenuItem";
-            resources.ApplyResources(this.cartãoDeCidadãoToolStripMenuItem, "cartãoDeCidadãoToolStripMenuItem");
-            // 
-            // bilheteDeIdentidadeToolStripMenuItem
-            // 
-            this.bilheteDeIdentidadeToolStripMenuItem.Name = "bilheteDeIdentidadeToolStripMenuItem";
-            resources.ApplyResources(this.bilheteDeIdentidadeToolStripMenuItem, "bilheteDeIdentidadeToolStripMenuItem");
             // 
             // AdicionarPessoaForm
             // 
