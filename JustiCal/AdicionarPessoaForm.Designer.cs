@@ -123,6 +123,7 @@
             resources.ApplyResources(this.birthDateDateTimePicker, "birthDateDateTimePicker");
             this.birthDateDateTimePicker.Name = "birthDateDateTimePicker";
             this.birthDateDateTimePicker.ValueChanged += new System.EventHandler(this.birthDateDateTimePicker_ValueChanged);
+            this.birthDateDateTimePicker.Validating += new System.ComponentModel.CancelEventHandler(this.birthDateDateTimePicker_Validating);
             // 
             // comboBox1
             // 

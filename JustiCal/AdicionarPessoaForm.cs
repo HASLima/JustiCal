@@ -20,7 +20,9 @@ namespace JustiCal
         }
 
         List<object> listaDeDocumentos = new List<object>();
-
+        /// <summary>
+        /// Apaga e volta a preencher os items da IdDocumentsListBox
+        /// </summary>
         private void refreshIdDocumentsListBox()
         {
             IdDocumentsListBox.Items.Clear();
@@ -37,6 +39,7 @@ namespace JustiCal
                     IdDocumentsListBox.Items.Add(String.Format("BI {0}", bilhete.DocumentNumber));
                 }
             }
+            Debug.WriteLine(String.Format("listaDeDcoumentos.Count = {0}", listaDeDocumentos.Count));
         }
 
 
@@ -91,6 +94,18 @@ namespace JustiCal
                 listaDeDocumentos.Add(adicionarCartaoDeCidadaoForm.cartao);
             }
             refreshIdDocumentsListBox();
+        }
+
+        private void birthDateDateTimePicker_Validating(object sender, CancelEventArgs e)
+        {
+            if (birthDateDateTimePicker.Value > DateTime.Now)
+            {
+                birthDateDateTimePicker.Font = new Font("Lucida Console", 10, FontStyle.Strikeout, GraphicsUnit.Point);
+                e.Cancel = true;
+            }
+            else
+                birthDateDateTimePicker.Font = new Font("Lucida Console", 10, FontStyle.Regular, GraphicsUnit.Point);
+
         }
     }
 }
