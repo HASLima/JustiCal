@@ -66,6 +66,12 @@
     <Compile Include="AdicionarCartaoDeCidadao.Designer.cs">
       <DependentUpon>AdicionarCartaoDeCidadao.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdicionarMorada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarMorada.Designer.cs">
+      <DependentUpon>AdicionarMorada.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContactoTelefonico.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="AdicionarPessoaForm.cs">
@@ -97,6 +103,9 @@
     <Compile Include="ViewClass.cs" />
     <EmbeddedResource Include="AdicionarCartaoDeCidadao.resx">
       <DependentUpon>AdicionarCartaoDeCidadao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarMorada.resx">
+      <DependentUpon>AdicionarMorada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
