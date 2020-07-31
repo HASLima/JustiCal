@@ -66,6 +66,18 @@
     <Compile Include="AdicionarCartaoDeCidadao.Designer.cs">
       <DependentUpon>AdicionarCartaoDeCidadao.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdicionarContactoTelefonico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarContactoTelefonico.Designer.cs">
+      <DependentUpon>AdicionarContactoTelefonico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarEnderecoEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarEnderecoEmail.Designer.cs">
+      <DependentUpon>AdicionarEnderecoEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdicionarMorada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,12 @@
     <Compile Include="ViewClass.cs" />
     <EmbeddedResource Include="AdicionarCartaoDeCidadao.resx">
       <DependentUpon>AdicionarCartaoDeCidadao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarContactoTelefonico.resx">
+      <DependentUpon>AdicionarContactoTelefonico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarEnderecoEmail.resx">
+      <DependentUpon>AdicionarEnderecoEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdicionarMorada.resx">
       <DependentUpon>AdicionarMorada.cs</DependentUpon>
