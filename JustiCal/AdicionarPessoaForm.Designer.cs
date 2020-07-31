@@ -73,13 +73,22 @@
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.AdressesContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.coisoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apagarMoradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ContactsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.criarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apagarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EmailsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.criarEMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apagarEMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.IdDocumentsContextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.contextMenuStrip2.SuspendLayout();
+            this.AdressesContextMenuStrip.SuspendLayout();
+            this.ContactsContextMenuStrip.SuspendLayout();
+            this.EmailsContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // fullNameLabel
@@ -232,18 +241,21 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.ContextMenuStrip = this.AdressesContextMenuStrip;
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
+            this.tabPage3.ContextMenuStrip = this.AdressesContextMenuStrip;
             resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
+            this.tabPage4.ContextMenuStrip = this.EmailsContextMenuStrip;
             resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -343,18 +355,60 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // contextMenuStrip2
+            // AdressesContextMenuStrip
             // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.coisoToolStripMenuItem});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            resources.ApplyResources(this.contextMenuStrip2, "contextMenuStrip2");
+            this.AdressesContextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.AdressesContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.coisoToolStripMenuItem,
+            this.apagarMoradaToolStripMenuItem});
+            this.AdressesContextMenuStrip.Name = "contextMenuStrip2";
+            resources.ApplyResources(this.AdressesContextMenuStrip, "AdressesContextMenuStrip");
             // 
             // coisoToolStripMenuItem
             // 
             this.coisoToolStripMenuItem.Name = "coisoToolStripMenuItem";
             resources.ApplyResources(this.coisoToolStripMenuItem, "coisoToolStripMenuItem");
+            // 
+            // apagarMoradaToolStripMenuItem
+            // 
+            this.apagarMoradaToolStripMenuItem.Name = "apagarMoradaToolStripMenuItem";
+            resources.ApplyResources(this.apagarMoradaToolStripMenuItem, "apagarMoradaToolStripMenuItem");
+            // 
+            // ContactsContextMenuStrip
+            // 
+            this.ContactsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarContactoToolStripMenuItem,
+            this.apagarContactoToolStripMenuItem});
+            this.ContactsContextMenuStrip.Name = "ContactsContextMenuStrip";
+            resources.ApplyResources(this.ContactsContextMenuStrip, "ContactsContextMenuStrip");
+            // 
+            // criarContactoToolStripMenuItem
+            // 
+            this.criarContactoToolStripMenuItem.Name = "criarContactoToolStripMenuItem";
+            resources.ApplyResources(this.criarContactoToolStripMenuItem, "criarContactoToolStripMenuItem");
+            // 
+            // apagarContactoToolStripMenuItem
+            // 
+            this.apagarContactoToolStripMenuItem.Name = "apagarContactoToolStripMenuItem";
+            resources.ApplyResources(this.apagarContactoToolStripMenuItem, "apagarContactoToolStripMenuItem");
+            // 
+            // EmailsContextMenuStrip
+            // 
+            this.EmailsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarEMailToolStripMenuItem,
+            this.apagarEMailToolStripMenuItem});
+            this.EmailsContextMenuStrip.Name = "EmailsContextMenuStrip";
+            resources.ApplyResources(this.EmailsContextMenuStrip, "EmailsContextMenuStrip");
+            // 
+            // criarEMailToolStripMenuItem
+            // 
+            this.criarEMailToolStripMenuItem.Name = "criarEMailToolStripMenuItem";
+            resources.ApplyResources(this.criarEMailToolStripMenuItem, "criarEMailToolStripMenuItem");
+            // 
+            // apagarEMailToolStripMenuItem
+            // 
+            this.apagarEMailToolStripMenuItem.Name = "apagarEMailToolStripMenuItem";
+            resources.ApplyResources(this.apagarEMailToolStripMenuItem, "apagarEMailToolStripMenuItem");
             // 
             // AdicionarPessoaForm
             // 
@@ -398,7 +452,9 @@
             this.tabPage1.ResumeLayout(false);
             this.IdDocumentsContextMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.contextMenuStrip2.ResumeLayout(false);
+            this.AdressesContextMenuStrip.ResumeLayout(false);
+            this.ContactsContextMenuStrip.ResumeLayout(false);
+            this.EmailsContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,12 +500,19 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ContextMenuStrip IdDocumentsContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem criarDocumentoToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ContextMenuStrip AdressesContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem coisoToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ListBox IdDocumentsListBox;
         private System.Windows.Forms.ToolStripMenuItem apagarDocumentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cartãoDeCidadãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bilheteDeIdentidadeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem apagarMoradaToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip ContactsContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem criarContactoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem apagarContactoToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip EmailsContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem criarEMailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem apagarEMailToolStripMenuItem;
     }
 }
