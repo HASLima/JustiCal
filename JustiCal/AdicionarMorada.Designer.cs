@@ -249,6 +249,7 @@
             this.Controls.Add(this.descricaoLabel);
             this.Name = "AdicionarMorada";
             this.Text = "Adicionar Morada";
+            this.Load += new System.EventHandler(this.AdicionarMorada_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

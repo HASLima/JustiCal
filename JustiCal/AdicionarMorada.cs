@@ -16,5 +16,10 @@ namespace JustiCal
         {
             InitializeComponent();
         }
+
+        private void AdicionarMorada_Load(object sender, EventArgs e)
+        {
+            countryComboBox.Text = "Portugal";
+        }
     }
 }
