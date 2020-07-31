@@ -37,7 +37,7 @@ namespace JustiCal
             /// <param name="contactos">A list of contacts</param>
             /// <param name="mailAddress">The email address</param>
             /// <param name="pai">Father's Fullname</param>
-            /// <param name="mae">Mother's FUllname</param>
+            /// <param name="mae">Mother's Fullname</param>
             /// <param name="naturalidade">Naturality</param>
             /// <param name="nacionalidade">Nacionality</param>
             public Person(string name, bool masculino, List<IdDocument> idDocuments = null, DateTime? birthDate = null, List<Morada> moradas = null, List<ContactoTelefonico> contactos = null, EnderecoElectronico mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
