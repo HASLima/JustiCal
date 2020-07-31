@@ -32,18 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdicionarPessoaForm));
             this.fullNameLabel = new System.Windows.Forms.Label();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.filiacao1TextBox = new System.Windows.Forms.TextBox();
+            this.filiacao1Label = new System.Windows.Forms.Label();
+            this.filiacao2TextBox = new System.Windows.Forms.TextBox();
+            this.filiacao2Label = new System.Windows.Forms.Label();
             this.birthDateLabel = new System.Windows.Forms.Label();
             this.birthDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.naturalidadeComboBox = new System.Windows.Forms.ComboBox();
+            this.naturalidadeLabel = new System.Windows.Forms.Label();
+            this.nacionalidadeLabel = new System.Windows.Forms.Label();
+            this.nacionalidadeComboBox = new System.Windows.Forms.ComboBox();
+            this.masculinoRadioButton = new System.Windows.Forms.RadioButton();
+            this.femininoRadioButton = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.IdDocumentsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -52,43 +52,47 @@
             this.bilheteDeIdentidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apagarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.IdDocumentsListBox = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.AdressesContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.apagarMoradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.AdressesContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.coisoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.apagarMoradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ContactsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.criarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.apagarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EmailsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.criarEMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apagarEMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.militarCheckBox = new System.Windows.Forms.CheckBox();
+            this.alunoCheckBox = new System.Windows.Forms.CheckBox();
+            this.postoLabel = new System.Windows.Forms.Label();
+            this.armaLabel = new System.Windows.Forms.Label();
+            this.nrLabel = new System.Windows.Forms.Label();
+            this.nrTextBox = new System.Windows.Forms.TextBox();
+            this.postoComboBox = new System.Windows.Forms.ComboBox();
+            this.armaComboBox = new System.Windows.Forms.ComboBox();
+            this.nrCorpoLabel = new System.Windows.Forms.Label();
+            this.nrCorpoTextBox = new System.Windows.Forms.TextBox();
+            this.cursoComboBox = new System.Windows.Forms.ComboBox();
+            this.cursoLabel = new System.Windows.Forms.Label();
+            this.companhiaComboBox = new System.Windows.Forms.ComboBox();
+            this.companhiaLabel = new System.Windows.Forms.Label();
+            this.origemComboBox = new System.Windows.Forms.ComboBox();
+            this.origemLabel = new System.Windows.Forms.Label();
+            this.submeterButton = new System.Windows.Forms.Button();
+            this.ContactsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.criarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apagarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moradasListBox = new System.Windows.Forms.ListBox();
+            this.contactosTelefonicosListBox = new System.Windows.Forms.ListBox();
+            this.emailsListBox = new System.Windows.Forms.ListBox();
+            this.criarMoradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.IdDocumentsContextMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.AdressesContextMenuStrip.SuspendLayout();
-            this.ContactsContextMenuStrip.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.EmailsContextMenuStrip.SuspendLayout();
+            this.ContactsContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // fullNameLabel
@@ -101,25 +105,25 @@
             resources.ApplyResources(this.fullNameTextBox, "fullNameTextBox");
             this.fullNameTextBox.Name = "fullNameTextBox";
             // 
-            // textBox1
+            // filiacao1TextBox
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.filiacao1TextBox, "filiacao1TextBox");
+            this.filiacao1TextBox.Name = "filiacao1TextBox";
             // 
-            // label1
+            // filiacao1Label
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.filiacao1Label, "filiacao1Label");
+            this.filiacao1Label.Name = "filiacao1Label";
             // 
-            // textBox2
+            // filiacao2TextBox
             // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
+            resources.ApplyResources(this.filiacao2TextBox, "filiacao2TextBox");
+            this.filiacao2TextBox.Name = "filiacao2TextBox";
             // 
-            // label2
+            // filiacao2Label
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.filiacao2Label, "filiacao2Label");
+            this.filiacao2Label.Name = "filiacao2Label";
             // 
             // birthDateLabel
             // 
@@ -134,41 +138,41 @@
             this.birthDateDateTimePicker.ValueChanged += new System.EventHandler(this.birthDateDateTimePicker_ValueChanged);
             this.birthDateDateTimePicker.Validating += new System.ComponentModel.CancelEventHandler(this.birthDateDateTimePicker_Validating);
             // 
-            // comboBox1
+            // naturalidadeComboBox
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Name = "comboBox1";
+            resources.ApplyResources(this.naturalidadeComboBox, "naturalidadeComboBox");
+            this.naturalidadeComboBox.FormattingEnabled = true;
+            this.naturalidadeComboBox.Name = "naturalidadeComboBox";
             // 
-            // label6
+            // naturalidadeLabel
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.naturalidadeLabel, "naturalidadeLabel");
+            this.naturalidadeLabel.Name = "naturalidadeLabel";
             // 
-            // label7
+            // nacionalidadeLabel
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.nacionalidadeLabel, "nacionalidadeLabel");
+            this.nacionalidadeLabel.Name = "nacionalidadeLabel";
             // 
-            // comboBox2
+            // nacionalidadeComboBox
             // 
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Name = "comboBox2";
+            resources.ApplyResources(this.nacionalidadeComboBox, "nacionalidadeComboBox");
+            this.nacionalidadeComboBox.FormattingEnabled = true;
+            this.nacionalidadeComboBox.Name = "nacionalidadeComboBox";
             // 
-            // radioButton1
+            // masculinoRadioButton
             // 
-            resources.ApplyResources(this.radioButton1, "radioButton1");
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.masculinoRadioButton, "masculinoRadioButton");
+            this.masculinoRadioButton.Name = "masculinoRadioButton";
+            this.masculinoRadioButton.TabStop = true;
+            this.masculinoRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // femininoRadioButton
             // 
-            resources.ApplyResources(this.radioButton2, "radioButton2");
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.femininoRadioButton, "femininoRadioButton");
+            this.femininoRadioButton.Name = "femininoRadioButton";
+            this.femininoRadioButton.TabStop = true;
+            this.femininoRadioButton.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -184,7 +188,6 @@
             // 
             this.tabPage1.ContextMenuStrip = this.IdDocumentsContextMenuStrip;
             this.tabPage1.Controls.Add(this.IdDocumentsListBox);
-            this.tabPage1.Controls.Add(this.dataGridView1);
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -229,26 +232,34 @@
             this.IdDocumentsListBox.FormattingEnabled = true;
             this.IdDocumentsListBox.Name = "IdDocumentsListBox";
             this.IdDocumentsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
+            this.IdDocumentsListBox.TabStop = false;
             // 
             // tabPage2
             // 
             this.tabPage2.ContextMenuStrip = this.AdressesContextMenuStrip;
+            this.tabPage2.Controls.Add(this.moradasListBox);
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // AdressesContextMenuStrip
+            // 
+            this.AdressesContextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.AdressesContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarMoradaToolStripMenuItem,
+            this.apagarMoradaToolStripMenuItem});
+            this.AdressesContextMenuStrip.Name = "contextMenuStrip2";
+            resources.ApplyResources(this.AdressesContextMenuStrip, "AdressesContextMenuStrip");
+            // 
+            // apagarMoradaToolStripMenuItem
+            // 
+            this.apagarMoradaToolStripMenuItem.Name = "apagarMoradaToolStripMenuItem";
+            resources.ApplyResources(this.apagarMoradaToolStripMenuItem, "apagarMoradaToolStripMenuItem");
+            // 
             // tabPage3
             // 
             this.tabPage3.ContextMenuStrip = this.AdressesContextMenuStrip;
+            this.tabPage3.Controls.Add(this.contactosTelefonicosListBox);
             resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -256,141 +267,10 @@
             // tabPage4
             // 
             this.tabPage4.ContextMenuStrip = this.EmailsContextMenuStrip;
+            this.tabPage4.Controls.Add(this.emailsListBox);
             resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            resources.ApplyResources(this.checkBox2, "checkBox2");
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // textBox3
-            // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.Name = "textBox3";
-            // 
-            // comboBox3
-            // 
-            resources.ApplyResources(this.comboBox3, "comboBox3");
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Name = "comboBox3";
-            // 
-            // comboBox4
-            // 
-            resources.ApplyResources(this.comboBox4, "comboBox4");
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Name = "comboBox4";
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // textBox4
-            // 
-            resources.ApplyResources(this.textBox4, "textBox4");
-            this.textBox4.Name = "textBox4";
-            // 
-            // comboBox5
-            // 
-            resources.ApplyResources(this.comboBox5, "comboBox5");
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
-            // 
-            // comboBox6
-            // 
-            resources.ApplyResources(this.comboBox6, "comboBox6");
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Name = "comboBox6";
-            // 
-            // label10
-            // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
-            // 
-            // comboBox7
-            // 
-            resources.ApplyResources(this.comboBox7, "comboBox7");
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Name = "comboBox7";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // AdressesContextMenuStrip
-            // 
-            this.AdressesContextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.AdressesContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.coisoToolStripMenuItem,
-            this.apagarMoradaToolStripMenuItem});
-            this.AdressesContextMenuStrip.Name = "contextMenuStrip2";
-            resources.ApplyResources(this.AdressesContextMenuStrip, "AdressesContextMenuStrip");
-            // 
-            // coisoToolStripMenuItem
-            // 
-            this.coisoToolStripMenuItem.Name = "coisoToolStripMenuItem";
-            resources.ApplyResources(this.coisoToolStripMenuItem, "coisoToolStripMenuItem");
-            // 
-            // apagarMoradaToolStripMenuItem
-            // 
-            this.apagarMoradaToolStripMenuItem.Name = "apagarMoradaToolStripMenuItem";
-            resources.ApplyResources(this.apagarMoradaToolStripMenuItem, "apagarMoradaToolStripMenuItem");
-            // 
-            // ContactsContextMenuStrip
-            // 
-            this.ContactsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.criarContactoToolStripMenuItem,
-            this.apagarContactoToolStripMenuItem});
-            this.ContactsContextMenuStrip.Name = "ContactsContextMenuStrip";
-            resources.ApplyResources(this.ContactsContextMenuStrip, "ContactsContextMenuStrip");
-            // 
-            // criarContactoToolStripMenuItem
-            // 
-            this.criarContactoToolStripMenuItem.Name = "criarContactoToolStripMenuItem";
-            resources.ApplyResources(this.criarContactoToolStripMenuItem, "criarContactoToolStripMenuItem");
-            // 
-            // apagarContactoToolStripMenuItem
-            // 
-            this.apagarContactoToolStripMenuItem.Name = "apagarContactoToolStripMenuItem";
-            resources.ApplyResources(this.apagarContactoToolStripMenuItem, "apagarContactoToolStripMenuItem");
             // 
             // EmailsContextMenuStrip
             // 
@@ -410,40 +290,180 @@
             this.apagarEMailToolStripMenuItem.Name = "apagarEMailToolStripMenuItem";
             resources.ApplyResources(this.apagarEMailToolStripMenuItem, "apagarEMailToolStripMenuItem");
             // 
+            // militarCheckBox
+            // 
+            resources.ApplyResources(this.militarCheckBox, "militarCheckBox");
+            this.militarCheckBox.Name = "militarCheckBox";
+            this.militarCheckBox.UseVisualStyleBackColor = true;
+            this.militarCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // alunoCheckBox
+            // 
+            resources.ApplyResources(this.alunoCheckBox, "alunoCheckBox");
+            this.alunoCheckBox.Name = "alunoCheckBox";
+            this.alunoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // postoLabel
+            // 
+            resources.ApplyResources(this.postoLabel, "postoLabel");
+            this.postoLabel.Name = "postoLabel";
+            // 
+            // armaLabel
+            // 
+            resources.ApplyResources(this.armaLabel, "armaLabel");
+            this.armaLabel.Name = "armaLabel";
+            // 
+            // nrLabel
+            // 
+            resources.ApplyResources(this.nrLabel, "nrLabel");
+            this.nrLabel.Name = "nrLabel";
+            // 
+            // nrTextBox
+            // 
+            resources.ApplyResources(this.nrTextBox, "nrTextBox");
+            this.nrTextBox.Name = "nrTextBox";
+            // 
+            // postoComboBox
+            // 
+            resources.ApplyResources(this.postoComboBox, "postoComboBox");
+            this.postoComboBox.FormattingEnabled = true;
+            this.postoComboBox.Name = "postoComboBox";
+            // 
+            // armaComboBox
+            // 
+            resources.ApplyResources(this.armaComboBox, "armaComboBox");
+            this.armaComboBox.FormattingEnabled = true;
+            this.armaComboBox.Name = "armaComboBox";
+            // 
+            // nrCorpoLabel
+            // 
+            resources.ApplyResources(this.nrCorpoLabel, "nrCorpoLabel");
+            this.nrCorpoLabel.Name = "nrCorpoLabel";
+            // 
+            // nrCorpoTextBox
+            // 
+            resources.ApplyResources(this.nrCorpoTextBox, "nrCorpoTextBox");
+            this.nrCorpoTextBox.Name = "nrCorpoTextBox";
+            // 
+            // cursoComboBox
+            // 
+            resources.ApplyResources(this.cursoComboBox, "cursoComboBox");
+            this.cursoComboBox.FormattingEnabled = true;
+            this.cursoComboBox.Name = "cursoComboBox";
+            this.cursoComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // cursoLabel
+            // 
+            resources.ApplyResources(this.cursoLabel, "cursoLabel");
+            this.cursoLabel.Name = "cursoLabel";
+            // 
+            // companhiaComboBox
+            // 
+            resources.ApplyResources(this.companhiaComboBox, "companhiaComboBox");
+            this.companhiaComboBox.FormattingEnabled = true;
+            this.companhiaComboBox.Name = "companhiaComboBox";
+            // 
+            // companhiaLabel
+            // 
+            resources.ApplyResources(this.companhiaLabel, "companhiaLabel");
+            this.companhiaLabel.Name = "companhiaLabel";
+            // 
+            // origemComboBox
+            // 
+            resources.ApplyResources(this.origemComboBox, "origemComboBox");
+            this.origemComboBox.FormattingEnabled = true;
+            this.origemComboBox.Name = "origemComboBox";
+            // 
+            // origemLabel
+            // 
+            resources.ApplyResources(this.origemLabel, "origemLabel");
+            this.origemLabel.Name = "origemLabel";
+            // 
+            // submeterButton
+            // 
+            resources.ApplyResources(this.submeterButton, "submeterButton");
+            this.submeterButton.Name = "submeterButton";
+            this.submeterButton.UseVisualStyleBackColor = true;
+            this.submeterButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ContactsContextMenuStrip
+            // 
+            this.ContactsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarContactoToolStripMenuItem,
+            this.apagarContactoToolStripMenuItem});
+            this.ContactsContextMenuStrip.Name = "ContactsContextMenuStrip";
+            resources.ApplyResources(this.ContactsContextMenuStrip, "ContactsContextMenuStrip");
+            // 
+            // criarContactoToolStripMenuItem
+            // 
+            this.criarContactoToolStripMenuItem.Name = "criarContactoToolStripMenuItem";
+            resources.ApplyResources(this.criarContactoToolStripMenuItem, "criarContactoToolStripMenuItem");
+            // 
+            // apagarContactoToolStripMenuItem
+            // 
+            this.apagarContactoToolStripMenuItem.Name = "apagarContactoToolStripMenuItem";
+            resources.ApplyResources(this.apagarContactoToolStripMenuItem, "apagarContactoToolStripMenuItem");
+            // 
+            // moradasListBox
+            // 
+            this.moradasListBox.ContextMenuStrip = this.AdressesContextMenuStrip;
+            resources.ApplyResources(this.moradasListBox, "moradasListBox");
+            this.moradasListBox.FormattingEnabled = true;
+            this.moradasListBox.Name = "moradasListBox";
+            // 
+            // contactosTelefonicosListBox
+            // 
+            this.contactosTelefonicosListBox.ContextMenuStrip = this.ContactsContextMenuStrip;
+            resources.ApplyResources(this.contactosTelefonicosListBox, "contactosTelefonicosListBox");
+            this.contactosTelefonicosListBox.FormattingEnabled = true;
+            this.contactosTelefonicosListBox.Name = "contactosTelefonicosListBox";
+            // 
+            // emailsListBox
+            // 
+            this.emailsListBox.ContextMenuStrip = this.EmailsContextMenuStrip;
+            resources.ApplyResources(this.emailsListBox, "emailsListBox");
+            this.emailsListBox.FormattingEnabled = true;
+            this.emailsListBox.Name = "emailsListBox";
+            // 
+            // criarMoradaToolStripMenuItem
+            // 
+            this.criarMoradaToolStripMenuItem.Name = "criarMoradaToolStripMenuItem";
+            resources.ApplyResources(this.criarMoradaToolStripMenuItem, "criarMoradaToolStripMenuItem");
+            // 
             // AdicionarPessoaForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.submeterButton);
+            this.Controls.Add(this.origemComboBox);
+            this.Controls.Add(this.origemLabel);
+            this.Controls.Add(this.companhiaComboBox);
+            this.Controls.Add(this.companhiaLabel);
+            this.Controls.Add(this.cursoComboBox);
+            this.Controls.Add(this.cursoLabel);
+            this.Controls.Add(this.nrCorpoTextBox);
+            this.Controls.Add(this.nrCorpoLabel);
+            this.Controls.Add(this.armaComboBox);
+            this.Controls.Add(this.postoComboBox);
+            this.Controls.Add(this.nrTextBox);
+            this.Controls.Add(this.nrLabel);
+            this.Controls.Add(this.armaLabel);
+            this.Controls.Add(this.postoLabel);
+            this.Controls.Add(this.alunoCheckBox);
+            this.Controls.Add(this.militarCheckBox);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.femininoRadioButton);
+            this.Controls.Add(this.masculinoRadioButton);
+            this.Controls.Add(this.nacionalidadeLabel);
+            this.Controls.Add(this.nacionalidadeComboBox);
+            this.Controls.Add(this.naturalidadeLabel);
+            this.Controls.Add(this.naturalidadeComboBox);
             this.Controls.Add(this.birthDateDateTimePicker);
             this.Controls.Add(this.birthDateLabel);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.filiacao2TextBox);
+            this.Controls.Add(this.filiacao2Label);
+            this.Controls.Add(this.filiacao1TextBox);
+            this.Controls.Add(this.filiacao1Label);
             this.Controls.Add(this.fullNameTextBox);
             this.Controls.Add(this.fullNameLabel);
             this.Name = "AdicionarPessoaForm";
@@ -451,10 +471,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.IdDocumentsContextMenuStrip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.AdressesContextMenuStrip.ResumeLayout(false);
-            this.ContactsContextMenuStrip.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.EmailsContextMenuStrip.ResumeLayout(false);
+            this.ContactsContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,45 +486,43 @@
 
         private System.Windows.Forms.Label fullNameLabel;
         private System.Windows.Forms.TextBox fullNameTextBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox filiacao1TextBox;
+        private System.Windows.Forms.Label filiacao1Label;
+        private System.Windows.Forms.TextBox filiacao2TextBox;
+        private System.Windows.Forms.Label filiacao2Label;
         private System.Windows.Forms.Label birthDateLabel;
         private System.Windows.Forms.DateTimePicker birthDateDateTimePicker;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.ComboBox naturalidadeComboBox;
+        private System.Windows.Forms.Label naturalidadeLabel;
+        private System.Windows.Forms.Label nacionalidadeLabel;
+        private System.Windows.Forms.ComboBox nacionalidadeComboBox;
+        private System.Windows.Forms.RadioButton masculinoRadioButton;
+        private System.Windows.Forms.RadioButton femininoRadioButton;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox militarCheckBox;
+        private System.Windows.Forms.CheckBox alunoCheckBox;
+        private System.Windows.Forms.Label postoLabel;
+        private System.Windows.Forms.Label armaLabel;
+        private System.Windows.Forms.Label nrLabel;
+        private System.Windows.Forms.TextBox nrTextBox;
+        private System.Windows.Forms.ComboBox postoComboBox;
+        private System.Windows.Forms.ComboBox armaComboBox;
+        private System.Windows.Forms.Label nrCorpoLabel;
+        private System.Windows.Forms.TextBox nrCorpoTextBox;
+        private System.Windows.Forms.ComboBox cursoComboBox;
+        private System.Windows.Forms.Label cursoLabel;
+        private System.Windows.Forms.ComboBox companhiaComboBox;
+        private System.Windows.Forms.Label companhiaLabel;
+        private System.Windows.Forms.ComboBox origemComboBox;
+        private System.Windows.Forms.Label origemLabel;
+        private System.Windows.Forms.Button submeterButton;
         private System.Windows.Forms.ContextMenuStrip IdDocumentsContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem criarDocumentoToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip AdressesContextMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem coisoToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ListBox IdDocumentsListBox;
         private System.Windows.Forms.ToolStripMenuItem apagarDocumentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cartãoDeCidadãoToolStripMenuItem;
@@ -514,5 +534,9 @@
         private System.Windows.Forms.ContextMenuStrip EmailsContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem criarEMailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem apagarEMailToolStripMenuItem;
+        private System.Windows.Forms.ListBox moradasListBox;
+        private System.Windows.Forms.ListBox contactosTelefonicosListBox;
+        private System.Windows.Forms.ListBox emailsListBox;
+        private System.Windows.Forms.ToolStripMenuItem criarMoradaToolStripMenuItem;
     }
 }

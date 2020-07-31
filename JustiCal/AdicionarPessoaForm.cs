@@ -107,5 +107,13 @@ namespace JustiCal
                 birthDateDateTimePicker.Font = new Font("Lucida Console", 10, FontStyle.Regular, GraphicsUnit.Point);
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (militarCheckBox.Checked)
+            {
+
+            }
+        }
     }
 }
