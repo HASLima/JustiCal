@@ -32,7 +32,7 @@ namespace JustiCal
                 if (item is CartaoDeCidadao)
                 {
                     CartaoDeCidadao cartao = item as CartaoDeCidadao;
-                IdDocumentsListBox.Items.Add(String.Format("CC {0}", cartao.DocumentNumber));
+                    IdDocumentsListBox.Items.Add(String.Format("CC {0}", cartao.DocumentNumber));
                 }
                 else if (item is BilheteDeIdentidade)
                 {
@@ -87,7 +87,7 @@ namespace JustiCal
         private void apagarDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ListBox.SelectedObjectCollection list = IdDocumentsListBox.SelectedItems;
-            for (int i = list.Count-1;  i >= 0; i--)
+            for (int i = list.Count - 1; i >= 0; i--)
             {
                 IdDocumentsListBox.Items.Remove(list[i]);
                 listaDeDocumentos.RemoveAt(i);
@@ -121,10 +121,27 @@ namespace JustiCal
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (militarCheckBox.Checked)
+            alunoCheckBox.Visible = militarCheckBox.Checked;
+            alunoCheckBox.Enabled = militarCheckBox.Checked;
+            if (!militarCheckBox.Checked)
             {
-
+                alunoCheckBox.Checked = false;
             }
+
+            postoLabel.Visible = militarCheckBox.Checked;
+            postoLabel.Enabled = militarCheckBox.Checked;
+            postoComboBox.Visible = militarCheckBox.Checked;
+            postoComboBox.Enabled = militarCheckBox.Checked;
+
+            armaLabel.Visible = militarCheckBox.Checked;
+            armaLabel.Enabled = militarCheckBox.Checked;
+            armaComboBox.Visible = militarCheckBox.Checked;
+            armaComboBox.Enabled = militarCheckBox.Checked;
+
+            nrLabel.Visible = militarCheckBox.Checked;
+            nrLabel.Enabled = militarCheckBox.Checked;
+            nrTextBox.Visible = militarCheckBox.Checked;
+            nrTextBox.Enabled = militarCheckBox.Checked;
         }
 
         private void criarEMailToolStripMenuItem_Click(object sender, EventArgs e)
@@ -141,12 +158,37 @@ namespace JustiCal
         private void apagarEMailToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ListBox.SelectedObjectCollection list = emailsListBox.SelectedItems;
-            for (int i = list.Count-1; i >= 0; i--)
+            for (int i = list.Count - 1; i >= 0; i--)
             {
                 emailsListBox.Items.Remove(list[i]);
                 listaDeMails.RemoveAt(i);
             }
             refreshEmailAddressesListBox();
+        }
+
+        private void alunoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            nrCorpoLabel.Visible =
+                nrCorpoLabel.Enabled =
+                nrCorpoTextBox.Visible =
+                nrCorpoTextBox.Enabled = alunoCheckBox.Checked;
+
+            cursoLabel.Visible =
+                cursoLabel.Enabled =
+                cursoComboBox.Visible =
+                cursoComboBox.Enabled = alunoCheckBox.Checked;
+
+            companhiaLabel.Visible =
+                companhiaLabel.Enabled =
+                companhiaComboBox.Visible =
+                companhiaComboBox.Enabled = alunoCheckBox.Checked;
+
+            origemLabel.Visible =
+                origemLabel.Enabled =
+                origemComboBox.Visible =
+                origemComboBox.Enabled = alunoCheckBox.Checked;
+
+
         }
     }
 }

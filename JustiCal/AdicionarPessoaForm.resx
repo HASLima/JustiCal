@@ -564,33 +564,87 @@
   <data name="&gt;&gt;femininoRadioButton.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 66</value>
+  </data>
+  <data name="tabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="tabControl1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>667, 292</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>799, 292</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
   <metadata name="IdDocumentsContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>11, 11</value>
   </metadata>
-  <data name="cartãoDeCidadãoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 22</value>
-  </data>
-  <data name="cartãoDeCidadãoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cartão de Cidadão</value>
-  </data>
-  <data name="bilheteDeIdentidadeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 22</value>
-  </data>
-  <data name="bilheteDeIdentidadeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Bilhete de Identidade</value>
-  </data>
-  <data name="criarDocumentoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
-  </data>
-  <data name="criarDocumentoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Criar Documento</value>
-  </data>
-  <data name="apagarDocumentoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
-  </data>
-  <data name="apagarDocumentoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Apagar Documento</value>
-  </data>
   <data name="IdDocumentsContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 48</value>
   </data>
@@ -660,21 +714,33 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="criarDocumentoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="criarDocumentoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Criar Documento</value>
+  </data>
+  <data name="cartãoDeCidadãoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="cartãoDeCidadãoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cartão de Cidadão</value>
+  </data>
+  <data name="bilheteDeIdentidadeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="bilheteDeIdentidadeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bilhete de Identidade</value>
+  </data>
+  <data name="apagarDocumentoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="apagarDocumentoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Apagar Documento</value>
+  </data>
   <metadata name="AdressesContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>251, 11</value>
   </metadata>
-  <data name="criarMoradaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 22</value>
-  </data>
-  <data name="criarMoradaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Criar Morada</value>
-  </data>
-  <data name="apagarMoradaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 22</value>
-  </data>
-  <data name="apagarMoradaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Apagar Morada</value>
-  </data>
   <data name="AdressesContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 48</value>
   </data>
@@ -744,21 +810,21 @@
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="criarMoradaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 22</value>
+  </data>
+  <data name="criarMoradaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Criar Morada</value>
+  </data>
+  <data name="apagarMoradaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 22</value>
+  </data>
+  <data name="apagarMoradaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Apagar Morada</value>
+  </data>
   <metadata name="ContactsContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>480, 11</value>
   </metadata>
-  <data name="criarContactoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="criarContactoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Criar Contacto</value>
-  </data>
-  <data name="apagarContactoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="apagarContactoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Apagar Contacto</value>
-  </data>
   <data name="ContactsContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 48</value>
   </data>
@@ -828,23 +894,23 @@
   <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="criarContactoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="criarContactoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Criar Contacto</value>
+  </data>
+  <data name="apagarContactoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="apagarContactoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Apagar Contacto</value>
+  </data>
   <metadata name="EmailsContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>678, 11</value>
   </metadata>
-  <data name="criarEMailToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="criarEMailToolStripMenuItem.Text" xml:space="preserve">
-    <value>Criar E-Mail</value>
-  </data>
-  <data name="apagarEMailToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="apagarEMailToolStripMenuItem.Text" xml:space="preserve">
-    <value>Apagar E-Mail</value>
-  </data>
   <data name="EmailsContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 70</value>
+    <value>150, 48</value>
   </data>
   <data name="&gt;&gt;EmailsContextMenuStrip.Name" xml:space="preserve">
     <value>EmailsContextMenuStrip</value>
@@ -912,35 +978,17 @@
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="tabControl1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 10pt</value>
+  <data name="criarEMailToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
   </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 66</value>
+  <data name="criarEMailToolStripMenuItem.Text" xml:space="preserve">
+    <value>Criar E-Mail</value>
   </data>
-  <data name="tabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="apagarEMailToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
   </data>
-  <data name="tabControl1.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>667, 292</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>799, 292</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>21</value>
+  <data name="apagarEMailToolStripMenuItem.Text" xml:space="preserve">
+    <value>Apagar E-Mail</value>
   </data>
   <data name="militarCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -975,6 +1023,9 @@
   <data name="alunoCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="alunoCheckBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="alunoCheckBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
   </data>
@@ -993,6 +1044,9 @@
   <data name="alunoCheckBox.Text" xml:space="preserve">
     <value>Aluno(a)?</value>
   </data>
+  <data name="alunoCheckBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;alunoCheckBox.Name" xml:space="preserve">
     <value>alunoCheckBox</value>
   </data>
@@ -1007,6 +1061,9 @@
   </data>
   <data name="postoLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="postoLabel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="postoLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
@@ -1029,6 +1086,9 @@
   <data name="postoLabel.Text" xml:space="preserve">
     <value>Posto:</value>
   </data>
+  <data name="postoLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;postoLabel.Name" xml:space="preserve">
     <value>postoLabel</value>
   </data>
@@ -1043,6 +1103,9 @@
   </data>
   <data name="armaLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="armaLabel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="armaLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
@@ -1065,6 +1128,9 @@
   <data name="armaLabel.Text" xml:space="preserve">
     <value>Arma:</value>
   </data>
+  <data name="armaLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;armaLabel.Name" xml:space="preserve">
     <value>armaLabel</value>
   </data>
@@ -1079,6 +1145,9 @@
   </data>
   <data name="nrLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="nrLabel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="nrLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
@@ -1101,6 +1170,9 @@
   <data name="nrLabel.Text" xml:space="preserve">
     <value>NIM/NM:</value>
   </data>
+  <data name="nrLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;nrLabel.Name" xml:space="preserve">
     <value>nrLabel</value>
   </data>
@@ -1112,6 +1184,9 @@
   </data>
   <data name="&gt;&gt;nrLabel.ZOrder" xml:space="preserve">
     <value>16</value>
+  </data>
+  <data name="nrTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="nrTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Console, 10pt</value>
@@ -1128,6 +1203,9 @@
   <data name="nrTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
+  <data name="nrTextBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;nrTextBox.Name" xml:space="preserve">
     <value>nrTextBox</value>
   </data>
@@ -1139,6 +1217,9 @@
   </data>
   <data name="&gt;&gt;nrTextBox.ZOrder" xml:space="preserve">
     <value>15</value>
+  </data>
+  <data name="postoComboBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="postoComboBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Console, 10pt</value>
@@ -1152,6 +1233,9 @@
   <data name="postoComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
+  <data name="postoComboBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;postoComboBox.Name" xml:space="preserve">
     <value>postoComboBox</value>
   </data>
@@ -1164,6 +1248,9 @@
   <data name="&gt;&gt;postoComboBox.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <data name="armaComboBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="armaComboBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Console, 10pt</value>
   </data>
@@ -1175,6 +1262,9 @@
   </data>
   <data name="armaComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
+  </data>
+  <data name="armaComboBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;armaComboBox.Name" xml:space="preserve">
     <value>armaComboBox</value>
@@ -1190,6 +1280,9 @@
   </data>
   <data name="nrCorpoLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="nrCorpoLabel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="nrCorpoLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
@@ -1212,6 +1305,9 @@
   <data name="nrCorpoLabel.Text" xml:space="preserve">
     <value>N.º Corpo:</value>
   </data>
+  <data name="nrCorpoLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;nrCorpoLabel.Name" xml:space="preserve">
     <value>nrCorpoLabel</value>
   </data>
@@ -1223,6 +1319,9 @@
   </data>
   <data name="&gt;&gt;nrCorpoLabel.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="nrCorpoTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="nrCorpoTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Console, 10pt</value>
@@ -1239,6 +1338,9 @@
   <data name="nrCorpoTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
+  <data name="nrCorpoTextBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;nrCorpoTextBox.Name" xml:space="preserve">
     <value>nrCorpoTextBox</value>
   </data>
@@ -1251,6 +1353,9 @@
   <data name="&gt;&gt;nrCorpoTextBox.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="cursoComboBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="cursoComboBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Console, 10pt</value>
   </data>
@@ -1262,6 +1367,9 @@
   </data>
   <data name="cursoComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
+  </data>
+  <data name="cursoComboBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;cursoComboBox.Name" xml:space="preserve">
     <value>cursoComboBox</value>
@@ -1277,6 +1385,9 @@
   </data>
   <data name="cursoLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="cursoLabel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="cursoLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
@@ -1299,6 +1410,9 @@
   <data name="cursoLabel.Text" xml:space="preserve">
     <value>Curso:</value>
   </data>
+  <data name="cursoLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;cursoLabel.Name" xml:space="preserve">
     <value>cursoLabel</value>
   </data>
@@ -1311,6 +1425,9 @@
   <data name="&gt;&gt;cursoLabel.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="companhiaComboBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="companhiaComboBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Console, 10pt</value>
   </data>
@@ -1322,6 +1439,9 @@
   </data>
   <data name="companhiaComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
+  </data>
+  <data name="companhiaComboBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;companhiaComboBox.Name" xml:space="preserve">
     <value>companhiaComboBox</value>
@@ -1337,6 +1457,9 @@
   </data>
   <data name="companhiaLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="companhiaLabel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="companhiaLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
@@ -1359,6 +1482,9 @@
   <data name="companhiaLabel.Text" xml:space="preserve">
     <value>Companhia:</value>
   </data>
+  <data name="companhiaLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;companhiaLabel.Name" xml:space="preserve">
     <value>companhiaLabel</value>
   </data>
@@ -1371,6 +1497,9 @@
   <data name="&gt;&gt;companhiaLabel.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="origemComboBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="origemComboBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Lucida Console, 10pt</value>
   </data>
@@ -1382,6 +1511,9 @@
   </data>
   <data name="origemComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
+  </data>
+  <data name="origemComboBox.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;origemComboBox.Name" xml:space="preserve">
     <value>origemComboBox</value>
@@ -1397,6 +1529,9 @@
   </data>
   <data name="origemLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="origemLabel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="origemLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10pt</value>
@@ -1418,6 +1553,9 @@
   </data>
   <data name="origemLabel.Text" xml:space="preserve">
     <value>Origem:</value>
+  </data>
+  <data name="origemLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;origemLabel.Name" xml:space="preserve">
     <value>origemLabel</value>

@@ -348,6 +348,7 @@
             resources.ApplyResources(this.alunoCheckBox, "alunoCheckBox");
             this.alunoCheckBox.Name = "alunoCheckBox";
             this.alunoCheckBox.UseVisualStyleBackColor = true;
+            this.alunoCheckBox.CheckedChanged += new System.EventHandler(this.alunoCheckBox_CheckedChanged);
             // 
             // postoLabel
             // 
