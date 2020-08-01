@@ -43,6 +43,16 @@ namespace JustiCal
             Debug.WriteLine(String.Format("listaDeDcoumentos.Count = {0}", listaDeDocumentos.Count));
         }
 
+        private void refreshEmailAddressesListBox()
+        {
+            emailsListBox.Items.Clear();
+            foreach (EnderecoElectronico item in listaDeMails)
+            {
+                emailsListBox.Items.Add(String.Format("{0} [{1}]", item.Descricao, item.Address));
+            }
+            Debug.WriteLine(String.Format("listaDeMails.Count = {0}", listaDeMails.Count));
+        }
+
 
 
         private void AdicionarPessoaForm_Load(object sender, EventArgs e)
@@ -125,6 +135,18 @@ namespace JustiCal
             {
                 listaDeMails.Add(adicionarEnderecoEmail.eMail as EnderecoElectronico);
             }
+            refreshEmailAddressesListBox();
+        }
+
+        private void apagarEMailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListBox.SelectedObjectCollection list = emailsListBox.SelectedItems;
+            for (int i = list.Count-1; i >= 0; i--)
+            {
+                emailsListBox.Items.Remove(list[i]);
+                listaDeMails.RemoveAt(i);
+            }
+            refreshEmailAddressesListBox();
         }
     }
 }

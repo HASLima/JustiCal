@@ -567,6 +567,30 @@
   <metadata name="IdDocumentsContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>11, 11</value>
   </metadata>
+  <data name="cartãoDeCidadãoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="cartãoDeCidadãoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cartão de Cidadão</value>
+  </data>
+  <data name="bilheteDeIdentidadeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="bilheteDeIdentidadeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bilhete de Identidade</value>
+  </data>
+  <data name="criarDocumentoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="criarDocumentoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Criar Documento</value>
+  </data>
+  <data name="apagarDocumentoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="apagarDocumentoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Apagar Documento</value>
+  </data>
   <data name="IdDocumentsContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 48</value>
   </data>
@@ -639,6 +663,18 @@
   <metadata name="AdressesContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>251, 11</value>
   </metadata>
+  <data name="criarMoradaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 22</value>
+  </data>
+  <data name="criarMoradaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Criar Morada</value>
+  </data>
+  <data name="apagarMoradaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 22</value>
+  </data>
+  <data name="apagarMoradaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Apagar Morada</value>
+  </data>
   <data name="AdressesContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 48</value>
   </data>
@@ -711,6 +747,18 @@
   <metadata name="ContactsContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>480, 11</value>
   </metadata>
+  <data name="criarContactoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="criarContactoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Criar Contacto</value>
+  </data>
+  <data name="apagarContactoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="apagarContactoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Apagar Contacto</value>
+  </data>
   <data name="ContactsContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 48</value>
   </data>
@@ -790,7 +838,7 @@
     <value>Criar E-Mail</value>
   </data>
   <data name="apagarEMailToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="apagarEMailToolStripMenuItem.Text" xml:space="preserve">
     <value>Apagar E-Mail</value>
@@ -893,36 +941,6 @@
   </data>
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>21</value>
-  </data>
-  <data name="criarDocumentoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
-  </data>
-  <data name="criarDocumentoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Criar Documento</value>
-  </data>
-  <data name="cartãoDeCidadãoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 22</value>
-  </data>
-  <data name="cartãoDeCidadãoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Cartão de Cidadão</value>
-  </data>
-  <data name="bilheteDeIdentidadeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 22</value>
-  </data>
-  <data name="bilheteDeIdentidadeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Bilhete de Identidade</value>
-  </data>
-  <data name="apagarDocumentoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
-  </data>
-  <data name="apagarDocumentoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Apagar Documento</value>
-  </data>
-  <data name="apagarMoradaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 22</value>
-  </data>
-  <data name="apagarMoradaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Apagar Morada</value>
   </data>
   <data name="militarCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1440,24 +1458,6 @@
   <data name="&gt;&gt;submeterButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="criarContactoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="criarContactoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Criar Contacto</value>
-  </data>
-  <data name="apagarContactoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="apagarContactoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Apagar Contacto</value>
-  </data>
-  <data name="criarMoradaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 22</value>
-  </data>
-  <data name="criarMoradaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Criar Morada</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1500,22 +1500,16 @@
   <data name="&gt;&gt;apagarDocumentoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;criarMoradaToolStripMenuItem.Name" xml:space="preserve">
+    <value>criarMoradaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;criarMoradaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;apagarMoradaToolStripMenuItem.Name" xml:space="preserve">
     <value>apagarMoradaToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;apagarMoradaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;criarEMailToolStripMenuItem.Name" xml:space="preserve">
-    <value>criarEMailToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;criarEMailToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;apagarEMailToolStripMenuItem.Name" xml:space="preserve">
-    <value>apagarEMailToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;apagarEMailToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;criarContactoToolStripMenuItem.Name" xml:space="preserve">
@@ -1530,10 +1524,16 @@
   <data name="&gt;&gt;apagarContactoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;criarMoradaToolStripMenuItem.Name" xml:space="preserve">
-    <value>criarMoradaToolStripMenuItem</value>
+  <data name="&gt;&gt;criarEMailToolStripMenuItem.Name" xml:space="preserve">
+    <value>criarEMailToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;criarMoradaToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;criarEMailToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;apagarEMailToolStripMenuItem.Name" xml:space="preserve">
+    <value>apagarEMailToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;apagarEMailToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

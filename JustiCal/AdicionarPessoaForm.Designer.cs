@@ -54,12 +54,19 @@
             this.IdDocumentsListBox = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.AdressesContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.criarMoradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apagarMoradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moradasListBox = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.contactosTelefonicosListBox = new System.Windows.Forms.ListBox();
+            this.ContactsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.criarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apagarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.EmailsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.criarEMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apagarEMailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailsListBox = new System.Windows.Forms.ListBox();
             this.militarCheckBox = new System.Windows.Forms.CheckBox();
             this.alunoCheckBox = new System.Windows.Forms.CheckBox();
             this.postoLabel = new System.Windows.Forms.Label();
@@ -77,22 +84,15 @@
             this.origemComboBox = new System.Windows.Forms.ComboBox();
             this.origemLabel = new System.Windows.Forms.Label();
             this.submeterButton = new System.Windows.Forms.Button();
-            this.ContactsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.criarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.apagarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moradasListBox = new System.Windows.Forms.ListBox();
-            this.contactosTelefonicosListBox = new System.Windows.Forms.ListBox();
-            this.emailsListBox = new System.Windows.Forms.ListBox();
-            this.criarMoradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.IdDocumentsContextMenuStrip.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.AdressesContextMenuStrip.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.ContactsContextMenuStrip.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.EmailsContextMenuStrip.SuspendLayout();
-            this.ContactsContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // fullNameLabel
@@ -251,10 +251,22 @@
             this.AdressesContextMenuStrip.Name = "contextMenuStrip2";
             resources.ApplyResources(this.AdressesContextMenuStrip, "AdressesContextMenuStrip");
             // 
+            // criarMoradaToolStripMenuItem
+            // 
+            this.criarMoradaToolStripMenuItem.Name = "criarMoradaToolStripMenuItem";
+            resources.ApplyResources(this.criarMoradaToolStripMenuItem, "criarMoradaToolStripMenuItem");
+            // 
             // apagarMoradaToolStripMenuItem
             // 
             this.apagarMoradaToolStripMenuItem.Name = "apagarMoradaToolStripMenuItem";
             resources.ApplyResources(this.apagarMoradaToolStripMenuItem, "apagarMoradaToolStripMenuItem");
+            // 
+            // moradasListBox
+            // 
+            this.moradasListBox.ContextMenuStrip = this.AdressesContextMenuStrip;
+            resources.ApplyResources(this.moradasListBox, "moradasListBox");
+            this.moradasListBox.FormattingEnabled = true;
+            this.moradasListBox.Name = "moradasListBox";
             // 
             // tabPage3
             // 
@@ -263,6 +275,31 @@
             resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // contactosTelefonicosListBox
+            // 
+            this.contactosTelefonicosListBox.ContextMenuStrip = this.ContactsContextMenuStrip;
+            resources.ApplyResources(this.contactosTelefonicosListBox, "contactosTelefonicosListBox");
+            this.contactosTelefonicosListBox.FormattingEnabled = true;
+            this.contactosTelefonicosListBox.Name = "contactosTelefonicosListBox";
+            // 
+            // ContactsContextMenuStrip
+            // 
+            this.ContactsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarContactoToolStripMenuItem,
+            this.apagarContactoToolStripMenuItem});
+            this.ContactsContextMenuStrip.Name = "ContactsContextMenuStrip";
+            resources.ApplyResources(this.ContactsContextMenuStrip, "ContactsContextMenuStrip");
+            // 
+            // criarContactoToolStripMenuItem
+            // 
+            this.criarContactoToolStripMenuItem.Name = "criarContactoToolStripMenuItem";
+            resources.ApplyResources(this.criarContactoToolStripMenuItem, "criarContactoToolStripMenuItem");
+            // 
+            // apagarContactoToolStripMenuItem
+            // 
+            this.apagarContactoToolStripMenuItem.Name = "apagarContactoToolStripMenuItem";
+            resources.ApplyResources(this.apagarContactoToolStripMenuItem, "apagarContactoToolStripMenuItem");
             // 
             // tabPage4
             // 
@@ -290,6 +327,14 @@
             // 
             this.apagarEMailToolStripMenuItem.Name = "apagarEMailToolStripMenuItem";
             resources.ApplyResources(this.apagarEMailToolStripMenuItem, "apagarEMailToolStripMenuItem");
+            this.apagarEMailToolStripMenuItem.Click += new System.EventHandler(this.apagarEMailToolStripMenuItem_Click);
+            // 
+            // emailsListBox
+            // 
+            this.emailsListBox.ContextMenuStrip = this.EmailsContextMenuStrip;
+            resources.ApplyResources(this.emailsListBox, "emailsListBox");
+            this.emailsListBox.FormattingEnabled = true;
+            this.emailsListBox.Name = "emailsListBox";
             // 
             // militarCheckBox
             // 
@@ -387,50 +432,6 @@
             this.submeterButton.UseVisualStyleBackColor = true;
             this.submeterButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ContactsContextMenuStrip
-            // 
-            this.ContactsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.criarContactoToolStripMenuItem,
-            this.apagarContactoToolStripMenuItem});
-            this.ContactsContextMenuStrip.Name = "ContactsContextMenuStrip";
-            resources.ApplyResources(this.ContactsContextMenuStrip, "ContactsContextMenuStrip");
-            // 
-            // criarContactoToolStripMenuItem
-            // 
-            this.criarContactoToolStripMenuItem.Name = "criarContactoToolStripMenuItem";
-            resources.ApplyResources(this.criarContactoToolStripMenuItem, "criarContactoToolStripMenuItem");
-            // 
-            // apagarContactoToolStripMenuItem
-            // 
-            this.apagarContactoToolStripMenuItem.Name = "apagarContactoToolStripMenuItem";
-            resources.ApplyResources(this.apagarContactoToolStripMenuItem, "apagarContactoToolStripMenuItem");
-            // 
-            // moradasListBox
-            // 
-            this.moradasListBox.ContextMenuStrip = this.AdressesContextMenuStrip;
-            resources.ApplyResources(this.moradasListBox, "moradasListBox");
-            this.moradasListBox.FormattingEnabled = true;
-            this.moradasListBox.Name = "moradasListBox";
-            // 
-            // contactosTelefonicosListBox
-            // 
-            this.contactosTelefonicosListBox.ContextMenuStrip = this.ContactsContextMenuStrip;
-            resources.ApplyResources(this.contactosTelefonicosListBox, "contactosTelefonicosListBox");
-            this.contactosTelefonicosListBox.FormattingEnabled = true;
-            this.contactosTelefonicosListBox.Name = "contactosTelefonicosListBox";
-            // 
-            // emailsListBox
-            // 
-            this.emailsListBox.ContextMenuStrip = this.EmailsContextMenuStrip;
-            resources.ApplyResources(this.emailsListBox, "emailsListBox");
-            this.emailsListBox.FormattingEnabled = true;
-            this.emailsListBox.Name = "emailsListBox";
-            // 
-            // criarMoradaToolStripMenuItem
-            // 
-            this.criarMoradaToolStripMenuItem.Name = "criarMoradaToolStripMenuItem";
-            resources.ApplyResources(this.criarMoradaToolStripMenuItem, "criarMoradaToolStripMenuItem");
-            // 
             // AdicionarPessoaForm
             // 
             resources.ApplyResources(this, "$this");
@@ -475,9 +476,9 @@
             this.tabPage2.ResumeLayout(false);
             this.AdressesContextMenuStrip.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.ContactsContextMenuStrip.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.EmailsContextMenuStrip.ResumeLayout(false);
-            this.ContactsContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
