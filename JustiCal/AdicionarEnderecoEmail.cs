@@ -16,5 +16,19 @@ namespace JustiCal
         {
             InitializeComponent();
         }
+
+        public object eMail;
+
+        private void submeterButton_Click(object sender, EventArgs e)
+        {
+            eMail = new EnderecoElectronico(descricaoTextBox.Text, enderecoTextBox.Text);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void AdicionarEnderecoEmailToolTip_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }

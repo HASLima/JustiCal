@@ -783,8 +783,20 @@
   <metadata name="EmailsContextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>678, 11</value>
   </metadata>
+  <data name="criarEMailToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="criarEMailToolStripMenuItem.Text" xml:space="preserve">
+    <value>Criar E-Mail</value>
+  </data>
+  <data name="apagarEMailToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="apagarEMailToolStripMenuItem.Text" xml:space="preserve">
+    <value>Apagar E-Mail</value>
+  </data>
   <data name="EmailsContextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 48</value>
+    <value>181, 70</value>
   </data>
   <data name="&gt;&gt;EmailsContextMenuStrip.Name" xml:space="preserve">
     <value>EmailsContextMenuStrip</value>
@@ -911,18 +923,6 @@
   </data>
   <data name="apagarMoradaToolStripMenuItem.Text" xml:space="preserve">
     <value>Apagar Morada</value>
-  </data>
-  <data name="criarEMailToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="criarEMailToolStripMenuItem.Text" xml:space="preserve">
-    <value>Criar E-Mail</value>
-  </data>
-  <data name="apagarEMailToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 22</value>
-  </data>
-  <data name="apagarEMailToolStripMenuItem.Text" xml:space="preserve">
-    <value>Apagar E-Mail</value>
   </data>
   <data name="militarCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

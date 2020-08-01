@@ -284,6 +284,7 @@
             // 
             this.criarEMailToolStripMenuItem.Name = "criarEMailToolStripMenuItem";
             resources.ApplyResources(this.criarEMailToolStripMenuItem, "criarEMailToolStripMenuItem");
+            this.criarEMailToolStripMenuItem.Click += new System.EventHandler(this.criarEMailToolStripMenuItem_Click);
             // 
             // apagarEMailToolStripMenuItem
             // 

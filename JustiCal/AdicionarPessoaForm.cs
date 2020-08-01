@@ -20,6 +20,7 @@ namespace JustiCal
         }
 
         List<object> listaDeDocumentos = new List<object>();
+        List<EnderecoElectronico> listaDeMails = new List<EnderecoElectronico>();
         /// <summary>
         /// Apaga e volta a preencher os items da IdDocumentsListBox
         /// </summary>
@@ -113,6 +114,16 @@ namespace JustiCal
             if (militarCheckBox.Checked)
             {
 
+            }
+        }
+
+        private void criarEMailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdicionarEnderecoEmail adicionarEnderecoEmail = new AdicionarEnderecoEmail();
+            DialogResult result = adicionarEnderecoEmail.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                listaDeMails.Add(adicionarEnderecoEmail.eMail as EnderecoElectronico);
             }
         }
     }
