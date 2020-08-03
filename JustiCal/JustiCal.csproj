@@ -95,6 +95,12 @@
     <Compile Include="EnderecoElectronico.cs" />
     <Compile Include="ModelClass.cs" />
     <Compile Include="Morada.cs" />
+    <Compile Include="MoradasEncontradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoradasEncontradas.Designer.cs">
+      <DependentUpon>MoradasEncontradas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProcessoAA.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -131,6 +137,9 @@
     <EmbeddedResource Include="AdicionarPessoaForm.resx">
       <DependentUpon>AdicionarPessoaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MoradasEncontradas.resx">
+      <DependentUpon>MoradasEncontradas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -163,6 +172,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\findIco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
