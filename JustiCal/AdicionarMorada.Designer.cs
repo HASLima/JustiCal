@@ -42,7 +42,7 @@
             this.cp4TextBox = new System.Windows.Forms.TextBox();
             this.codigoPostalLabel = new System.Windows.Forms.Label();
             this.cp3TextBox = new System.Windows.Forms.TextBox();
-            this.localidadeTextBox = new System.Windows.Forms.TextBox();
+            this.designacaoFiscalTextBox = new System.Windows.Forms.TextBox();
             this.countryComboBox = new System.Windows.Forms.ComboBox();
             this.countryLabel = new System.Windows.Forms.Label();
             this.submeterButton = new System.Windows.Forms.Button();
@@ -52,10 +52,9 @@
             // descricaoTextBox
             // 
             this.descricaoTextBox.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.descricaoTextBox.Location = new System.Drawing.Point(90, 7);
-            this.descricaoTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.descricaoTextBox.Location = new System.Drawing.Point(135, 11);
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(369, 21);
+            this.descricaoTextBox.Size = new System.Drawing.Size(552, 27);
             this.descricaoTextBox.TabIndex = 30;
             // 
             // descricaoLabel
@@ -63,10 +62,9 @@
             this.descricaoLabel.AutoSize = true;
             this.descricaoLabel.Font = new System.Drawing.Font("Arial", 10F);
             this.descricaoLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.descricaoLabel.Location = new System.Drawing.Point(11, 9);
-            this.descricaoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.descricaoLabel.Location = new System.Drawing.Point(16, 14);
             this.descricaoLabel.Name = "descricaoLabel";
-            this.descricaoLabel.Size = new System.Drawing.Size(75, 16);
+            this.descricaoLabel.Size = new System.Drawing.Size(104, 23);
             this.descricaoLabel.TabIndex = 29;
             this.descricaoLabel.Text = "Descrição:";
             // 
@@ -75,10 +73,9 @@
             this.arteriaLabel.AutoSize = true;
             this.arteriaLabel.Font = new System.Drawing.Font("Arial", 10F);
             this.arteriaLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.arteriaLabel.Location = new System.Drawing.Point(11, 73);
-            this.arteriaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.arteriaLabel.Location = new System.Drawing.Point(16, 112);
             this.arteriaLabel.Name = "arteriaLabel";
-            this.arteriaLabel.Size = new System.Drawing.Size(54, 16);
+            this.arteriaLabel.Size = new System.Drawing.Size(75, 23);
             this.arteriaLabel.TabIndex = 31;
             this.arteriaLabel.Text = "Artéria:";
             // 
@@ -86,18 +83,20 @@
             // 
             this.arteriaComboBox.Font = new System.Drawing.Font("Lucida Console", 10F);
             this.arteriaComboBox.FormattingEnabled = true;
-            this.arteriaComboBox.Location = new System.Drawing.Point(70, 71);
+            this.arteriaComboBox.Location = new System.Drawing.Point(105, 109);
+            this.arteriaComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.arteriaComboBox.Name = "arteriaComboBox";
-            this.arteriaComboBox.Size = new System.Drawing.Size(389, 21);
+            this.arteriaComboBox.Size = new System.Drawing.Size(582, 28);
             this.arteriaComboBox.TabIndex = 32;
             // 
             // nomeDaArteriaComboBox
             // 
             this.nomeDaArteriaComboBox.Font = new System.Drawing.Font("Lucida Console", 10F);
             this.nomeDaArteriaComboBox.FormattingEnabled = true;
-            this.nomeDaArteriaComboBox.Location = new System.Drawing.Point(129, 103);
+            this.nomeDaArteriaComboBox.Location = new System.Drawing.Point(194, 158);
+            this.nomeDaArteriaComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nomeDaArteriaComboBox.Name = "nomeDaArteriaComboBox";
-            this.nomeDaArteriaComboBox.Size = new System.Drawing.Size(330, 21);
+            this.nomeDaArteriaComboBox.Size = new System.Drawing.Size(493, 28);
             this.nomeDaArteriaComboBox.TabIndex = 34;
             // 
             // nomeDaArteriaLabel
@@ -105,20 +104,18 @@
             this.nomeDaArteriaLabel.AutoSize = true;
             this.nomeDaArteriaLabel.Font = new System.Drawing.Font("Arial", 10F);
             this.nomeDaArteriaLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.nomeDaArteriaLabel.Location = new System.Drawing.Point(11, 105);
-            this.nomeDaArteriaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nomeDaArteriaLabel.Location = new System.Drawing.Point(16, 162);
             this.nomeDaArteriaLabel.Name = "nomeDaArteriaLabel";
-            this.nomeDaArteriaLabel.Size = new System.Drawing.Size(113, 16);
+            this.nomeDaArteriaLabel.Size = new System.Drawing.Size(159, 23);
             this.nomeDaArteriaLabel.TabIndex = 33;
             this.nomeDaArteriaLabel.Text = "Nome da Artéria:";
             // 
             // portaTextBox
             // 
             this.portaTextBox.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.portaTextBox.Location = new System.Drawing.Point(61, 135);
-            this.portaTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.portaTextBox.Location = new System.Drawing.Point(92, 208);
             this.portaTextBox.Name = "portaTextBox";
-            this.portaTextBox.Size = new System.Drawing.Size(50, 21);
+            this.portaTextBox.Size = new System.Drawing.Size(73, 27);
             this.portaTextBox.TabIndex = 36;
             // 
             // portaLabel
@@ -126,20 +123,18 @@
             this.portaLabel.AutoSize = true;
             this.portaLabel.Font = new System.Drawing.Font("Arial", 10F);
             this.portaLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.portaLabel.Location = new System.Drawing.Point(11, 137);
-            this.portaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.portaLabel.Location = new System.Drawing.Point(16, 211);
             this.portaLabel.Name = "portaLabel";
-            this.portaLabel.Size = new System.Drawing.Size(46, 16);
+            this.portaLabel.Size = new System.Drawing.Size(64, 23);
             this.portaLabel.TabIndex = 35;
             this.portaLabel.Text = "Porta:";
             // 
             // alojamentoTextBox
             // 
             this.alojamentoTextBox.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.alojamentoTextBox.Location = new System.Drawing.Point(201, 135);
-            this.alojamentoTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.alojamentoTextBox.Location = new System.Drawing.Point(302, 208);
             this.alojamentoTextBox.Name = "alojamentoTextBox";
-            this.alojamentoTextBox.Size = new System.Drawing.Size(57, 21);
+            this.alojamentoTextBox.Size = new System.Drawing.Size(84, 27);
             this.alojamentoTextBox.TabIndex = 38;
             // 
             // alojamentoLabel
@@ -147,10 +142,9 @@
             this.alojamentoLabel.AutoSize = true;
             this.alojamentoLabel.Font = new System.Drawing.Font("Arial", 10F);
             this.alojamentoLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.alojamentoLabel.Location = new System.Drawing.Point(115, 137);
-            this.alojamentoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.alojamentoLabel.Location = new System.Drawing.Point(172, 211);
             this.alojamentoLabel.Name = "alojamentoLabel";
-            this.alojamentoLabel.Size = new System.Drawing.Size(82, 16);
+            this.alojamentoLabel.Size = new System.Drawing.Size(113, 23);
             this.alojamentoLabel.TabIndex = 37;
             this.alojamentoLabel.Text = "Alojamento:";
             // 
@@ -158,82 +152,82 @@
             // 
             this.cp4TextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.cp4TextBox.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.cp4TextBox.Location = new System.Drawing.Point(115, 167);
-            this.cp4TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.cp4TextBox.Location = new System.Drawing.Point(172, 257);
             this.cp4TextBox.Name = "cp4TextBox";
-            this.cp4TextBox.Size = new System.Drawing.Size(75, 21);
+            this.cp4TextBox.Size = new System.Drawing.Size(110, 27);
             this.cp4TextBox.TabIndex = 40;
+            this.cp4TextBox.Validating += new System.ComponentModel.CancelEventHandler(this.cp4TextBox_Validating);
             // 
             // codigoPostalLabel
             // 
             this.codigoPostalLabel.AutoSize = true;
             this.codigoPostalLabel.Font = new System.Drawing.Font("Arial", 10F);
             this.codigoPostalLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.codigoPostalLabel.Location = new System.Drawing.Point(11, 169);
-            this.codigoPostalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.codigoPostalLabel.Location = new System.Drawing.Point(16, 260);
             this.codigoPostalLabel.Name = "codigoPostalLabel";
-            this.codigoPostalLabel.Size = new System.Drawing.Size(100, 16);
+            this.codigoPostalLabel.Size = new System.Drawing.Size(139, 23);
             this.codigoPostalLabel.TabIndex = 39;
             this.codigoPostalLabel.Text = "Código Postal:";
             // 
             // cp3TextBox
             // 
             this.cp3TextBox.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.cp3TextBox.Location = new System.Drawing.Point(194, 167);
-            this.cp3TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.cp3TextBox.Location = new System.Drawing.Point(291, 257);
             this.cp3TextBox.Name = "cp3TextBox";
-            this.cp3TextBox.Size = new System.Drawing.Size(43, 21);
+            this.cp3TextBox.Size = new System.Drawing.Size(62, 27);
             this.cp3TextBox.TabIndex = 41;
+            this.cp3TextBox.Validating += new System.ComponentModel.CancelEventHandler(this.cp3TextBox_Validating);
             // 
-            // localidadeTextBox
+            // designacaoFiscalTextBox
             // 
-            this.localidadeTextBox.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.localidadeTextBox.Location = new System.Drawing.Point(250, 167);
-            this.localidadeTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.localidadeTextBox.Name = "localidadeTextBox";
-            this.localidadeTextBox.Size = new System.Drawing.Size(209, 21);
-            this.localidadeTextBox.TabIndex = 42;
+            this.designacaoFiscalTextBox.Font = new System.Drawing.Font("Lucida Console", 10F);
+            this.designacaoFiscalTextBox.Location = new System.Drawing.Point(375, 257);
+            this.designacaoFiscalTextBox.Name = "designacaoFiscalTextBox";
+            this.designacaoFiscalTextBox.Size = new System.Drawing.Size(312, 27);
+            this.designacaoFiscalTextBox.TabIndex = 42;
             // 
             // countryComboBox
             // 
             this.countryComboBox.Font = new System.Drawing.Font("Lucida Console", 10F);
             this.countryComboBox.FormattingEnabled = true;
-            this.countryComboBox.Location = new System.Drawing.Point(55, 39);
+            this.countryComboBox.Location = new System.Drawing.Point(82, 60);
+            this.countryComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.countryComboBox.Name = "countryComboBox";
-            this.countryComboBox.Size = new System.Drawing.Size(228, 21);
+            this.countryComboBox.Size = new System.Drawing.Size(340, 28);
             this.countryComboBox.TabIndex = 44;
+            this.countryComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.countryComboBox_Validating);
             // 
             // countryLabel
             // 
             this.countryLabel.AutoSize = true;
             this.countryLabel.Font = new System.Drawing.Font("Arial", 10F);
             this.countryLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.countryLabel.Location = new System.Drawing.Point(11, 41);
-            this.countryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.countryLabel.Location = new System.Drawing.Point(16, 63);
             this.countryLabel.Name = "countryLabel";
-            this.countryLabel.Size = new System.Drawing.Size(39, 16);
+            this.countryLabel.Size = new System.Drawing.Size(54, 23);
             this.countryLabel.TabIndex = 43;
             this.countryLabel.Text = "Pais:";
             // 
             // submeterButton
             // 
             this.submeterButton.Font = new System.Drawing.Font("Arial", 10F);
-            this.submeterButton.Location = new System.Drawing.Point(14, 201);
+            this.submeterButton.Location = new System.Drawing.Point(21, 309);
+            this.submeterButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.submeterButton.Name = "submeterButton";
-            this.submeterButton.Size = new System.Drawing.Size(445, 23);
+            this.submeterButton.Size = new System.Drawing.Size(668, 35);
             this.submeterButton.TabIndex = 45;
             this.submeterButton.Text = "Submeter";
             this.submeterButton.UseVisualStyleBackColor = true;
             // 
             // AdicionarMorada
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 234);
+            this.ClientSize = new System.Drawing.Size(706, 360);
             this.Controls.Add(this.submeterButton);
             this.Controls.Add(this.countryComboBox);
             this.Controls.Add(this.countryLabel);
-            this.Controls.Add(this.localidadeTextBox);
+            this.Controls.Add(this.designacaoFiscalTextBox);
             this.Controls.Add(this.cp3TextBox);
             this.Controls.Add(this.cp4TextBox);
             this.Controls.Add(this.codigoPostalLabel);
@@ -247,6 +241,7 @@
             this.Controls.Add(this.arteriaLabel);
             this.Controls.Add(this.descricaoTextBox);
             this.Controls.Add(this.descricaoLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdicionarMorada";
             this.Text = "Adicionar Morada";
             this.Load += new System.EventHandler(this.AdicionarMorada_Load);
@@ -269,7 +264,7 @@
         private System.Windows.Forms.TextBox cp4TextBox;
         private System.Windows.Forms.Label codigoPostalLabel;
         private System.Windows.Forms.TextBox cp3TextBox;
-        private System.Windows.Forms.TextBox localidadeTextBox;
+        private System.Windows.Forms.TextBox designacaoFiscalTextBox;
         private System.Windows.Forms.ComboBox countryComboBox;
         private System.Windows.Forms.Label countryLabel;
         private System.Windows.Forms.Button submeterButton;

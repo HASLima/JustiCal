@@ -57,23 +57,8 @@ namespace JustiCal
                 if (Pais == "Portugal")
                 {
                     //use the embedded resource file todos_cp.txt
-                    var assembly = Assembly.GetExecutingAssembly();
-                    var resourceName = "JustiCal.Properties.todos_cp.txt";
-                    using (Stream stream = assembly.GetManifestResourceStream(resourceName))
-                    using (var reader = new System.IO.StreamReader(stream))
-                    {
-                        while (!reader.EndOfStream && Localidade == null)
-                        {
-                            var line = reader.ReadLine();
-                            var values = line.Split(';');
-
-                            if (values[14] == CodigoPostalCP4 && values[15] == CodigoPostalCP3)
-                            {
-                                Localidade = values[3];
-                                DesignacaoPostal = values[16];
-                            }
-                        }
-                    }
+                    Localidade = GetLocalidadeFromCodigoPostal(CodigoPostalCP4, CodigoPostalCP3);
+                    DesignacaoPostal = GetDesignacaoPostalFromCodigoPostal(CodigoPostalCP4, CodigoPostalCP3);
                 }
                 else
                 {
@@ -91,10 +76,98 @@ namespace JustiCal
                     str += String.Format(", {0}", IdentificacaoAlojamento);
                 if (Localidade != null && !String.Equals(Localidade, DesignacaoPostal, StringComparison.OrdinalIgnoreCase))
                     str += String.Format("\n{0}", Localidade);
-                str += String.Format("\n{0}-{1} {2}", CodigoPostalCP4, CodigoPostalCP3, DesignacaoPostal);
                 if (Pais != null && Pais != "Portugal")
+                {
+                    str += String.Format("\n{0} {1}", CodigoPostalCP4, DesignacaoPostal);
                     str += String.Format("\n{0}", Pais);
+                }
+                else
+                    str += String.Format("\n{0}-{1} {2}", CodigoPostalCP4, CodigoPostalCP3, DesignacaoPostal);
                 return str;
+            }
+
+            public static string GetLocalidadeFromCodigoPostal(string cp4, string cp3)
+            {
+                var assembly = Assembly.GetExecutingAssembly();
+                var resourceName = "JustiCal.Properties.todos_cp.txt";
+                using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+                using (var reader = new System.IO.StreamReader(stream))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        var values = line.Split(';');
+
+                        if (values[14] == cp4 && values[15] == cp3)
+                        {
+                            return values[3];
+                        }
+                    }
+                }
+                return null;
+            }
+
+            public static string GetDesignacaoPostalFromCodigoPostal(string cp4, string cp3)
+            {
+                var assembly = Assembly.GetExecutingAssembly();
+                var resourceName = "JustiCal.Properties.todos_cp.txt";
+                using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+                using (var reader = new System.IO.StreamReader(stream))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        var values = line.Split(';');
+
+                        if (values[14] == cp4 && values[15] == cp3)
+                        {
+                            return values[16];
+                        }
+                    }
+                }
+                return null;
+            }
+
+            public static bool CP4IsValid(string cp4)
+            {
+                var assembly = Assembly.GetExecutingAssembly();
+                var resourceName = "JustiCal.Properties.todos_cp.txt";
+                using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+                using (var reader = new System.IO.StreamReader(stream))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        var values = line.Split(';');
+
+                        if (values[14] == cp4)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+
+            public static bool CPIsValid(string cp4, string cp3)
+            {
+                var assembly = Assembly.GetExecutingAssembly();
+                var resourceName = "JustiCal.Properties.todos_cp.txt";
+                using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+                using (var reader = new System.IO.StreamReader(stream))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        var values = line.Split(';');
+
+                        if (values[14] == cp4 && values[15] == cp3)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
             }
         } 
     }
