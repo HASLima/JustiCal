@@ -24,6 +24,7 @@ namespace JustiCal
 
         private void AdicionarMorada_Load(object sender, EventArgs e)
         {
+            countryComboBox.Items.AddRange(Morada.CountryList().ToArray());
             countryComboBox.Text = "Portugal";
         }
 

@@ -34,10 +34,11 @@
             this.numeroTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.descricaoComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.detentorTextBox = new System.Windows.Forms.TextBox();
             this.paisComboBox = new System.Windows.Forms.ComboBox();
             this.countryLabel = new System.Windows.Forms.Label();
             this.submeterButton = new System.Windows.Forms.Button();
+            this.plusLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // descricaoLabel
@@ -54,9 +55,9 @@
             // indicativoTextBox
             // 
             this.indicativoTextBox.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.indicativoTextBox.Location = new System.Drawing.Point(131, 103);
+            this.indicativoTextBox.Location = new System.Drawing.Point(149, 103);
             this.indicativoTextBox.Name = "indicativoTextBox";
-            this.indicativoTextBox.Size = new System.Drawing.Size(92, 27);
+            this.indicativoTextBox.Size = new System.Drawing.Size(65, 27);
             this.indicativoTextBox.TabIndex = 34;
             this.indicativoTextBox.Leave += new System.EventHandler(this.indicativoTextBox_Leave);
             // 
@@ -100,13 +101,13 @@
             this.descricaoComboBox.Size = new System.Drawing.Size(552, 28);
             this.descricaoComboBox.TabIndex = 45;
             // 
-            // textBox3
+            // detentorTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.textBox3.Location = new System.Drawing.Point(131, 55);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(552, 27);
-            this.textBox3.TabIndex = 37;
+            this.detentorTextBox.Font = new System.Drawing.Font("Lucida Console", 10F);
+            this.detentorTextBox.Location = new System.Drawing.Point(131, 55);
+            this.detentorTextBox.Name = "detentorTextBox";
+            this.detentorTextBox.Size = new System.Drawing.Size(552, 27);
+            this.detentorTextBox.TabIndex = 37;
             // 
             // paisComboBox
             // 
@@ -139,17 +140,31 @@
             this.submeterButton.TabIndex = 48;
             this.submeterButton.Text = "Submeter";
             this.submeterButton.UseVisualStyleBackColor = true;
+            this.submeterButton.Click += new System.EventHandler(this.submeterButton_Click);
+            // 
+            // plusLabel
+            // 
+            this.plusLabel.AutoSize = true;
+            this.plusLabel.Font = new System.Drawing.Font("Arial", 10F);
+            this.plusLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.plusLabel.Location = new System.Drawing.Point(127, 105);
+            this.plusLabel.Name = "plusLabel";
+            this.plusLabel.Size = new System.Drawing.Size(22, 23);
+            this.plusLabel.TabIndex = 49;
+            this.plusLabel.Text = "+";
+            this.plusLabel.Click += new System.EventHandler(this.plusLabel_Click);
             // 
             // AdicionarContactoTelefonico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 256);
+            this.Controls.Add(this.plusLabel);
             this.Controls.Add(this.submeterButton);
             this.Controls.Add(this.paisComboBox);
             this.Controls.Add(this.countryLabel);
             this.Controls.Add(this.descricaoComboBox);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.detentorTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.numeroTextBox);
             this.Controls.Add(this.indicativoTextBox);
@@ -170,9 +185,10 @@
         private System.Windows.Forms.TextBox numeroTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox descricaoComboBox;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox detentorTextBox;
         private System.Windows.Forms.ComboBox paisComboBox;
         private System.Windows.Forms.Label countryLabel;
         private System.Windows.Forms.Button submeterButton;
+        private System.Windows.Forms.Label plusLabel;
     }
 }

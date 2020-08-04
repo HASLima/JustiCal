@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
+using System.Globalization;
 
 namespace JustiCal
 {
@@ -168,6 +169,27 @@ namespace JustiCal
                     }
                 }
                 return false;
+            }
+
+            public static List<string> CountryList()
+            {
+                List<string> CultureList = new List<string>();
+
+                CultureInfo[] getCultureInfo = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
+
+                foreach (CultureInfo item in getCultureInfo)
+                {
+                    RegionInfo GetRegionInfo = new RegionInfo(item.LCID);
+
+                    if (!(CultureList.Contains(GetRegionInfo.DisplayName)))
+                    {
+                        CultureList.Add(GetRegionInfo.DisplayName);
+                    }
+                }
+
+                CultureList.Sort();
+
+                return CultureList;
             }
         } 
     }
