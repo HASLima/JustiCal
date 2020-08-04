@@ -1,10 +1,12 @@
 ﻿using JustiCal.Model;
+using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,8 @@ namespace JustiCal
         List<object> listaDeDocumentos = new List<object>();
         List<EnderecoElectronico> listaDeMails = new List<EnderecoElectronico>();
         List<Morada> listaDeMoradas = new List<Morada>();
+        List<ContactoTelefonico> listaDeContactosTelefonicos = new List<ContactoTelefonico>();
+        public object individuo;
         /// <summary>
         /// Apaga e volta a preencher os items da IdDocumentsListBox
         /// </summary>
@@ -61,14 +65,24 @@ namespace JustiCal
             {
                 moradasListBox.Items.Add(item);
             }
-            Debug.WriteLine(String.Format("listaDeMoradas.Count = {0}", listaDeMails.Count));
+            Debug.WriteLine(String.Format("listaDeMoradas.Count = {0}", listaDeMoradas.Count));
+        }
+
+        private void refreshContactosTelefonicosListBox()
+        {
+            contactosTelefonicosListBox.Items.Clear();
+            foreach (ContactoTelefonico item in listaDeContactosTelefonicos)
+            {
+                contactosTelefonicosListBox.Items.Add(item);
+            }
+            Debug.WriteLine(String.Format("listaDeContactosTelefonicos = {0}", listaDeContactosTelefonicos.Count));
         }
 
 
 
         private void AdicionarPessoaForm_Load(object sender, EventArgs e)
         {
-
+            birthDateDateTimePicker.MaxDate = DateTime.Now;
         }
 
         private void birthDateDateTimePicker_ValueChanged(object sender, EventArgs e)
@@ -88,10 +102,40 @@ namespace JustiCal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<string> strings = new List<string> { "133683761ZX8", "2080018", "16083006" };
-            foreach (string item in strings)
+            bool masculino = (masculinoRadioButton.Checked && !femininoRadioButton.Checked);
+            Person pessoa = new Person(fullNameTextBox.Text, masculino, listaDeDocumentos, birthDateDateTimePicker.Value, listaDeMoradas, listaDeContactosTelefonicos, listaDeMails, filiacao1TextBox.Text, filiacao2TextBox.Text, naturalidadeComboBox.Text, nacionalidadeComboBox.Text);
+            if (militarCheckBox.Checked)
             {
-                IdDocumentsListBox.Items.Add(item);
+                Militar militar = new Militar(postoComboBox.Text, armaComboBox.Text, nrTextBox.Text, pessoa);
+                if (alunoCheckBox.Checked)
+                {
+                    int bat = 0;
+                    if (companhiaComboBox.SelectedIndex > 3)
+                    {
+                        bat = 2;
+                    }
+                    else
+                    {
+                        bat = 1;
+                    }
+                    Int32.TryParse(nrCorpoTextBox.Text, out int nrCorpo);
+                    Student student = new Student(nrCorpo, cursoComboBox.Text, companhiaComboBox.SelectedIndex, bat, origemComboBox.Text, militar);
+                    individuo = student;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    individuo = militar;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+            }
+            else
+            {
+                individuo = pessoa;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
 
@@ -122,11 +166,11 @@ namespace JustiCal
         {
             if (birthDateDateTimePicker.Value > DateTime.Now)
             {
-                birthDateDateTimePicker.Font = new Font("Lucida Console", 10, FontStyle.Strikeout, GraphicsUnit.Point);
+                birthDateDateTimePicker.Font = new System.Drawing.Font("Lucida Console", 10, FontStyle.Strikeout, GraphicsUnit.Point);
                 e.Cancel = true;
             }
             else
-                birthDateDateTimePicker.Font = new Font("Lucida Console", 10, FontStyle.Regular, GraphicsUnit.Point);
+                birthDateDateTimePicker.Font = new System.Drawing.Font("Lucida Console", 10, FontStyle.Regular, GraphicsUnit.Point);
 
         }
 
@@ -227,6 +271,36 @@ namespace JustiCal
                 listaDeMails.RemoveAt(i);
             }
             refreshAddressesListBox();
+        }
+
+        private void criarContactoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdicionarContactoTelefonico adicionarContactoForm = new AdicionarContactoTelefonico();
+            DialogResult dialogResult = adicionarContactoForm.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                listaDeContactosTelefonicos.Add(adicionarContactoForm.contacto as ContactoTelefonico);
+            }
+            refreshContactosTelefonicosListBox();
+        }
+
+        private void apagarContactoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListBox.SelectedObjectCollection list = contactosTelefonicosListBox.SelectedItems;
+            for (int i = list.Count-1; i >= 0; i--)
+            {
+                contactosTelefonicosListBox.Items.Remove(list[i]);
+                listaDeContactosTelefonicos.RemoveAt(i);
+            }
+            refreshContactosTelefonicosListBox();
+        }
+
+        private void masculinoRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((masculinoRadioButton.Checked && !femininoRadioButton.Checked) || (!masculinoRadioButton.Checked && femininoRadioButton.Checked))
+            {
+
+            }
         }
     }
 }

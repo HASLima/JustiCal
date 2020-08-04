@@ -24,7 +24,7 @@ namespace JustiCal
         private void AdicionarContactoTelefonico_Load(object sender, EventArgs e)
         {
             descricaoComboBox.Items.AddRange(descricoes.ToArray());
-            indicativoTextBox.Text = "+351";
+            indicativoTextBox.Text = "351";
             
         }
 

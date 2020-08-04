@@ -16,13 +16,11 @@ namespace JustiCal
             public string LastName { get; set; }
             public string OtherNames { get; set; }
             public DateTime? BirthDate { get; set; }
-            public List<IdDocument> IdDocuments { get; set; }
+            public List<object> IdDocuments { get; set; }
             public bool Masculino { get; set; }
-
-            //public Morada Morada { get; set; }
             public List<Morada> Moradas { get; set; }
             public List<ContactoTelefonico> Contactos { get; set; }
-            public EnderecoElectronico EmailAddress { get; set; }
+            public List<EnderecoElectronico> Emails { get; set; }
             public string[] Filiacao;
             public string Naturalidade { get; set; }
             public string Nacionalidade { get; set; }
@@ -40,7 +38,7 @@ namespace JustiCal
             /// <param name="mae">Mother's Fullname</param>
             /// <param name="naturalidade">Naturality</param>
             /// <param name="nacionalidade">Nacionality</param>
-            public Person(string name, bool masculino, List<IdDocument> idDocuments = null, DateTime? birthDate = null, List<Morada> moradas = null, List<ContactoTelefonico> contactos = null, EnderecoElectronico mailAddress = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
+            public Person(string name, bool masculino, List<object> idDocuments = null, DateTime? birthDate = null, List<Morada> moradas = null, List<ContactoTelefonico> contactos = null, List<EnderecoElectronico> mails = null, string pai = null, string mae = null , string naturalidade = null, string nacionalidade = null)
             {
                 //Spliting FirstName, LastName and other names from name
                 string[] names = name.Split(' ');
@@ -61,7 +59,7 @@ namespace JustiCal
                 if (!(idDocuments == null))
                     IdDocuments = idDocuments;
                 else
-                    IdDocuments = new List<IdDocument>();
+                    IdDocuments = new List<object>();
 
                 if (!(birthDate == null))
                     BirthDate = birthDate;
@@ -73,8 +71,10 @@ namespace JustiCal
                     Contactos = contactos;
                 else
                     Contactos = new List<ContactoTelefonico>();
-                if (!(mailAddress == null))
-                    EmailAddress = mailAddress;
+                if (!(mails == null))
+                    Emails = mails;
+                else
+                    Emails = new List<EnderecoElectronico>();
                 Filiacao = new string[] { pai, mae };
                 if (!(naturalidade == null))
                     Naturalidade = naturalidade;
@@ -103,7 +103,7 @@ namespace JustiCal
             public string Nr { get; set; }
 
 
-            public Militar(string posto, string arma, string nr, Person person) : base(person.getFullName(), person.Masculino, person.IdDocuments, person.BirthDate, person.Moradas, person.Contactos, person.EmailAddress, person.Filiacao[0], person.Filiacao[1], person.Naturalidade, person.Nacionalidade)
+            public Militar(string posto, string arma, string nr, Person person) : base(person.getFullName(), person.Masculino, person.IdDocuments, person.BirthDate, person.Moradas, person.Contactos, person.Emails, person.Filiacao[0], person.Filiacao[1], person.Naturalidade, person.Nacionalidade)
             {
                 Posto = posto;
                 Arma = arma;

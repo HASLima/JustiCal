@@ -166,6 +166,7 @@
             this.masculinoRadioButton.Name = "masculinoRadioButton";
             this.masculinoRadioButton.TabStop = true;
             this.masculinoRadioButton.UseVisualStyleBackColor = true;
+            this.masculinoRadioButton.CheckedChanged += new System.EventHandler(this.masculinoRadioButton_CheckedChanged);
             // 
             // femininoRadioButton
             // 
@@ -299,11 +300,13 @@
             // 
             this.criarContactoToolStripMenuItem.Name = "criarContactoToolStripMenuItem";
             resources.ApplyResources(this.criarContactoToolStripMenuItem, "criarContactoToolStripMenuItem");
+            this.criarContactoToolStripMenuItem.Click += new System.EventHandler(this.criarContactoToolStripMenuItem_Click);
             // 
             // apagarContactoToolStripMenuItem
             // 
             this.apagarContactoToolStripMenuItem.Name = "apagarContactoToolStripMenuItem";
             resources.ApplyResources(this.apagarContactoToolStripMenuItem, "apagarContactoToolStripMenuItem");
+            this.apagarContactoToolStripMenuItem.Click += new System.EventHandler(this.apagarContactoToolStripMenuItem_Click);
             // 
             // tabPage4
             // 

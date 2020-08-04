@@ -72,6 +72,11 @@ namespace JustiCal
                 Descricao = descricao;
                 Detentor = detentor;
             }
+
+            public override string ToString()
+            {
+                return String.Format("{0} [+{1} {2}]", Descricao, Indicativo, Numero);
+            }
             /// <summary>
             /// Returns the country name given a international dialer code
             /// </summary>

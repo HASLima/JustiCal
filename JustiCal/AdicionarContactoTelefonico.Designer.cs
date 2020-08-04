@@ -35,8 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.descricaoComboBox = new System.Windows.Forms.ComboBox();
             this.detentorTextBox = new System.Windows.Forms.TextBox();
-            this.paisComboBox = new System.Windows.Forms.ComboBox();
-            this.countryLabel = new System.Windows.Forms.Label();
             this.submeterButton = new System.Windows.Forms.Button();
             this.plusLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -109,31 +107,10 @@
             this.detentorTextBox.Size = new System.Drawing.Size(552, 27);
             this.detentorTextBox.TabIndex = 37;
             // 
-            // paisComboBox
-            // 
-            this.paisComboBox.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.paisComboBox.FormattingEnabled = true;
-            this.paisComboBox.Location = new System.Drawing.Point(131, 150);
-            this.paisComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.paisComboBox.Name = "paisComboBox";
-            this.paisComboBox.Size = new System.Drawing.Size(552, 28);
-            this.paisComboBox.TabIndex = 47;
-            // 
-            // countryLabel
-            // 
-            this.countryLabel.AutoSize = true;
-            this.countryLabel.Font = new System.Drawing.Font("Arial", 10F);
-            this.countryLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.countryLabel.Location = new System.Drawing.Point(12, 153);
-            this.countryLabel.Name = "countryLabel";
-            this.countryLabel.Size = new System.Drawing.Size(54, 23);
-            this.countryLabel.TabIndex = 46;
-            this.countryLabel.Text = "Pais:";
-            // 
             // submeterButton
             // 
             this.submeterButton.Font = new System.Drawing.Font("Arial", 10F);
-            this.submeterButton.Location = new System.Drawing.Point(16, 201);
+            this.submeterButton.Location = new System.Drawing.Point(16, 148);
             this.submeterButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.submeterButton.Name = "submeterButton";
             this.submeterButton.Size = new System.Drawing.Size(668, 35);
@@ -158,11 +135,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 256);
+            this.ClientSize = new System.Drawing.Size(700, 194);
             this.Controls.Add(this.plusLabel);
             this.Controls.Add(this.submeterButton);
-            this.Controls.Add(this.paisComboBox);
-            this.Controls.Add(this.countryLabel);
             this.Controls.Add(this.descricaoComboBox);
             this.Controls.Add(this.detentorTextBox);
             this.Controls.Add(this.label2);
@@ -186,8 +161,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox descricaoComboBox;
         private System.Windows.Forms.TextBox detentorTextBox;
-        private System.Windows.Forms.ComboBox paisComboBox;
-        private System.Windows.Forms.Label countryLabel;
         private System.Windows.Forms.Button submeterButton;
         private System.Windows.Forms.Label plusLabel;
     }
