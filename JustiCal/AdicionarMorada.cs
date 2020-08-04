@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -92,6 +93,7 @@ namespace JustiCal
                                 morada[1] += " " + values[i];
                             }
                         }
+                        Debug.WriteLine(morada[1]);
 
                         morada[2] = values[3];
 
