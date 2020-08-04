@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.moradasEncontradasListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // listBox1
+            // moradasEncontradasListBox
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.Font = new System.Drawing.Font("Lucida Console", 10F);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 0);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(387, 209);
-            this.listBox1.TabIndex = 0;
+            this.moradasEncontradasListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.moradasEncontradasListBox.Font = new System.Drawing.Font("Lucida Console", 10F);
+            this.moradasEncontradasListBox.FormattingEnabled = true;
+            this.moradasEncontradasListBox.ItemHeight = 20;
+            this.moradasEncontradasListBox.Location = new System.Drawing.Point(0, 0);
+            this.moradasEncontradasListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.moradasEncontradasListBox.Name = "moradasEncontradasListBox";
+            this.moradasEncontradasListBox.Size = new System.Drawing.Size(387, 209);
+            this.moradasEncontradasListBox.TabIndex = 0;
+            this.moradasEncontradasListBox.DoubleClick += new System.EventHandler(this.moradasEncontradasListBox_DoubleClick);
             // 
             // MoradasEncontradas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 209);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.moradasEncontradasListBox);
             this.Font = new System.Drawing.Font("Arial", 10F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MoradasEncontradas";
@@ -58,6 +60,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox moradasEncontradasListBox;
     }
 }

@@ -21,6 +21,7 @@ namespace JustiCal
 
         List<object> listaDeDocumentos = new List<object>();
         List<EnderecoElectronico> listaDeMails = new List<EnderecoElectronico>();
+        List<Morada> listaDeMoradas = new List<Morada>();
         /// <summary>
         /// Apaga e volta a preencher os items da IdDocumentsListBox
         /// </summary>
@@ -51,6 +52,16 @@ namespace JustiCal
                 emailsListBox.Items.Add(String.Format("{0} [{1}]", item.Descricao, item.Address));
             }
             Debug.WriteLine(String.Format("listaDeMails.Count = {0}", listaDeMails.Count));
+        }
+
+        private void refreshAddressesListBox()
+        {
+            moradasListBox.Items.Clear();
+            foreach (Morada item in listaDeMoradas)
+            {
+                moradasListBox.Items.Add(item);
+            }
+            Debug.WriteLine(String.Format("listaDeMoradas.Count = {0}", listaDeMails.Count));
         }
 
 
@@ -189,6 +200,33 @@ namespace JustiCal
                 origemComboBox.Enabled = alunoCheckBox.Checked;
 
 
+        }
+
+        private void moradasListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void criarMoradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdicionarMorada adicionarMorada = new AdicionarMorada();
+            DialogResult dialogResult = adicionarMorada.ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                listaDeMoradas.Add(adicionarMorada.morada as Morada);
+            }
+            refreshAddressesListBox();
+        }
+
+        private void apagarMoradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListBox.SelectedObjectCollection list = moradasListBox.SelectedItems;
+            for (int i = list.Count -1; i >= 0; i--)
+            {
+                moradasListBox.Items.Remove(list[i]);
+                listaDeMails.RemoveAt(i);
+            }
+            refreshAddressesListBox();
         }
     }
 }

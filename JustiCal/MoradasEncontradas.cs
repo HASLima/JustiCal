@@ -12,9 +12,21 @@ namespace JustiCal
 {
     public partial class MoradasEncontradas : Form
     {
-        public MoradasEncontradas()
+        public int escolha;
+        public MoradasEncontradas(List<string[]> listaDeMoradas)
         {
             InitializeComponent();
+            foreach (string[] item in listaDeMoradas)
+            {
+                moradasEncontradasListBox.Items.Add(String.Format("{0} {1}, {2}", item[0], item[1], item[3]));
+            }
         }
+
+        private void moradasEncontradasListBox_DoubleClick(object sender, EventArgs e)
+        {
+            escolha = moradasEncontradasListBox.SelectedIndex;
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+                }
     }
 }

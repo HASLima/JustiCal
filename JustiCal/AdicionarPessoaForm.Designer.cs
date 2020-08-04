@@ -255,11 +255,13 @@
             // 
             this.criarMoradaToolStripMenuItem.Name = "criarMoradaToolStripMenuItem";
             resources.ApplyResources(this.criarMoradaToolStripMenuItem, "criarMoradaToolStripMenuItem");
+            this.criarMoradaToolStripMenuItem.Click += new System.EventHandler(this.criarMoradaToolStripMenuItem_Click);
             // 
             // apagarMoradaToolStripMenuItem
             // 
             this.apagarMoradaToolStripMenuItem.Name = "apagarMoradaToolStripMenuItem";
             resources.ApplyResources(this.apagarMoradaToolStripMenuItem, "apagarMoradaToolStripMenuItem");
+            this.apagarMoradaToolStripMenuItem.Click += new System.EventHandler(this.apagarMoradaToolStripMenuItem_Click);
             // 
             // moradasListBox
             // 
@@ -267,6 +269,7 @@
             resources.ApplyResources(this.moradasListBox, "moradasListBox");
             this.moradasListBox.FormattingEnabled = true;
             this.moradasListBox.Name = "moradasListBox";
+            this.moradasListBox.SelectedIndexChanged += new System.EventHandler(this.moradasListBox_SelectedIndexChanged);
             // 
             // tabPage3
             // 
@@ -285,6 +288,7 @@
             // 
             // ContactsContextMenuStrip
             // 
+            this.ContactsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.ContactsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.criarContactoToolStripMenuItem,
             this.apagarContactoToolStripMenuItem});
@@ -311,6 +315,7 @@
             // 
             // EmailsContextMenuStrip
             // 
+            this.EmailsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.EmailsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.criarEMailToolStripMenuItem,
             this.apagarEMailToolStripMenuItem});
