@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Task = System.Threading.Tasks.Task;
 using JustiCal;
+using JustiCal.Model;
 
 namespace JustiCal
 {
@@ -98,6 +99,17 @@ namespace JustiCal
 
 
 
+            }
+
+            private void createPersonButton_Click(object sender, EventArgs e)
+            {
+                AdicionarPessoaForm adicionarPessoaForm = new AdicionarPessoaForm(View);
+                DialogResult result = adicionarPessoaForm.ShowDialog();
+            }
+
+            private void printPersonsButton_Click(object sender, EventArgs e)
+            {
+                View.CliqueEmImprimirPessoas();
             }
         } 
     }

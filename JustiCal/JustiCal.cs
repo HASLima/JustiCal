@@ -32,24 +32,10 @@ namespace JustiCal
 
             static void Main()
             {
-
-                AdicionarPessoaForm adicionarPessoaForm = new AdicionarPessoaForm();
-                adicionarPessoaForm.ShowDialog();
                 
                 
                 Controller controller = new Controller();
-                //controller.View.ActivarUI();
-
-                Person oPerson2 = new Person("Andreia Sofia Saraiva dos Santos Lima", false, null, new DateTime(1987, 9, 13), new List<Morada> { new Morada("Principal", "Rua", "Dias Lourenço", "10", null, "2925", "135") }, new List<ContactoTelefonico> { new ContactoTelefonico("969654740","Principal") }, new EnderecoElectronico("Principal", "assantos.lima@gmail.com"), "José Carlos Santos", "Ana Paula Saraiva dos Santos", null, null);
-                CartaoDeCidadao cartaoDeCidadao = new CartaoDeCidadao("133683761ZX8", new DateTime(2021, 10, 01));
-                oPerson2.IdDocuments.Add(cartaoDeCidadao);
-                Person oPessoa = new Person("Hélder Alexandre de Sousa Lima", true, new List<IdDocument>{ new CartaoDeCidadao("133683761ZX8", 10, 10, 2021) }, new DateTime(1988, 3, 2), new List<Morada> { new Morada("Principal", "Rua", "António Alves", "44", null, "4700", "253") }, new List<ContactoTelefonico> { new ContactoTelefonico("969239643","Principal") }, new EnderecoElectronico("Principal","haslima@gmail.com"), "Hélder Carvalho Lima", "Maria Armanda Leite da Costa Sousa");
-
-                //test area
-                BilheteDeIdentidade oBilhete = new BilheteDeIdentidade("13368376", 1, 2, 3, 2000, 2, 3, 2005, "Braga");
-                //BilheteDeIdentidade oBilhete = new BilheteDeIdentidade("13368376", 1, new DateTime(2000, 3, 2), new DateTime(2005, 03, 02), "Braga");
-                Console.WriteLine(String.Format("Bilhete de identidade n.º {0}\nEmitido a {1} em {3}\nVálido até {2}", oBilhete.DocumentNumber, oBilhete.IssueDate.Value.Date.ToString(), oBilhete.ExpiryDate.Value.ToString(), oBilhete.IssuePlace));
-
+                controller.View.ActivarUI();
                     
 
                 

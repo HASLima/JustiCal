@@ -1,4 +1,5 @@
 ﻿using JustiCal.Model;
+using JustiCal.View;
 using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,10 @@ namespace JustiCal
 {
     public partial class AdicionarPessoaForm : Form
     {
-        public AdicionarPessoaForm()
+        private ViewClass view;
+        public AdicionarPessoaForm(ViewClass v)
         {
+            view = v;
             InitializeComponent();
         }
 
@@ -104,6 +107,10 @@ namespace JustiCal
         {
             bool masculino = (masculinoRadioButton.Checked && !femininoRadioButton.Checked);
             Person pessoa = new Person(fullNameTextBox.Text, masculino, listaDeDocumentos, birthDateDateTimePicker.Value, listaDeMoradas, listaDeContactosTelefonicos, listaDeMails, filiacao1TextBox.Text, filiacao2TextBox.Text, naturalidadeComboBox.Text, nacionalidadeComboBox.Text);
+            if (pessoa == null)
+            {
+                Debug.WriteLine("pessoa é nulo");
+            }
             if (militarCheckBox.Checked)
             {
                 Militar militar = new Militar(postoComboBox.Text, armaComboBox.Text, nrTextBox.Text, pessoa);
@@ -134,6 +141,11 @@ namespace JustiCal
             else
             {
                 individuo = pessoa;
+                view.CliqueEmSubmeterPessoa(individuo);
+                if (individuo == null)
+                {
+                    Debug.WriteLine("individuo é nulo");
+                }
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

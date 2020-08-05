@@ -20,6 +20,9 @@ namespace JustiCal
             {
                 View = new View.ViewClass(model);
                 Model = new ModelClass(view);
+
+                view.UtilizadorClicouEmSubmeterPessoa += PrecisoAdicionarIndividuo;
+                view.UtilizadorClicouEmImprimirPessoas += PrecisoImprimirPessoas;
             }
 
             public ModelClass Model
@@ -32,6 +35,16 @@ namespace JustiCal
             {
                 get { return view; }
                 set { view = value; }
+            }
+
+            private void PrecisoAdicionarIndividuo(object individuo)
+            {
+                model.AddPerson(individuo);
+            }
+
+            private void PrecisoImprimirPessoas()
+            {
+                model.PrintPersons();
             }
 
 

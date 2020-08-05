@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,12 @@ namespace JustiCal
             private Form homepage;
             ModelClass model;
 
+            public delegate void UtilizadorClicarEmSubmeterPessoa(object Individuo);
+            public event UtilizadorClicarEmSubmeterPessoa UtilizadorClicouEmSubmeterPessoa;
+
+            public delegate void UtilizadorClicarEmImprimirPessoas();
+            public event UtilizadorClicarEmImprimirPessoas UtilizadorClicouEmImprimirPessoas;
+
             public ViewClass(ModelClass m)
             {
                 model = m;
@@ -26,6 +33,16 @@ namespace JustiCal
             {
                 homepage = new Form1(this);
                 homepage.ShowDialog();
+            }
+
+            public void CliqueEmSubmeterPessoa(object individuo)
+            {
+                UtilizadorClicouEmSubmeterPessoa(individuo);
+            }
+
+            public void CliqueEmImprimirPessoas()
+            {
+                UtilizadorClicouEmImprimirPessoas();
             }
         } 
     }
