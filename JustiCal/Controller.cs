@@ -1,4 +1,5 @@
-﻿using Microsoft.Office.Interop.Word;
+﻿using JustiCal.Model;
+using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,8 @@ namespace JustiCal
 
                 view.UtilizadorClicouEmSubmeterPessoa += PrecisoAdicionarIndividuo;
                 view.UtilizadorClicouEmImprimirPessoas += PrecisoImprimirPessoas;
+                view.UtilizadorClicouEmProcurarCodigoPostal += PrecisoMoradas;
+
             }
 
             public ModelClass Model
@@ -45,6 +48,11 @@ namespace JustiCal
             private void PrecisoImprimirPessoas()
             {
                 model.PrintPersons();
+            }
+
+            private List<string[]> PrecisoMoradas(string cp4, string cp3)
+            {
+                return Morada.ProcurarCP(cp4, cp3);
             }
 
 
