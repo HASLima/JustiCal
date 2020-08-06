@@ -128,12 +128,14 @@ namespace JustiCal
                     Int32.TryParse(nrCorpoTextBox.Text, out int nrCorpo);
                     Student student = new Student(nrCorpo, cursoComboBox.Text, companhiaComboBox.SelectedIndex, bat, origemComboBox.Text, militar);
                     individuo = student;
+                    view.CliqueEmSubmeterPessoa(individuo);
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
                 else
                 {
                     individuo = militar;
+                    view.CliqueEmSubmeterPessoa(individuo);
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }

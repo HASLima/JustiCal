@@ -21,6 +21,9 @@ namespace JustiCal
             public delegate void UtilizadorClicarEmImprimirPessoas();
             public event UtilizadorClicarEmImprimirPessoas UtilizadorClicouEmImprimirPessoas;
 
+            public delegate List<string[]> UtilizadorClicarEmProcurarCodigoPostal(string cp4, string cp3);
+            public event UtilizadorClicarEmProcurarCodigoPostal UtilizadorClicouEmProcurarCodigoPostal;
+
             public ViewClass(ModelClass m)
             {
                 model = m;
@@ -43,6 +46,11 @@ namespace JustiCal
             public void CliqueEmImprimirPessoas()
             {
                 UtilizadorClicouEmImprimirPessoas();
+            }
+
+            public List<string[]> CliqueEmProcurarCP(string cp4, string cp3)
+            {
+                return UtilizadorClicouEmProcurarCodigoPostal(cp4, cp3);
             }
         } 
     }

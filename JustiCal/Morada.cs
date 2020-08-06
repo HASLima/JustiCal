@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
 using System.Globalization;
+using System.Diagnostics;
 
 namespace JustiCal
 {
@@ -190,6 +191,46 @@ namespace JustiCal
                 CultureList.Sort();
 
                 return CultureList;
+            }
+
+            public static List<string[]> ProcurarCP(string cp4, string cp3)
+            {
+                List<string[]> lista = new List<string[]>();
+
+                var assembly = Assembly.GetExecutingAssembly();
+                var resourceName = "JustiCal.Properties.todos_cp.txt";
+                using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+                using (var reader = new System.IO.StreamReader(stream))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        var values = line.Split(';');
+
+                        if (values[14] == cp4 && values[15] == cp3)
+                        {
+                            string[] morada = new string[4];
+                            morada[0] = values[5];
+
+                            morada[1] = values[6];
+                            for (int i = 7; i < 10; i++)
+                            {
+                                if (values[i].Length > 0)
+                                {
+                                    morada[1] += " " + values[i];
+                                }
+                            }
+                            Debug.WriteLine(morada[1]);
+
+                            morada[2] = values[3];
+
+                            morada[3] = values[16];
+
+                            lista.Add(morada);
+                        }
+                    }
+                }
+                return lista;
             }
         } 
     }
