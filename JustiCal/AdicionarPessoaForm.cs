@@ -267,7 +267,7 @@ namespace JustiCal
 
         private void criarMoradaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AdicionarMorada adicionarMorada = new AdicionarMorada();
+            AdicionarMorada adicionarMorada = new AdicionarMorada(view);
             DialogResult dialogResult = adicionarMorada.ShowDialog();
             if (dialogResult == DialogResult.OK)
             {
