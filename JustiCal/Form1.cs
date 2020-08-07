@@ -111,6 +111,12 @@ namespace JustiCal
             {
                 View.CliqueEmImprimirPessoas();
             }
+
+            private void showHomePageButton_Click(object sender, EventArgs e)
+            {
+                HomePage homePage = new HomePage();
+                DialogResult result = homePage.ShowDialog();
+            }
         } 
     }
 }

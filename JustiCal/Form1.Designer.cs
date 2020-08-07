@@ -34,6 +34,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.createPersonButton = new System.Windows.Forms.Button();
             this.printPersonsButton = new System.Windows.Forms.Button();
+            this.showHomePageButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -78,11 +79,22 @@
             this.printPersonsButton.UseVisualStyleBackColor = true;
             this.printPersonsButton.Click += new System.EventHandler(this.printPersonsButton_Click);
             // 
+            // showHomePageButton
+            // 
+            this.showHomePageButton.Location = new System.Drawing.Point(751, 107);
+            this.showHomePageButton.Name = "showHomePageButton";
+            this.showHomePageButton.Size = new System.Drawing.Size(255, 140);
+            this.showHomePageButton.TabIndex = 5;
+            this.showHomePageButton.Text = "Abrir Home Page";
+            this.showHomePageButton.UseVisualStyleBackColor = true;
+            this.showHomePageButton.Click += new System.EventHandler(this.showHomePageButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.showHomePageButton);
             this.Controls.Add(this.printPersonsButton);
             this.Controls.Add(this.createPersonButton);
             this.Controls.Add(this.button2);
@@ -100,6 +112,7 @@
             private System.Windows.Forms.Button button2;
             private System.Windows.Forms.Button createPersonButton;
             private System.Windows.Forms.Button printPersonsButton;
+            private System.Windows.Forms.Button showHomePageButton;
         } 
     }
 }

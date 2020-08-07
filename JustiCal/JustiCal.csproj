@@ -93,6 +93,12 @@
       <DependentUpon>AdicionarPessoaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EnderecoElectronico.cs" />
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelClass.cs" />
     <Compile Include="Morada.cs" />
     <Compile Include="MoradasEncontradas.cs">
@@ -131,6 +137,9 @@
     <EmbeddedResource Include="AdicionarPessoaForm.resx">
       <DependentUpon>AdicionarPessoaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MoradasEncontradas.resx">
       <DependentUpon>MoradasEncontradas.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,11 +173,20 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\todos_cp.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Properties\findIco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\military.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\militaryIco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\militaryIco.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,3 +41,4 @@ namespace JustiCal
         } 
     }
 }
+//TODO: in the about page set a link to the icons page https://support.flaticon.com/hc/en-us/articles/207248209-How-I-must-insert-the-attribution-
