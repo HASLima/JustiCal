@@ -17,8 +17,6 @@ namespace JustiCal
 {
     namespace Controller
     {
-
-
         static class JustiCal
         {
             /// <summary>
@@ -27,19 +25,11 @@ namespace JustiCal
             /// 
             //static Controller controller;
             [STAThread]
-
-
-
             static void Main()
             {
-                
-                
                 Controller controller = new Controller();
                 controller.View.ActivarUI();
-                    
-
-                
-
+                   
                 Console.Read();
 
                 //Este é o código originalmente criado pelo VIsual Studio
