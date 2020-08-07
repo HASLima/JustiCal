@@ -15,91 +15,94 @@ using System.Windows.Forms;
 
 namespace JustiCal
 {
-    public partial class AdicionarMorada : Form
+    namespace View
     {
-        public object morada;
-        private ViewClass view;
-        public AdicionarMorada(ViewClass v)
+        public partial class AdicionarMorada : Form
         {
-            InitializeComponent();
-            view = v;
-        }
-
-        private void AdicionarMorada_Load(object sender, EventArgs e)
-        {
-            countryComboBox.Items.AddRange(Morada.CountryList().ToArray());
-            countryComboBox.Text = "Portugal";
-        }
-
-        private void cp4TextBox_Validating(object sender, CancelEventArgs e)
-        {
-            if (Morada.CP4IsValid(cp4TextBox.Text))
+            public object morada;
+            private ViewClass view;
+            public AdicionarMorada(ViewClass v)
             {
-                cp4TextBox.BackColor = Color.Green;
-                e.Cancel = false;
+                InitializeComponent();
+                view = v;
             }
-            else
-            {
-                cp4TextBox.BackColor = Color.Red;
-                e.Cancel = true;
-            }
-        }
 
-        private void cp3TextBox_Validating(object sender, CancelEventArgs e)
-        {
-            if(Morada.CPIsValid(cp4TextBox.Text, cp3TextBox.Text))
+            private void AdicionarMorada_Load(object sender, EventArgs e)
             {
-                cp4TextBox.BackColor = cp3TextBox.BackColor = Color.Green;
-                findAddressButton.Enabled = true;
-                e.Cancel = false;
+                countryComboBox.Items.AddRange(Morada.CountryList().ToArray());
+                countryComboBox.Text = "Portugal";
             }
+
+            private void cp4TextBox_Validating(object sender, CancelEventArgs e)
+            {
+                if (Morada.CP4IsValid(cp4TextBox.Text))
+                {
+                    cp4TextBox.BackColor = Color.Green;
+                    e.Cancel = false;
+                }
+                else
+                {
+                    cp4TextBox.BackColor = Color.Red;
+                    e.Cancel = true;
+                }
+            }
+
+            private void cp3TextBox_Validating(object sender, CancelEventArgs e)
+            {
+                if (Morada.CPIsValid(cp4TextBox.Text, cp3TextBox.Text))
+                {
+                    cp4TextBox.BackColor = cp3TextBox.BackColor = Color.Green;
+                    findAddressButton.Enabled = true;
+                    e.Cancel = false;
+                }
                 else
                 {
                     cp3TextBox.BackColor = Color.Red;
-                findAddressButton.Enabled = false;
-                e.Cancel = true;
+                    findAddressButton.Enabled = false;
+                    e.Cancel = true;
                 }
-        }
-
-        private void countryComboBox_Validating(object sender, CancelEventArgs e)
-        {
-            if (countryComboBox.Text == "Portugal")
-            {
-                cp3TextBox.Enabled = cp3TextBox.Visible = (countryComboBox.Text == "Portugal");
-                designacaoPostalTextBox.Enabled = !(countryComboBox.Text == "Portugal");
             }
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            List<string[]> moradasEncontradas = view.CliqueEmProcurarCP(cp4TextBox.Text, cp3TextBox.Text);
-
-            if (moradasEncontradas.Count == 1)
+            private void countryComboBox_Validating(object sender, CancelEventArgs e)
             {
-                arteriaTextBox.Text = moradasEncontradas[0][0];
-                nomeDaArteriaTextBox.Text = moradasEncontradas[0][1];
-                localidadeTextBox.Text = moradasEncontradas[0][2];
-                designacaoPostalTextBox.Text = moradasEncontradas[0][3];
-            }
-            else if (moradasEncontradas.Count > 1)
-            {
-                MoradasEncontradas moradasEncontradasForm = new MoradasEncontradas(moradasEncontradas);
-                DialogResult dialogResult = moradasEncontradasForm.ShowDialog();
-                if (dialogResult == DialogResult.OK)
+                if (countryComboBox.Text == "Portugal")
                 {
-                    arteriaTextBox.Text = moradasEncontradas[moradasEncontradasForm.escolha][0];
-                    nomeDaArteriaTextBox.Text = moradasEncontradas[moradasEncontradasForm.escolha][1];
-                    localidadeTextBox.Text = moradasEncontradas[moradasEncontradasForm.escolha][2];
-                    designacaoPostalTextBox.Text = moradasEncontradas[moradasEncontradasForm.escolha][3];
+                    cp3TextBox.Enabled = cp3TextBox.Visible = (countryComboBox.Text == "Portugal");
+                    designacaoPostalTextBox.Enabled = !(countryComboBox.Text == "Portugal");
                 }
             }
-        }
 
-        private void submeterButton_Click(object sender, EventArgs e)
-        {
-            morada = new Morada(descricaoTextBox.Text, arteriaTextBox.Text, nomeDaArteriaTextBox.Text, portaTextBox.Text, alojamentoTextBox.Text, cp4TextBox.Text, cp3TextBox.Text, countryComboBox.Text, localidadeTextBox.Text, designacaoPostalTextBox.Text);
-            this.DialogResult = DialogResult.OK;
-            Close();
-        }
+            private void button1_Click(object sender, EventArgs e)
+            {
+                List<string[]> moradasEncontradas = view.CliqueEmProcurarCP(cp4TextBox.Text, cp3TextBox.Text);
+
+                if (moradasEncontradas.Count == 1)
+                {
+                    arteriaTextBox.Text = moradasEncontradas[0][0];
+                    nomeDaArteriaTextBox.Text = moradasEncontradas[0][1];
+                    localidadeTextBox.Text = moradasEncontradas[0][2];
+                    designacaoPostalTextBox.Text = moradasEncontradas[0][3];
+                }
+                else if (moradasEncontradas.Count > 1)
+                {
+                    MoradasEncontradas moradasEncontradasForm = new MoradasEncontradas(moradasEncontradas);
+                    DialogResult dialogResult = moradasEncontradasForm.ShowDialog();
+                    if (dialogResult == DialogResult.OK)
+                    {
+                        arteriaTextBox.Text = moradasEncontradas[moradasEncontradasForm.escolha][0];
+                        nomeDaArteriaTextBox.Text = moradasEncontradas[moradasEncontradasForm.escolha][1];
+                        localidadeTextBox.Text = moradasEncontradas[moradasEncontradasForm.escolha][2];
+                        designacaoPostalTextBox.Text = moradasEncontradas[moradasEncontradasForm.escolha][3];
+                    }
+                }
+            }
+
+            private void submeterButton_Click(object sender, EventArgs e)
+            {
+                morada = new Morada(descricaoTextBox.Text, arteriaTextBox.Text, nomeDaArteriaTextBox.Text, portaTextBox.Text, alojamentoTextBox.Text, cp4TextBox.Text, cp3TextBox.Text, countryComboBox.Text, localidadeTextBox.Text, designacaoPostalTextBox.Text);
+                this.DialogResult = DialogResult.OK;
+                Close();
+            }
+        } 
     }
 }

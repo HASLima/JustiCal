@@ -11,38 +11,41 @@ using System.Windows.Forms;
 
 namespace JustiCal
 {
-    public partial class AdicionarContactoTelefonico : Form
+    namespace View
     {
-        public AdicionarContactoTelefonico()
+        public partial class AdicionarContactoTelefonico : Form
         {
-            InitializeComponent();
-        }
-        public ContactoTelefonico contacto;
-        private List<string> descricoes = new List<string>() { "Principal", "Emergência", "Fixo", "Móvel"};
+            public AdicionarContactoTelefonico()
+            {
+                InitializeComponent();
+            }
+            public ContactoTelefonico contacto;
+            private List<string> descricoes = new List<string>() { "Principal", "Emergência", "Fixo", "Móvel" };
 
 
-        private void AdicionarContactoTelefonico_Load(object sender, EventArgs e)
-        {
-            descricaoComboBox.Items.AddRange(descricoes.ToArray());
-            indicativoTextBox.Text = "351";
-            
-        }
+            private void AdicionarContactoTelefonico_Load(object sender, EventArgs e)
+            {
+                descricaoComboBox.Items.AddRange(descricoes.ToArray());
+                indicativoTextBox.Text = "351";
 
-        private void indicativoTextBox_Leave(object sender, EventArgs e)
-        {
+            }
 
-        }
+            private void indicativoTextBox_Leave(object sender, EventArgs e)
+            {
 
-        private void submeterButton_Click(object sender, EventArgs e)
-        {
-            contacto = new ContactoTelefonico(numeroTextBox.Text, descricaoComboBox.Text, detentorTextBox.Text, indicativoTextBox.Text);
-            this.DialogResult = DialogResult.OK;
-            Close();
-        }
+            }
 
-        private void plusLabel_Click(object sender, EventArgs e)
-        {
+            private void submeterButton_Click(object sender, EventArgs e)
+            {
+                contacto = new ContactoTelefonico(numeroTextBox.Text, descricaoComboBox.Text, detentorTextBox.Text, indicativoTextBox.Text);
+                this.DialogResult = DialogResult.OK;
+                Close();
+            }
 
-        }
+            private void plusLabel_Click(object sender, EventArgs e)
+            {
+
+            }
+        } 
     }
 }

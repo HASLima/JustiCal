@@ -7,13 +7,16 @@ using System.Net.Mail;
 
 namespace JustiCal
 {
-    public class EnderecoElectronico : MailAddress
+    namespace Model
     {
-        public string Descricao { get; set; }
-        public EnderecoElectronico(string descricao, string mailAddress) :base(mailAddress)
+        public class EnderecoElectronico : MailAddress
         {
-            Descricao = descricao;
-        }
+            public string Descricao { get; set; }
+            public EnderecoElectronico(string descricao, string mailAddress) : base(mailAddress)
+            {
+                Descricao = descricao;
+            }
 
+        } 
     }
 }

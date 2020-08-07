@@ -7,28 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JustiCal.Model;
 
 namespace JustiCal
 {
-    public partial class AdicionarEnderecoEmail : Form
+    namespace View
     {
-        public AdicionarEnderecoEmail()
+        public partial class AdicionarEnderecoEmail : Form
         {
-            InitializeComponent();
-        }
+            public AdicionarEnderecoEmail()
+            {
+                InitializeComponent();
+            }
 
-        public object eMail;
+            public object eMail;
 
-        private void submeterButton_Click(object sender, EventArgs e)
-        {
-            eMail = new EnderecoElectronico(descricaoTextBox.Text, enderecoTextBox.Text);
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
+            private void submeterButton_Click(object sender, EventArgs e)
+            {
+                eMail = new EnderecoElectronico(descricaoTextBox.Text, enderecoTextBox.Text);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
 
-        private void AdicionarEnderecoEmailToolTip_Popup(object sender, PopupEventArgs e)
-        {
+            private void AdicionarEnderecoEmailToolTip_Popup(object sender, PopupEventArgs e)
+            {
 
-        }
+            }
+        } 
     }
 }

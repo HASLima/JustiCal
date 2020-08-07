@@ -9,35 +9,38 @@ using System.Threading.Tasks;
 
 namespace JustiCal
 {
-    public class ModelClass
+    namespace Model
     {
-        View.ViewClass view;
-        public static HttpClient client = new HttpClient(); //create a HttpClient
-        private List<object> persons;
-
-
-        public ModelClass(View.ViewClass v)
+        public class ModelClass
         {
-            view = v;
-            persons = new List<object>();
-        }
+            View.ViewClass view;
+            public static HttpClient client = new HttpClient(); //create a HttpClient
+            private List<object> persons;
 
-        public void AddPerson(object person)
-        {
-            persons.Add(person);
-        }
 
-        public void PrintPersons()
-        {
-            int index = 1;
-                Console.WriteLine("===PESSOAS===");
-            foreach (object item in persons)
+            public ModelClass(View.ViewClass v)
             {
-                Person tmp = (Person)item;
-                Console.WriteLine("-------------");
-                Console.WriteLine(String.Format("{0} - {1}\nData de Nascimento: {2}/{3}/{4}", index, tmp.getFullName(), tmp.BirthDate.Value.Day, tmp.BirthDate.Value.Month, tmp.BirthDate.Value.Year));
-                Console.WriteLine("-------------");
+                view = v;
+                persons = new List<object>();
             }
-        }
+
+            public void AddPerson(object person)
+            {
+                persons.Add(person);
+            }
+
+            public void PrintPersons()
+            {
+                int index = 1;
+                Console.WriteLine("===PESSOAS===");
+                foreach (object item in persons)
+                {
+                    Person tmp = (Person)item;
+                    Console.WriteLine("-------------");
+                    Console.WriteLine(String.Format("{0} - {1}\nData de Nascimento: {2}/{3}/{4}", index, tmp.getFullName(), tmp.BirthDate.Value.Day, tmp.BirthDate.Value.Month, tmp.BirthDate.Value.Year));
+                    Console.WriteLine("-------------");
+                }
+            }
+        } 
     }
 }
