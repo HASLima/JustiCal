@@ -33,7 +33,7 @@ namespace JustiCal
                 View = view;
             }
 
-            public ViewClass View { get; set; }
+            public ViewClass View { get { return view; } set { view = value; } }
 
             public void updateBookmark(string bookmarkToBeUpdated, string newText, Microsoft.Office.Interop.Word.Document document)
             {
