@@ -41,8 +41,8 @@ namespace JustiCal
             }
             individualsTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
             individualsTableLayoutPanel.Controls.Add(new Label() { Text = "N.º Documento" }, 0, 0);
-            individualsTableLayoutPanel.Controls.Add(new Label() { Text = "Primeiro Nome" }, 0, 0);
-            individualsTableLayoutPanel.Controls.Add(new Label() { Text = "Apelido" }, 0, 0);
+            individualsTableLayoutPanel.Controls.Add(new Label() { Text = "Primeiro Nome" }, 1, 0);
+            individualsTableLayoutPanel.Controls.Add(new Label() { Text = "Apelido" }, 2, 0);
             //individualsTableLayoutPanel.Controls.Add(new Image() { }
             individualsTableLayoutPanel.Controls.Add(new Label() { Text = "N.º Documento" }, 0, 0);
             individualsTableLayoutPanel.Controls.Add(new Label() { Text = "N.º Documento" }, 0, 0);
