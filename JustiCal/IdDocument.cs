@@ -11,30 +11,31 @@ namespace JustiCal
         {
             public enum DocumentType
             {
-                CartaoDeCidadao = 0,
-                BilheteDeIdentidade = 1,
-                BilheteDeIdentidadeMilitar = 2,
-                Passaporte = 3,
-                TituloDeResidencia = 4
+                BilheteDeIdentidadeMilitar = 0,
+                CartaoDeCidadao = 1,
+                BilheteDeIdentidade = 2,
+                TituloDeResidencia = 3,
+                Passaporte = 4
+
             }
 
 
             public readonly Dictionary<int, string> DocumentTypes = new Dictionary<int, string>()
             {
-                {0, "Cartão de Cidadão"},
-                {1, "Bilhete de Identidade"},
-                {2, "Bilhete de Identidade Militar"},
-                {3, "Passaporte"},
-                {4, "Título de Residência"}
+                {0, "Bilhete de Identidade Militar"},
+                {1, "Cartão de Cidadão"},
+                {2, "Bilhete de Identidade"},
+                {3, "Título de Residência"},
+                {4, "Passaporte"}
             };
 
             public readonly Dictionary<int, string> AbreviatedDocumentTypes = new Dictionary<int, string>()
             {
-                {0, "CC" },
-                {1, "BI" },
-                {2, "BIM" },
-                {3, "P" },
-                {4, "TR" }
+                {0, "BIM" },
+                {1, "CC" },
+                {2, "BI" },
+                {3, "TR" },
+                {4, "P" }
             };
 
             public enum Organismo
