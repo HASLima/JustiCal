@@ -63,6 +63,16 @@ namespace JustiCal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap addIco {
+            get {
+                object obj = ResourceManager.GetObject("addIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap addPersonIco {
             get {
                 object obj = ResourceManager.GetObject("addPersonIco", resourceCulture);
@@ -86,6 +96,16 @@ namespace JustiCal.Properties {
         public static System.Drawing.Bitmap cadetIco {
             get {
                 object obj = ResourceManager.GetObject("cadetIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap deleteIco {
+            get {
+                object obj = ResourceManager.GetObject("deleteIco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +226,16 @@ namespace JustiCal.Properties {
         public static string todos_cp {
             get {
                 return ResourceManager.GetString("todos_cp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap watchIco {
+            get {
+                object obj = ResourceManager.GetObject("watchIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
