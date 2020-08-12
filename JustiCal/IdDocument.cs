@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace JustiCal
@@ -17,6 +18,7 @@ namespace JustiCal
                 TituloDeResidencia = 4
             }
 
+
             public readonly Dictionary<int, string> DocumentTypes = new Dictionary<int, string>()
             {
                 {0, "Cartão de Cidadão"},
@@ -24,6 +26,31 @@ namespace JustiCal
                 {2, "Bilhete de Identidade Militar"},
                 {3, "Passaporte"},
                 {4, "Título de Residência"}
+            };
+
+            public readonly Dictionary<int, string> AbreviatedDocumentTypes = new Dictionary<int, string>()
+            {
+                {0, "CC" },
+                {1, "BI" },
+                {2, "BIM" },
+                {3, "P" },
+                {4, "TR" }
+            };
+
+            public enum Organismo
+            {
+                Armada = 0,
+                Exercito = 1,
+                ForcaAerea = 2,
+                GNR = 3
+            }
+
+            public readonly Dictionary<int, string> Organismos = new Dictionary<int, string>()
+            {
+                {0, "Armada" },
+                {1, "Exército Português" },
+                {2, "Força Aérea" },
+                {3, "Guarda Nacional Republicana" }
             };
 
             public string DocumentNumber { get; set; }
@@ -34,6 +61,11 @@ namespace JustiCal
             public IdDocument()
             {
 
+            }
+
+            public override string ToString()
+            {
+                return String.Format("{0} {1}", AbreviatedDocumentTypes[(int)IdDocumentType], DocumentNumber);
             }
 
         }
@@ -227,6 +259,18 @@ namespace JustiCal
             {
             }
 
+        }
+
+        public class BilheteDeIdentidadeMilitar : IdDocument
+        {
+            public Organismo Organismo { get; set; }
+            public BilheteDeIdentidadeMilitar(string nr, DateTime expiryDate, Organismo organismo)
+            {
+                DocumentNumber = nr;
+                ExpiryDate = expiryDate;
+                Organismo = organismo;
+                IdDocumentType = DocumentType.BilheteDeIdentidadeMilitar;
+            }
         }
     }
 }
