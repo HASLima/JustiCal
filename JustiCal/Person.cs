@@ -192,6 +192,26 @@ namespace JustiCal
                 normalizedprint += " - " + getFullName();
                 return normalizedprint;
             }
+
+            public string GetOneDocument()
+            {
+                if (IdDocuments.Count < 1)
+                    return String.Format("N/A"); //TODO arranjar uma excepção
+                else if (IdDocuments.Count == 1)
+                    return IdDocuments[0].ToString();
+                else
+                {
+                    IdDocument idDocument = (IdDocument) IdDocuments[0];
+                    foreach (IdDocument item in IdDocuments)
+                    {
+                        if (item.IdDocumentType < idDocument.IdDocumentType)
+                        {
+                            idDocument = (IdDocument)item;
+                        }
+                    }
+                    return idDocument.ToString();
+                }
+            }
         }
 
         public class OficialInstrutor
@@ -225,6 +245,6 @@ namespace JustiCal
                 get { return finalDate; }
                 set { finalDate = value; }
             }
-        } 
+        }
     }
 }
