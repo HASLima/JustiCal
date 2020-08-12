@@ -63,6 +63,66 @@ namespace JustiCal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap addPersonIco {
+            get {
+                object obj = ResourceManager.GetObject("addPersonIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap addProcessIco {
+            get {
+                object obj = ResourceManager.GetObject("addProcessIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap cadetIco {
+            get {
+                object obj = ResourceManager.GetObject("cadetIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap editPersonIco {
+            get {
+                object obj = ResourceManager.GetObject("editPersonIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap editProcessIco {
+            get {
+                object obj = ResourceManager.GetObject("editProcessIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap findCPIco {
+            get {
+                object obj = ResourceManager.GetObject("findCPIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap findIco {
             get {
                 object obj = ResourceManager.GetObject("findIco", resourceCulture);
@@ -76,6 +136,56 @@ namespace JustiCal.Properties {
         public static System.Drawing.Bitmap militaryIco {
             get {
                 object obj = ResourceManager.GetObject("militaryIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap militaryIco1 {
+            get {
+                object obj = ResourceManager.GetObject("militaryIco1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap removePersonIco {
+            get {
+                object obj = ResourceManager.GetObject("removePersonIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap removeProcessIco {
+            get {
+                object obj = ResourceManager.GetObject("removeProcessIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap searchPersonIco {
+            get {
+                object obj = ResourceManager.GetObject("searchPersonIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap searchProcessIco {
+            get {
+                object obj = ResourceManager.GetObject("searchProcessIco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

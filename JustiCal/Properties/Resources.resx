@@ -127,4 +127,37 @@
   <data name="militaryIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>military.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="addPersonIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addPersonIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="addProcessIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addProcessIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cadetIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cadetIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editPersonIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editPersonIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editProcessIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editProcessIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="findCPIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\findCPIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="militaryIco1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\militaryIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="removePersonIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\removePersonIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="removeProcessIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\removeProcessIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="searchPersonIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\searchPersonIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="searchProcessIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\searchProcessIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

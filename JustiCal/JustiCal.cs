@@ -42,3 +42,14 @@ namespace JustiCal
     }
 }
 //TODO: in the about page set a link to the icons page https://support.flaticon.com/hc/en-us/articles/207248209-How-I-must-insert-the-attribution-
+// cadetIco.png "Icon made by FreePik from www.flaticon.com" (https://www.flaticon.com/authors/freepik)
+// militaryIco.png "Icon made by Eucalyp from www.flaticon.com" (https://www.flaticon.com/authors/eucalyp")
+// findCPIco.png "Icon made by FreePik from www.flaticon.com" (https://www.flaticon.com/authors/freepik)
+// addPersonIco.png "Icon made by Smashicons from www.flaticon.com" (https://www.flaticon.com/authors/smashicons)
+// removePersonIco.png "Icon made by Smashicons from www.flaticon.com" (https://www.flaticon.com/authors/smashicons)
+// editPersonIco.png "Icon made by Smashicons from www.flaticon.com" (https://www.flaticon.com/authors/smashicons)
+// searchPersonIco.png "Icon made by Smashicons from www.flaticon.com" (https://www.flaticon.com/authors/smashicons)
+// addProcessIco.png "Icon made by <a href="http://www.dariusdan.com/" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+// editProcessIco.png "Icon made by <a href="http://www.dariusdan.com/" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+// searchProcessIco.png "Icon made by <a href="http://www.dariusdan.com/" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+// removeProcessIco.png "Icon made by <a href="http://www.dariusdan.com/" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
