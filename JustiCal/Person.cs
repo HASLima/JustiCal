@@ -92,8 +92,26 @@ namespace JustiCal
                 else
                     return FirstName + " " + LastName;
             }
+            public string GetOneDocument()
+            {
+                if (IdDocuments.Count < 1)
+                    return String.Format("N/A"); //TODO arranjar uma excepção
+                else if (IdDocuments.Count == 1)
+                    return IdDocuments[0].ToString();
+                else
+                {
+                    IdDocument idDocument = (IdDocument)IdDocuments[0];
+                    foreach (IdDocument item in IdDocuments)
+                    {
+                        if (item.IdDocumentType < idDocument.IdDocumentType)
+                        {
+                            idDocument = (IdDocument)item;
+                        }
+                    }
+                    return idDocument.ToString();
+                }
+            }
 
-            
         }
 
         public class Militar : Person
@@ -193,25 +211,7 @@ namespace JustiCal
                 return normalizedprint;
             }
 
-            public string GetOneDocument()
-            {
-                if (IdDocuments.Count < 1)
-                    return String.Format("N/A"); //TODO arranjar uma excepção
-                else if (IdDocuments.Count == 1)
-                    return IdDocuments[0].ToString();
-                else
-                {
-                    IdDocument idDocument = (IdDocument) IdDocuments[0];
-                    foreach (IdDocument item in IdDocuments)
-                    {
-                        if (item.IdDocumentType < idDocument.IdDocumentType)
-                        {
-                            idDocument = (IdDocument)item;
-                        }
-                    }
-                    return idDocument.ToString();
-                }
-            }
+
         }
 
         public class OficialInstrutor
