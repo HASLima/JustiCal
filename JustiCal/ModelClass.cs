@@ -2,6 +2,7 @@
 using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -15,25 +16,37 @@ namespace JustiCal
         {
             View.ViewClass view;
             public static HttpClient client = new HttpClient(); //create a HttpClient
-            private List<object> persons;
 
+            public List<object> Persons { get; private set; }
 
             public ModelClass(View.ViewClass v)
             {
                 view = v;
-                persons = new List<object>();
+                Persons = new List<object>();
+
+                //Só para testes
+                Persons.Add(new Person("Hélder Alexandre de Sousa Lima", true, new List<object>() { new CartaoDeCidadao("133683761ZX8", new DateTime(2021, 10, 21)) }, new DateTime(1988, 03, 02), new List<Morada>() { new Morada("Principal", "Rua", "Dias Lourenço", "10", null, "2925", "135") }));
+                //
             }
+
 
             public void AddPerson(object person)
             {
-                persons.Add(person);
+                Persons.Add(person);
+            }
+
+            public void deletePerson(object person)
+            {
+                Debug.Write(String.Format("Antes de Apagar: {0}", Persons.Count));
+                Persons.Remove(person);
+                Debug.WriteLine(String.Format("Depois de Apagar: {0}", Persons.Count));
             }
 
             public void PrintPersons()
             {
                 int index = 1;
                 Console.WriteLine("===PESSOAS===");
-                foreach (object item in persons)
+                foreach (object item in Persons)
                 {
                     Person tmp = (Person)item;
                     Console.WriteLine("-------------");
@@ -41,6 +54,7 @@ namespace JustiCal
                     Console.WriteLine("-------------");
                 }
             }
+
         } 
     }
 }

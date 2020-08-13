@@ -25,6 +25,12 @@ namespace JustiCal
             public delegate List<string[]> UtilizadorClicarEmProcurarCodigoPostal(string cp4, string cp3);
             public event UtilizadorClicarEmProcurarCodigoPostal UtilizadorClicouEmProcurarCodigoPostal;
 
+            public delegate void UtilizadorClicarEmApagarPessoa(object individuo);
+            public event UtilizadorClicarEmApagarPessoa UtilizadorClicouEmApagarPessoa;
+
+            public delegate List<object> UtilizadorSolicitarListaDePessoas();
+            public event UtilizadorSolicitarListaDePessoas UtilizadorSolicitouListaDePessoas;
+
             public ViewClass(ModelClass m)
             {
                 model = m;
@@ -53,6 +59,19 @@ namespace JustiCal
             {
                 return UtilizadorClicouEmProcurarCodigoPostal(cp4, cp3);
             }
+
+            public void CliqueEmApagarPessoa(object individuo)
+            {
+                UtilizadorClicouEmApagarPessoa(individuo);
+            }
+
+            public List<object> SolicitaListaDePessoas()
+            {
+                return UtilizadorSolicitouListaDePessoas();
+            }
+
+
+
         } 
     }
 }

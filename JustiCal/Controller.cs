@@ -25,6 +25,8 @@ namespace JustiCal
                 view.UtilizadorClicouEmSubmeterPessoa += PrecisoAdicionarIndividuo;
                 view.UtilizadorClicouEmImprimirPessoas += PrecisoImprimirPessoas;
                 view.UtilizadorClicouEmProcurarCodigoPostal += PrecisoMoradas;
+                view.UtilizadorSolicitouListaDePessoas += PrecisoPessoas;
+                view.UtilizadorClicouEmApagarPessoa += PrecisoApagarPessoa; 
 
             }
 
@@ -53,6 +55,16 @@ namespace JustiCal
             private List<string[]> PrecisoMoradas(string cp4, string cp3)
             {
                 return Morada.ProcurarCP(cp4, cp3);
+            }
+
+            private List<object> PrecisoPessoas()
+            {
+                return model.Persons;
+            }
+
+            private void PrecisoApagarPessoa(object individuo)
+            {
+                model.deletePerson(individuo);
             }
 
 

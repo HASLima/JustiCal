@@ -114,7 +114,7 @@ namespace JustiCal
 
             private void showHomePageButton_Click(object sender, EventArgs e)
             {
-                HomePage homePage = new HomePage();
+                HomePage homePage = new HomePage(View);
                 DialogResult result = homePage.ShowDialog();
             }
         } 

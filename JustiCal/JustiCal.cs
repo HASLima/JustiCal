@@ -29,7 +29,7 @@ namespace JustiCal
             {
                 Controller controller = new Controller();
                 controller.View.ActivarUI();
-                   
+
                 Console.Read();
 
                 //Este é o código originalmente criado pelo VIsual Studio
