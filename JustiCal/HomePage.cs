@@ -152,5 +152,10 @@ namespace JustiCal
         {
             ShowPersonTable(View.SolicitaListaDePessoas());
         }
+
+        private void criarPessoaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

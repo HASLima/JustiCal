@@ -36,11 +36,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.individualsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.objectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pessoasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.criarPessoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.processosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.criarProcessoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.PeopleTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -48,10 +55,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.PeopleTabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 42);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1268, 600);
+            this.tabControl1.Size = new System.Drawing.Size(1268, 558);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -83,7 +90,7 @@
             this.PeopleTabPage.Location = new System.Drawing.Point(8, 46);
             this.PeopleTabPage.Name = "PeopleTabPage";
             this.PeopleTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.PeopleTabPage.Size = new System.Drawing.Size(1252, 546);
+            this.PeopleTabPage.Size = new System.Drawing.Size(1252, 504);
             this.PeopleTabPage.TabIndex = 1;
             this.PeopleTabPage.Text = "Pessoas";
             this.PeopleTabPage.UseVisualStyleBackColor = true;
@@ -126,8 +133,58 @@
             this.individualsTableLayoutPanel.RowCount = 2;
             this.individualsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.individualsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.individualsTableLayoutPanel.Size = new System.Drawing.Size(1246, 540);
+            this.individualsTableLayoutPanel.Size = new System.Drawing.Size(1246, 498);
             this.individualsTableLayoutPanel.TabIndex = 0;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.objectosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1268, 42);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // objectosToolStripMenuItem
+            // 
+            this.objectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pessoasToolStripMenuItem,
+            this.processosToolStripMenuItem});
+            this.objectosToolStripMenuItem.Name = "objectosToolStripMenuItem";
+            this.objectosToolStripMenuItem.Size = new System.Drawing.Size(129, 38);
+            this.objectosToolStripMenuItem.Text = "Objectos";
+            // 
+            // pessoasToolStripMenuItem
+            // 
+            this.pessoasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarPessoaToolStripMenuItem});
+            this.pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
+            this.pessoasToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.pessoasToolStripMenuItem.Text = "Pessoas";
+            // 
+            // criarPessoaToolStripMenuItem
+            // 
+            this.criarPessoaToolStripMenuItem.Name = "criarPessoaToolStripMenuItem";
+            this.criarPessoaToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.criarPessoaToolStripMenuItem.Text = "Criar Pessoa";
+            this.criarPessoaToolStripMenuItem.Click += new System.EventHandler(this.criarPessoaToolStripMenuItem_Click);
+            // 
+            // processosToolStripMenuItem
+            // 
+            this.processosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarProcessoToolStripMenuItem});
+            this.processosToolStripMenuItem.Name = "processosToolStripMenuItem";
+            this.processosToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.processosToolStripMenuItem.Text = "Processos";
+            // 
+            // criarProcessoToolStripMenuItem
+            // 
+            this.criarProcessoToolStripMenuItem.Name = "criarProcessoToolStripMenuItem";
+            this.criarProcessoToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.criarProcessoToolStripMenuItem.Text = "Criar Processo";
             // 
             // HomePage
             // 
@@ -135,6 +192,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1268, 600);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 10F);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "HomePage";
@@ -145,7 +203,10 @@
             this.PeopleTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -158,5 +219,11 @@
         private System.Windows.Forms.TableLayoutPanel individualsTableLayoutPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem objectosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pessoasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem criarPessoaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem processosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem criarProcessoToolStripMenuItem;
     }
 }
