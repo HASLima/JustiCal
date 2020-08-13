@@ -147,5 +147,10 @@ namespace JustiCal
         {
 
         }
+
+        private void PeopleTabPage_Enter(object sender, EventArgs e)
+        {
+            ShowPersonTable(View.SolicitaListaDePessoas());
+        }
     }
 }
