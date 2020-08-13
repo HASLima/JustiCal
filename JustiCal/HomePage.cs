@@ -65,21 +65,36 @@ namespace JustiCal
         {
             Debug.WriteLine("ShowPersonTable");
             individualsTableLayoutPanel.Size = new Size() { Height = 100, Width = individualsTableLayoutPanel.Width };
+            individualsTableLayoutPanel.AutoSize = true;
             individualsTableLayoutPanel.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             individualsTableLayoutPanel.ColumnCount = 0; individualsTableLayoutPanel.RowCount = 0;
             individualsTableLayoutPanel.ColumnCount = 6;
             individualsTableLayoutPanel.RowCount = 1;
-            for (int i = 0; i < individualsTableLayoutPanel.ColumnCount; i++)
+
+            Debug.WriteLine(String.Format("Columns Styles Count: {0}", individualsTableLayoutPanel.ColumnStyles.Count));
+            TableLayoutColumnStyleCollection styles = individualsTableLayoutPanel.ColumnStyles;
+            for (int i = styles.Count; i > 0; i--)
             {
-                Debug.WriteLine(individualsTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize)));
+                styles.RemoveAt(i-1);
             }
+            Debug.WriteLine(String.Format("Columns Styles Count: {0}", individualsTableLayoutPanel.ColumnStyles.Count));
+
+
+            individualsTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));   //Coluna 1 com largura variavel
+            individualsTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));   //Coluna 2 com largura variavel
+            individualsTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));   //Coluna 3 com largura variavel
+            individualsTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40F));   //Coluna 4 com largura fixa
+            individualsTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40F));   //Coluna 5 com largura fixa
+            individualsTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40F));   //Coluna 6 com largura fixa
+
+
             individualsTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            individualsTableLayoutPanel.Controls.Add(new TitleLabel("N.º Documento", AnchorStyles.Left) , 0, 0);
-            individualsTableLayoutPanel.Controls.Add(new TitleLabel("Primeiro Nome", AnchorStyles.Left) , 1, 0);
-            individualsTableLayoutPanel.Controls.Add(new TitleLabel("Apelido", AnchorStyles.Left) , 2, 0);
-            individualsTableLayoutPanel.Controls.Add(new TitleLabel("Tipo") , 3, 0);
-            individualsTableLayoutPanel.Controls.Add(new TitleLabel("Ver") , 4, 0);
-            individualsTableLayoutPanel.Controls.Add(new TitleLabel("Apagar") , 5, 0);
+            individualsTableLayoutPanel.Controls.Add(new TitleLabel("N.º Documento", AnchorStyles.Left), 0, 0);
+            individualsTableLayoutPanel.Controls.Add(new TitleLabel("Primeiro Nome", AnchorStyles.Left), 1, 0);
+            individualsTableLayoutPanel.Controls.Add(new TitleLabel("Apelido", AnchorStyles.Left), 2, 0);
+            individualsTableLayoutPanel.Controls.Add(new TitleLabel("Tipo"), 3, 0);
+            individualsTableLayoutPanel.Controls.Add(new TitleLabel("Ver"), 4, 0);
+            individualsTableLayoutPanel.Controls.Add(new TitleLabel("Apagar"), 5, 0);
 
             foreach (object item in people)
             {
@@ -150,10 +165,16 @@ namespace JustiCal
 
         private void PeopleTabPage_Enter(object sender, EventArgs e)
         {
-            ShowPersonTable(View.SolicitaListaDePessoas());
+            //ShowPersonTable(View.SolicitaListaDePessoas());
         }
 
         private void criarPessoaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdicionarPessoaForm adicionarPessoaForm = new AdicionarPessoaForm(View);
+            DialogResult result = adicionarPessoaForm.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

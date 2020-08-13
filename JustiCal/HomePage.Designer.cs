@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.PeopleTabPage = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.individualsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.objectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,20 +42,19 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.PeopleTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.PeopleTabPage);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 42);
+            this.tabControl1.Location = new System.Drawing.Point(0, 43);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1268, 558);
+            this.tabControl1.Size = new System.Drawing.Size(1698, 645);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -84,56 +80,27 @@
             // 
             // PeopleTabPage
             // 
-            this.PeopleTabPage.Controls.Add(this.pictureBox1);
-            this.PeopleTabPage.Controls.Add(this.pictureBox2);
             this.PeopleTabPage.Controls.Add(this.individualsTableLayoutPanel);
             this.PeopleTabPage.Location = new System.Drawing.Point(8, 46);
             this.PeopleTabPage.Name = "PeopleTabPage";
             this.PeopleTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.PeopleTabPage.Size = new System.Drawing.Size(1252, 504);
+            this.PeopleTabPage.Size = new System.Drawing.Size(1682, 591);
             this.PeopleTabPage.TabIndex = 1;
             this.PeopleTabPage.Text = "Pessoas";
             this.PeopleTabPage.UseVisualStyleBackColor = true;
             this.PeopleTabPage.Enter += new System.EventHandler(this.PeopleTabPage_Enter);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox1.Image = global::JustiCal.Properties.Resources.militaryIco;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(192, 346);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 106);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox2.Image = global::JustiCal.Properties.Resources.findIco;
-            this.pictureBox2.InitialImage = global::JustiCal.Properties.Resources.findIco;
-            this.pictureBox2.Location = new System.Drawing.Point(500, 356);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(71, 72);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.DoubleClick += new System.EventHandler(this.pictureBox2_DoubleClick);
-            // 
             // individualsTableLayoutPanel
             // 
             this.individualsTableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.individualsTableLayoutPanel.ColumnCount = 2;
+            this.individualsTableLayoutPanel.ColumnCount = 1;
             this.individualsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.individualsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.individualsTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.individualsTableLayoutPanel.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.individualsTableLayoutPanel.Location = new System.Drawing.Point(3, 3);
             this.individualsTableLayoutPanel.Name = "individualsTableLayoutPanel";
-            this.individualsTableLayoutPanel.RowCount = 2;
+            this.individualsTableLayoutPanel.RowCount = 1;
             this.individualsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.individualsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.individualsTableLayoutPanel.Size = new System.Drawing.Size(1246, 498);
+            this.individualsTableLayoutPanel.Size = new System.Drawing.Size(571, 355);
             this.individualsTableLayoutPanel.TabIndex = 0;
             // 
             // menuStrip1
@@ -144,9 +111,10 @@
             this.objectosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1268, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1743, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // objectosToolStripMenuItem
             // 
@@ -154,7 +122,7 @@
             this.pessoasToolStripMenuItem,
             this.processosToolStripMenuItem});
             this.objectosToolStripMenuItem.Name = "objectosToolStripMenuItem";
-            this.objectosToolStripMenuItem.Size = new System.Drawing.Size(129, 38);
+            this.objectosToolStripMenuItem.Size = new System.Drawing.Size(129, 36);
             this.objectosToolStripMenuItem.Text = "Objectos";
             // 
             // pessoasToolStripMenuItem
@@ -190,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1268, 600);
+            this.ClientSize = new System.Drawing.Size(1743, 794);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 10F);
@@ -201,8 +169,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.PeopleTabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -217,8 +183,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TabPage PeopleTabPage;
         private System.Windows.Forms.TableLayoutPanel individualsTableLayoutPanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem objectosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pessoasToolStripMenuItem;
