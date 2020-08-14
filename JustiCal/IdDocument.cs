@@ -54,7 +54,7 @@ namespace JustiCal
                 {3, "Guarda Nacional Republicana" }
             };
 
-            public string DocumentNumber { get; set; }
+            public virtual string DocumentNumber { get; set; }
             public DateTime? ExpiryDate { get; set; }
             public DateTime? IssueDate { get; set; }
             public DocumentType IdDocumentType { get; set; }
@@ -100,6 +100,7 @@ namespace JustiCal
                 ExpiryDate = dataDeValidade;
                 IssueDate = null;
                 IdDocumentType = DocumentType.CartaoDeCidadao;
+                DocumentNumber = String.Format("{0}{1}{2}{3}", CivilianIdNumber, CivilianIdNumberCheckDigit.ToString(), Version, DocumentNumberCheckDigit);
             }
             /// <summary>
             /// Construtor de Cartão de Cidadão
@@ -126,7 +127,35 @@ namespace JustiCal
             public int CivilianIdNumberCheckDigit { get; set; }
             public string Version { get; set; }
             public string DocumentNumberCheckDigit { get; set; }
-            public new string DocumentNumber { get { return String.Format("{0}{1}{2}{3}", CivilianIdNumber, CivilianIdNumberCheckDigit.ToString(), Version, DocumentNumberCheckDigit); }  }
+
+            public override string DocumentNumber
+            {
+                get => base.DocumentNumber;
+                set
+                {
+                    if (value.Length != 12)
+                        throw new ArgumentException("O número de cartão de cidadão não tem o número de caracteres correcto. Devem constar 12 caracteres");
+
+                    CivilianIdNumber = value.Substring(0, 8);
+
+                    try
+                    {
+                        CivilianIdNumberCheckDigit = Int16.Parse(value.Substring(8, 1));
+                    }
+                    catch (FormatException)
+                    {
+                        throw;
+                    }
+                    Version = value.Substring(9, 2);
+                    DocumentNumberCheckDigit = value.Substring(11, 1);
+                    base.DocumentNumber = String.Format("{0}{1}{2}{3}", CivilianIdNumber, CivilianIdNumberCheckDigit.ToString(), Version, DocumentNumberCheckDigit); ;
+                }
+            }
+
+            public void DecomposeDocumentNumber()
+            {
+
+            }
 
             public static bool CheckCivilianIdNumber(string civilianIdNumber, int civilianIdNumberCheckDigit)
             {
