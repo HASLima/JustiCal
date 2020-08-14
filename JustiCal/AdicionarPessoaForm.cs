@@ -318,6 +318,18 @@ namespace JustiCal
 
                 }
             }
+
+            private void bilheteDeIdentidadeToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                AdicionarBilheteDeIdentidade adicionarBilheteDeIdentidadeForm = new AdicionarBilheteDeIdentidade();
+                DialogResult result = adicionarBilheteDeIdentidadeForm.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    Debug.WriteLine("Teste");
+                    listaDeDocumentos.Add(adicionarBilheteDeIdentidadeForm.bilhete);
+                }
+                refreshIdDocumentsListBox();
+            }
         } 
     }
 }
