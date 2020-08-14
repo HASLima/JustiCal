@@ -82,21 +82,7 @@ namespace JustiCal
             /// <param name="dataDeValidade">Data de validade</param>
             public CartaoDeCidadao(string numero, DateTime dataDeValidade)
             {
-                if (numero.Length != 12)
-                    throw new ArgumentException("O número de cartão de cidadão não tem o número de caracteres correcto. Devem constar 12 caracteres");
-
-                CivilianIdNumber = numero.Substring(0, 8);
-
-                try
-                {
-                    CivilianIdNumberCheckDigit = Int16.Parse(numero.Substring(8, 1));
-                }
-                catch (FormatException)
-                { 
-                    throw;
-                }
-                Version = numero.Substring(9, 2);
-                DocumentNumberCheckDigit = numero.Substring(11, 1);
+                DecomposeDocumentNumber(numero);
                 ExpiryDate = dataDeValidade;
                 IssueDate = null;
                 IdDocumentType = DocumentType.CartaoDeCidadao;
@@ -133,28 +119,28 @@ namespace JustiCal
                 get => base.DocumentNumber;
                 set
                 {
-                    if (value.Length != 12)
-                        throw new ArgumentException("O número de cartão de cidadão não tem o número de caracteres correcto. Devem constar 12 caracteres");
-
-                    CivilianIdNumber = value.Substring(0, 8);
-
-                    try
-                    {
-                        CivilianIdNumberCheckDigit = Int16.Parse(value.Substring(8, 1));
-                    }
-                    catch (FormatException)
-                    {
-                        throw;
-                    }
-                    Version = value.Substring(9, 2);
-                    DocumentNumberCheckDigit = value.Substring(11, 1);
+                    DecomposeDocumentNumber(value);
                     base.DocumentNumber = String.Format("{0}{1}{2}{3}", CivilianIdNumber, CivilianIdNumberCheckDigit.ToString(), Version, DocumentNumberCheckDigit); ;
                 }
             }
 
-            public void DecomposeDocumentNumber()
+            public void DecomposeDocumentNumber(string number)
             {
+                if (number.Length != 12)
+                    throw new ArgumentException("O número de cartão de cidadão não tem o número de caracteres correcto. Devem constar 12 caracteres");
 
+                CivilianIdNumber = number.Substring(0, 8);
+
+                try
+                {
+                    CivilianIdNumberCheckDigit = Int16.Parse(number.Substring(8, 1));
+                }
+                catch (FormatException)
+                {
+                    throw;
+                }
+                Version = number.Substring(9, 2);
+                DocumentNumberCheckDigit = number.Substring(11, 1);
             }
 
             public static bool CheckCivilianIdNumber(string civilianIdNumber, int civilianIdNumberCheckDigit)
