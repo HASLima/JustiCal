@@ -24,6 +24,7 @@ namespace JustiCal
             {
                 view = v;
                 Persons = new List<object>();
+                Academia = new Academia();
 
                 //Só para testes
                 Academia.Pessoas.Add(new Person("Hélder Alexandre de Sousa Lima", true, new List<object>() { new CartaoDeCidadao("133683761ZX8", new DateTime(2021, 10, 21)) }, new DateTime(1988, 03, 02), new List<Morada>() { new Morada("Principal", "Rua", "Dias Lourenço", "10", null, "2925", "135") }));
