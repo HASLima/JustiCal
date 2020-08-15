@@ -34,7 +34,7 @@ namespace JustiCal
             {
                 Stream SaveFileStream = File.Create("SavedData.bin");
                 BinaryFormatter serializer = new BinaryFormatter();
-                serializer.Serialize(SaveFileStream, Model.academia);
+                serializer.Serialize(SaveFileStream, Model.Academia);
                 SaveFileStream.Close();
             }
         } 
