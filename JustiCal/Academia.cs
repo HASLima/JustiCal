@@ -8,7 +8,7 @@ namespace JustiCal
 {
     namespace Model
     {
-        class Academia
+        public class Academia
         {
             public List<object> Pessoas;
             public List<object> Processos;
