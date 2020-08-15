@@ -59,7 +59,7 @@ namespace JustiCal
 
             private List<object> PrecisoPessoas()
             {
-                return model.Persons;
+                return model.Academia.Pessoas;
             }
 
             private void PrecisoApagarPessoa(object individuo)

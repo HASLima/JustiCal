@@ -17,6 +17,7 @@ namespace JustiCal
             View.ViewClass view;
             public static HttpClient client = new HttpClient(); //create a HttpClient
 
+            public Academia Academia { get; set; }
             public List<object> Persons { get; private set; }
 
             public ModelClass(View.ViewClass v)
@@ -25,28 +26,28 @@ namespace JustiCal
                 Persons = new List<object>();
 
                 //Só para testes
-                Persons.Add(new Person("Hélder Alexandre de Sousa Lima", true, new List<object>() { new CartaoDeCidadao("133683761ZX8", new DateTime(2021, 10, 21)) }, new DateTime(1988, 03, 02), new List<Morada>() { new Morada("Principal", "Rua", "Dias Lourenço", "10", null, "2925", "135") }));
+                Academia.Pessoas.Add(new Person("Hélder Alexandre de Sousa Lima", true, new List<object>() { new CartaoDeCidadao("133683761ZX8", new DateTime(2021, 10, 21)) }, new DateTime(1988, 03, 02), new List<Morada>() { new Morada("Principal", "Rua", "Dias Lourenço", "10", null, "2925", "135") }));
                 //
             }
 
 
             public void AddPerson(object person)
             {
-                Persons.Add(person);
+                Academia.Pessoas.Add(person);
             }
 
             public void deletePerson(object person)
             {
-                Debug.Write(String.Format("Antes de Apagar: {0}", Persons.Count));
-                Persons.Remove(person);
-                Debug.WriteLine(String.Format("Depois de Apagar: {0}", Persons.Count));
+                Debug.Write(String.Format("Antes de Apagar: {0}", Academia.Pessoas.Count));
+                Academia.Pessoas.Remove(person);
+                Debug.WriteLine(String.Format("Depois de Apagar: {0}", Academia.Pessoas.Count));
             }
 
             public void PrintPersons()
             {
                 int index = 1;
                 Console.WriteLine("===PESSOAS===");
-                foreach (object item in Persons)
+                foreach (object item in Academia.Pessoas)
                 {
                     Person tmp = (Person)item;
                     Console.WriteLine("-------------");
