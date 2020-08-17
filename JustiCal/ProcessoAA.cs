@@ -12,8 +12,10 @@ namespace JustiCal
 {
     namespace Model
     {
+        [Serializable]
         class ProcessoAA
         {
+            
             private string nr;
             private DespachoLiminar despachoLiminar;
             private Participacao participacao;

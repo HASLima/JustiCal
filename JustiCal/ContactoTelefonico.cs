@@ -14,6 +14,7 @@ namespace JustiCal
 {
 	namespace Model
 	{
+        [Serializable]
 		public class ContactoTelefonico
 		{
             public string Numero { get; set; }

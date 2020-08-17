@@ -21,6 +21,7 @@ namespace JustiCal
             {
                 View = new View.ViewClass(model);
                 Model = new ModelClass(view);
+                InAndOut.Model = Model;
 
                 view.UtilizadorClicouEmSubmeterPessoa += PrecisoAdicionarIndividuo;
                 view.UtilizadorClicouEmImprimirPessoas += PrecisoImprimirPessoas;

@@ -1,4 +1,5 @@
-﻿using JustiCal.Model;
+﻿using JustiCal.Controller;
+using JustiCal.Model;
 using JustiCal.View;
 using System;
 using System.Collections.Generic;
@@ -177,6 +178,12 @@ namespace JustiCal
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void HomePage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //TODO Apagar. Serve só para testes
+            InAndOut.Out();
         }
     }
 }

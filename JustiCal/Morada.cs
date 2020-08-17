@@ -12,6 +12,7 @@ namespace JustiCal
 {
     namespace Model
     {
+        [Serializable]
         /// <summary>
         /// Classe para a criação de uma morada com os campos previstos pelos CTT no seu manual de endereçamento de Abril de 2018
         /// </summary>

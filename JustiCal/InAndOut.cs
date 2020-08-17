@@ -13,7 +13,7 @@ namespace JustiCal
     {
         class InAndOut
         {
-            private static ModelClass Model;
+            public static ModelClass Model;
             public InAndOut(ModelClass m)
             {
                 Model = m;

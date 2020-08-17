@@ -63,7 +63,7 @@
             this.tabPage1.Location = new System.Drawing.Point(8, 46);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1252, 546);
+            this.tabPage1.Size = new System.Drawing.Size(1682, 591);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@
             this.listBox1.ItemHeight = 32;
             this.listBox1.Location = new System.Drawing.Point(3, 3);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(648, 540);
+            this.listBox1.Size = new System.Drawing.Size(648, 585);
             this.listBox1.TabIndex = 0;
             // 
             // PeopleTabPage
@@ -130,13 +130,13 @@
             this.pessoasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.criarPessoaToolStripMenuItem});
             this.pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
-            this.pessoasToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.pessoasToolStripMenuItem.Size = new System.Drawing.Size(252, 44);
             this.pessoasToolStripMenuItem.Text = "Pessoas";
             // 
             // criarPessoaToolStripMenuItem
             // 
             this.criarPessoaToolStripMenuItem.Name = "criarPessoaToolStripMenuItem";
-            this.criarPessoaToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.criarPessoaToolStripMenuItem.Size = new System.Drawing.Size(276, 44);
             this.criarPessoaToolStripMenuItem.Text = "Criar Pessoa";
             this.criarPessoaToolStripMenuItem.Click += new System.EventHandler(this.criarPessoaToolStripMenuItem_Click);
             // 
@@ -145,13 +145,13 @@
             this.processosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.criarProcessoToolStripMenuItem});
             this.processosToolStripMenuItem.Name = "processosToolStripMenuItem";
-            this.processosToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.processosToolStripMenuItem.Size = new System.Drawing.Size(252, 44);
             this.processosToolStripMenuItem.Text = "Processos";
             // 
             // criarProcessoToolStripMenuItem
             // 
             this.criarProcessoToolStripMenuItem.Name = "criarProcessoToolStripMenuItem";
-            this.criarProcessoToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.criarProcessoToolStripMenuItem.Size = new System.Drawing.Size(298, 44);
             this.criarProcessoToolStripMenuItem.Text = "Criar Processo";
             // 
             // HomePage
@@ -165,6 +165,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "HomePage";
             this.Text = "JustiCal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomePage_FormClosed);
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

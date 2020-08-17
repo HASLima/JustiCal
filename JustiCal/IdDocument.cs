@@ -7,6 +7,7 @@ namespace JustiCal
 {
     namespace Model
     {
+        [Serializable]
         public class IdDocument
         {
             public enum DocumentType
@@ -70,6 +71,7 @@ namespace JustiCal
             }
 
         }
+        [Serializable]
         /// <summary>
         /// Esta class define um cartão de cidadão. Inclui as propriedades relativas ao número de identificação civil, número de controlo do número de identificação civil, versão do documento e número de controlo do número do documento. Inclui ainda o número completo do documento. Herda da class IdDocument as propriedades data de validade e de emissão.
         /// </summary>
@@ -96,7 +98,7 @@ namespace JustiCal
             /// <param name="mes">O mes da data de validade</param>
             /// <param name="ano">O ano da data de validade</param>
             public CartaoDeCidadao(string numero, int dia, int mes, int ano)
-                : this (numero, new DateTime(ano, mes, dia))
+                : this(numero, new DateTime(ano, mes, dia))
             {
             }
 
@@ -154,7 +156,7 @@ namespace JustiCal
                     if (!Char.IsDigit(character))
                         throw new ArgumentException("O número de identificação civil só deve conter digitos.");
                 }
-                for (int i = civilianIdNumber.Length - 1 , j = 2; i >= 0; i--, j++)
+                for (int i = civilianIdNumber.Length - 1, j = 2; i >= 0; i--, j++)
                 {
                     checkDigit += civilianIdNumber[i] * j;
                 }
@@ -174,8 +176,8 @@ namespace JustiCal
                     throw new ArgumentException("O número de cartão de cidadão não tem o número de caracteres correcto. Devem constar 12 caracteres");
                 for (int i = 0; i < documentNumber.Length; i++)
                 {
-                        int val = GetNumberFromChar(documentNumber[i]);
-                    if (i == 0 || i%2 == 0)
+                    int val = GetNumberFromChar(documentNumber[i]);
+                    if (i == 0 || i % 2 == 0)
                     {
                         val *= 2;
                         if (val >= 10)
@@ -187,7 +189,7 @@ namespace JustiCal
 
             }
 
-            private static int GetNumberFromChar (char letter)
+            private static int GetNumberFromChar(char letter)
             {
                 switch (letter)
                 {
@@ -232,11 +234,11 @@ namespace JustiCal
             }
 
         }
-
+        [Serializable]
         public class BilheteDeIdentidade : IdDocument
         {
             public int DocumentNumberCheckDigit { get; set; }
-            public string IssuePlace { get; set;}
+            public string IssuePlace { get; set; }
             /// <summary>
             /// Constructor do Bilhete de Identidade
             /// </summary>
@@ -276,7 +278,7 @@ namespace JustiCal
             }
 
         }
-
+        [Serializable]
         public class BilheteDeIdentidadeMilitar : IdDocument
         {
             public Organismo Organismo { get; set; }

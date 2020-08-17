@@ -8,6 +8,7 @@ namespace JustiCal
 {
     namespace Model
     {
+        [Serializable]
         public class Academia
         {
             public List<object> Pessoas;

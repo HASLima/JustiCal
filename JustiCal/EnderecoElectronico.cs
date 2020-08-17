@@ -9,12 +9,16 @@ namespace JustiCal
 {
     namespace Model
     {
-        public class EnderecoElectronico : MailAddress
+        [Serializable]
+        public class EnderecoElectronico
         {
+            
             public string Descricao { get; set; }
-            public EnderecoElectronico(string descricao, string mailAddress) : base(mailAddress)
+            public string Address { get; set; }
+            public EnderecoElectronico(string descricao, string mailAddress)
             {
                 Descricao = descricao;
+                Address = mailAddress;
             }
 
         } 
